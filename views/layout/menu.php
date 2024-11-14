@@ -1,58 +1,100 @@
-<div class=" bg-white">
-    <div class="flex items-center justify-between p-4 border-b">
-        <!-- Logo -->
-        <div class="text-2xl font-bold">
-            <span class="text-black">C</span><span class="text-black">orano</span>
-        </div>
+    <!-- Start Header Area -->
+    <header class="header-area header-wide">
+        <!-- main header start -->
+        <div class="main-header d-none d-lg-block">
 
-        <!-- Navigation Links -->
-        <nav class="flex items-center space-x-6">
-            <a href="#" class="text-black transition-colors duration-300 hover:text-orange-500">Home</a>
 
-            <!-- Pages Dropdown with Hover & Transition -->
-            <div class="relative group">
-                <a href="#" class="text-black transition-colors duration-300 hover:text-orange-500">Pages</a>
-                <div class="absolute hidden pt-2 group-hover:block transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                    <div class="bg-white border rounded shadow-lg">
-                        <a href="#" class="block px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-100">Sub Page 1</a>
-                        <a href="#" class="block px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-100">Sub Page 2</a>
+            <!-- header middle area start -->
+            <div class="header-main-area sticky">
+                <div class="container">
+                    <div class="row align-items-center position-relative">
+
+                        <!-- start logo area -->
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href=" <?= BASE_URL ?> ">
+                                    <img src="assets/img/logo/logo.png" alt="Brand Logo" width="120px">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- start logo area -->
+
+                        <!-- main menu area start -->
+                        <div class="col-lg-6 position-static">
+                            <div class="main-menu-area">
+                                <div class="main-menu">
+                                    <!-- main menu navbar start -->
+                                    <nav class="desktop-menu">
+                                        <ul>
+                                            <li><a href="<?= BASE_URL ?>">Trang chủ</i></a>
+
+                                            </li>
+
+                                            <li><a href="<?= BASE_URL .'?act=phong' ?>">Loại phòng <i class="fa fa-angle-down"></i></a>
+                                                <ul class="dropdown">
+                                                    <li><a href="#">Phòng VIP</a></li>
+                                                    <li><a href="#">Phòng Thường</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="<?= BASE_URL ?>">Blog</a></li>
+                                            <li><a href="<?= BASE_URL. '?act=gioi-thieu' ?>">Giới thiệu</a></li>
+                                            <li><a href="<?= BASE_URL. '?act=lien-he' ?>">Liên hệ</a></li>
+                                        </ul>
+                                    </nav>
+                                    <!-- main menu navbar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main menu area end -->
+
+                        <div class="col-lg-4">
+                            <div class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end">
+                                <div class="header-search-container">
+                                    <button class="search-trigger d-xl-none d-lg-block"><i class="pe-7s-search"></i></button>
+                                    <form class="header-search-box d-lg-none d-xl-block">
+                                        <input type="text" placeholder="Nhập loại phòng " class="header-search-field">
+                                        <button class="header-search-btn"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                                    </form>
+                                </div>
+                                <div class="header-configure-area">
+                                    <ul class="nav justify-content-end">
+                                        <label for="">
+                                            <?php
+                                            if (isset($_SESSION['user_client'])) {
+                                                echo $_SESSION['user_client'];
+                                            } ?>
+                                        </label>
+                                        <li class="user-hover">
+                                            <a href="#">
+                                            <i class="fa-solid fa-user"></i>
+                                            </a>
+                                            <ul class="dropdown-list">
+                                            <?php
+                                            if (!isset($_SESSION['user_client'])) {
+                                                ?>
+                                                <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng nhập</a></li>
+                                                <?php
+                                            }else{?>
+                                                <li><a href="#">Tài khoản</a></li>
+                                                <?php } ?>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="mini-btn">
+                                            <i class="fa-solid fa-shop"></i>
+                                            </a>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <a href="#" class="text-black transition-colors duration-300 hover:text-orange-500">Shop</a>
-
-            <!-- Blog Dropdown with Hover & Transition -->
-            <div class="relative group">
-                <a href="#" class="text-black transition-colors duration-300 hover:text-orange-500">Blog</a>
-                <div class="absolute hidden pt-2 group-hover:block transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                    <div class="bg-white border rounded shadow-lg">
-                        <a href="#" class="block px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-100">Blog Page 1</a>
-                        <a href="#" class="block px-4 py-2 text-black transition-colors duration-300 hover:bg-gray-100">Blog Page 2</a>
-                    </div>
-                </div>
-            </div>
-
-            <a href="#" class="text-black transition-colors duration-300 hover:text-orange-500">Contact Us</a>
-        </nav>
-
-        <!-- Search, User, Wishlist, Cart Icons -->
-        <div class="flex items-center space-x-4">
-            <input type="text" placeholder="Search entire store here" class="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition-all duration-300" />
-
-            <a href="#" class="relative text-black transition-colors duration-300 hover:text-orange-500">
-                <i class="fas fa-user text-lg"></i>
-            </a>
-
-            <a href="#" class="relative text-black transition-colors duration-300 hover:text-orange-500">
-                <i class="fas fa-heart text-lg"></i>
-                <span class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs text-white bg-orange-500 rounded-full">2</span>
-            </a>
-
-            <a href="#" class="relative text-black transition-colors duration-300 hover:text-orange-500">
-                <i class="fas fa-shopping-cart text-lg"></i>
-                <span class="absolute top-0 right-0 flex items-center justify-center w-4 h-4 text-xs text-white bg-orange-500 rounded-full">0</span>
-            </a>
+            <!-- header middle area end -->
         </div>
-    </div>
-</div>
+        <!-- main header start -->
+
+    </header>
+    <!-- end Header Area -->

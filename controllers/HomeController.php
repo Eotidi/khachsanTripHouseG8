@@ -55,8 +55,4 @@ class HomeController
     public function lienHe(){
         require_once './views/contact.php';
     }
-
-    public function blog(){
-        require_once './views/blog.php';
-    }
 }

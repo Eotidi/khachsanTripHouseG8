@@ -8,6 +8,5 @@ require_once 'layout/menu.php';
 <h1>Blog</h1>
 
 <?php
-require_once 'layout/mini.php';
 require_once 'layout/footer.php';
 ?>

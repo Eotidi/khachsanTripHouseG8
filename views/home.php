@@ -254,7 +254,7 @@ require_once 'layout/menu.php';
                     <div class="testimonial-thumb-wrapper">
                         <div class="testimonial-thumb-carousel">
                             <div class="testimonial-thumb">
-                                <img src="https://th.bing.com/th/id/OIP.7fIQ5_jM33_UdmvJv7ALxwHaJB?rs=1&pid=ImgDetMain" alt="testimonial-thumb">
+                                <a href="https://www.tiktok.com/@_halinhtran_"><img src="https://th.bing.com/th/id/OIP.7fIQ5_jM33_UdmvJv7ALxwHaJB?rs=1&pid=ImgDetMain" alt="testimonial-thumb"></a>
                             </div>
                             <div class="testimonial-thumb">
                                 <img src="https://giaingo.info/wp-content/uploads/2021/07/xoai-non-la-ai-2.jpg" alt="testimonial-thumb">

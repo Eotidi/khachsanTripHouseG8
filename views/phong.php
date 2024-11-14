@@ -4,7 +4,6 @@ require_once 'layout/menu.php';
 ?>
 
 <main>
-    <!-- breadcrumb area start -->
     <div class="breadcrumb-area">
         <div class="container">
             <div class="row">
@@ -21,28 +20,16 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </div>
-    <!-- breadcrumb area end -->
-    <!-- page main wrapper start -->
     <div class="shop-main-wrapper section-padding">
         <div class="container">
             <div class="row">
 
-                <!-- shop main wrapper start -->
                 <div class="col-lg-12 order-1 order-lg-2">
                     <div class="shop-room-wrapper">
-                        <!-- shop room top wrap start -->
                         <div class="shop-top-bar">
                             <div class="row align-items-center">
-                                <div class="col-lg-7 col-md-6 order-2 order-md-1">
-                                    <div class="top-bar-left">
-                                        <div class="room-view-mode">
-                                            <a class="active" href="#" data-target="grid-view" data-bs-toggle="tooltip" title="Grid View"><i class="fa fa-th"></i></a>
-                                            <a href="#" data-target="list-view" data-bs-toggle="tooltip" title="List View"><i class="fa fa-list"></i></a>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-6 order-1 order-md-2">
+                                
+                                <div class="col-lg-3 col-md-6 order-1 order-md-2">
                                     <div class="top-bar-right">
                                         <div class="room-short">
                                             <p>Sort By : </p>
@@ -56,11 +43,7 @@ require_once 'layout/menu.php';
                                 </div>
                             </div>
                         </div>
-                        <!-- shop room top wrap start -->
-
-                        <!-- room item list wrapper start -->
                         <div class="shop-room-wrap grid-view row mbn-30 pt-2">
-                            <!-- room single item start -->
                             <div class="col-md-4 col-sm-6">
                                 <div class="room-item">
                                     <figure class="room-thumb">
@@ -566,9 +549,6 @@ require_once 'layout/menu.php';
                                     </div>
                             </div>
                         </div>
-                        <!-- room item list wrapper end -->
-
-                        <!-- start pagination area -->
                         <div class="paginatoin-area text-center">
                             <ul class="pagination-box">
                                 <li><a class="previous" href="#"><i class="fa-solid fa-caret-left"></i></a></li>
@@ -578,14 +558,11 @@ require_once 'layout/menu.php';
                                 <li><a class="next" href="#"><i class="fa-solid fa-caret-right"></i></a></li>
                             </ul>
                         </div>
-                        <!-- end pagination area -->
                     </div>
                 </div>
-                <!-- shop main wrapper end -->
             </div>
         </div>
     </div>
-    <!-- page main wrapper end -->
 </main>
 
 <?php

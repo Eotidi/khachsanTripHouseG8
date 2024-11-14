@@ -1,15 +1,8 @@
-    <!-- Start Header Area -->
     <header class="header-area header-wide">
-        <!-- main header start -->
         <div class="main-header d-none d-lg-block">
-
-
-            <!-- header middle area start -->
             <div class="header-main-area sticky">
                 <div class="container">
                     <div class="row align-items-center position-relative">
-
-                        <!-- start logo area -->
                         <div class="col-lg-2">
                             <div class="logo">
                                 <a href=" <?= BASE_URL ?> ">
@@ -17,13 +10,9 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- start logo area -->
-
-                        <!-- main menu area start -->
                         <div class="col-lg-6 position-static">
                             <div class="main-menu-area">
                                 <div class="main-menu">
-                                    <!-- main menu navbar start -->
                                     <nav class="desktop-menu">
                                         <ul>
                                             <li><a href="<?= BASE_URL ?>">Trang chủ</i></a>
@@ -41,12 +30,9 @@
                                             <li><a href="<?= BASE_URL. '?act=lien-he' ?>">Liên hệ</a></li>
                                         </ul>
                                     </nav>
-                                    <!-- main menu navbar end -->
                                 </div>
                             </div>
                         </div>
-                        <!-- main menu area end -->
-
                         <div class="col-lg-4">
                             <div class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end">
                                 <div class="header-search-container">
@@ -92,9 +78,5 @@
                     </div>
                 </div>
             </div>
-            <!-- header middle area end -->
         </div>
-        <!-- main header start -->
-
     </header>
-    <!-- end Header Area -->

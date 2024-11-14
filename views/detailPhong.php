@@ -5,7 +5,6 @@ require_once 'layout/menu.php';
 
 
 <main>
-    <!-- breadcrumb area start -->
     <div class="breadcrumb-area">
         <div class="container">
             <div class="row">
@@ -23,15 +22,10 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </div>
-    <!-- breadcrumb area end -->
-
-    <!-- page main wrapper start -->
     <div class="shop-main-wrapper section-padding pb-0">
         <div class="container">
             <div class="row">
-                <!-- room details wrapper start -->
                 <div class="col-lg-12 order-1 order-lg-2">
-                    <!-- room details inner end -->
                     <div class="room-details-inner">
                         <div class="row">
                             <div class="col-lg-5">
@@ -96,9 +90,6 @@ require_once 'layout/menu.php';
                             </div>
                         </div>
                     </div>
-                    <!-- room details inner end -->
-
-                    <!-- room details reviews start -->
                     <div class="room-details-reviews section-padding pb-0">
                         <div class="row">
                             <div class="col-lg-12">
@@ -141,39 +132,31 @@ require_once 'layout/menu.php';
                                                 <div class="buttons">
                                                     <button class="btn btn-sqr" type="submit">Bình luận</button>
                                                 </div>
-                                                </form> <!-- end of review-form -->
+                                                </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- room details reviews end -->
                 </div>
-                <!-- room details wrapper end -->
             </div>
         </div>
     </div>
-    <!-- page main wrapper end -->
-
-    <!-- related products area start -->
     <section class="related-products section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- section title start -->
                     <div class="section-title text-center">
                         <h2 class="title">Các phòng khác</h2>
                     </div>
-                    <!-- section title start -->
+
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="room-carousel-4 slick-row-10 slick-arrow-style">
-                        <!-- room item start -->
                         <!-- <?php ?> -->
-                            <!-- room item start -->
                             <div class="room-item">
                                 <figure class="room-thumb">
                                     <a href="#">
@@ -196,13 +179,11 @@ require_once 'layout/menu.php';
                                 </div>
                             </div>
                         <!-- <?php  ?> -->
-                        <!-- room item end -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- related products area end -->
 </main>
 
 <?php

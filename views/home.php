@@ -2,14 +2,10 @@
 require_once 'layout/header.php';
 require_once 'layout/menu.php';
 ?>
-
-
-
 <main>
-    <!-- hero slider area start -->
     <section class="slider-area">
         <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
-            <!-- single slider item start -->
+            
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider1.png">
                     <div class="container">
@@ -19,7 +15,7 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            <!-- single slider item start -->
+            
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider2.png">
                     <div class="container">
@@ -29,7 +25,7 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            <!-- single slider item start -->
+            
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider3.png">
                     <div class="container">
@@ -39,13 +35,10 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            <!-- single slider item start -->
+            
 
         </div>
     </section>
-    <!-- hero slider area end -->
-
-    <!-- service policy area start -->
     <div class="service-policy section-padding">
         <div class="body1">
             <form action="">
@@ -59,43 +52,36 @@ require_once 'layout/menu.php';
                         <option value="">...</option>
                         <option value="">Single</option>
                         <option value="">Double</option>
-                        <!-- Add more options as needed -->
                     </select>
                     <select name="">
                         <option value="">...</option>
                         <option value="">Còn phòng</option>
                         <option value="">Hết phòng</option>
-                        <!-- Add more options as needed -->
                     </select>
                     <button class="btn ">Search</button>
                 </div>
             </form>
         </div>
     </div>
-    <!-- service policy area end -->
 
-    <!-- room area start -->
     <section class="room-area section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- section title start -->
+                    
                     <div class="section-title text-center">
                         <h2 class="title">Các phòng của chúng tôi</h2>
                         <p class="sub-title">Thông tin phòng được cập nhật liên tục</p>
                     </div>
-                    <!-- section title start -->
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="room-container">
-                        <!-- room tab menu start -->
-                        <!-- room tab content start -->
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="room-carousel-4 slick-row-10 slick-arrow-style">
-                                    <!-- room item start -->
                                     <div class="room-item">
                                         <figure class="room-thumb">
                                             <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
@@ -191,30 +177,25 @@ require_once 'layout/menu.php';
                                 </div>
                             </div>
                         </div>
-                        <!-- room tab content end -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- room area end -->
-
-    <!-- featured room area start -->
     <section class="feature-room section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- section title start -->
+                    
                     <div class="section-title text-center">
                         <h2 class="title">Phòng nổi bật</h2>
                     </div>
-                    <!-- section title start -->
+                    
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="room-carousel-4_2 slick-row-10 slick-arrow-style">
-                        <!-- room item start -->
                         <div class="room-item">
                             <figure class="room-thumb">
                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
@@ -227,26 +208,23 @@ require_once 'layout/menu.php';
                             </figure>
                             
                         </div>
-                        <!-- room item end -->
 
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- featured room area end -->
-
-    <!-- testimonial area start -->
+    
     <section class="testimonial-area section-padding bg-img" data-bg="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsb2ZmaWNlMjBfYV9jbG9zZV91cF9vZl9hX2NvbG9yZnVsX2ZsdWlkX2Fic3RyYWN0X3BhbGVfd18xYTg4YWI2Ny1jMzdmLTQ2ZTctYjk5OC1hMjI2N2U3YmI4ODBfMi5qcGc.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- section title start -->
+                    
                     <div class="section-title text-center">
                         <h2 class="title">Các lời đánh giá</h2>
                         <p class="sub-title">Họ nói gì ?</p>
                     </div>
-                    <!-- section title start -->
+                    
                 </div>
             </div>
             <div class="row">
@@ -318,9 +296,6 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
-    <!-- testimonial area end -->
-
-    <!-- group room start -->
     <section class="group-room-area section-padding">
         <div class="container">
             <div class="row">
@@ -340,17 +315,17 @@ require_once 'layout/menu.php';
                 </div>
                 <div class="col-lg-3">
                     <div class="categories-group-wrapper">
-                        <!-- section title start -->
+                        
                         <div class="section-title-append">
                             <h4>Phòng VIP</h4>
                             <div class="slick-append"></div>
                         </div>
-                        <!-- section title start -->
+                        
 
-                        <!-- group list carousel start -->
+                        
                         <div class="group-list-item-wrapper">
                             <div class="group-list-carousel">
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -368,9 +343,6 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -388,9 +360,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
+                                
 
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -408,9 +380,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
+                                
 
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -428,9 +400,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
+                                
 
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -448,37 +420,24 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
-
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
-
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
-
-                                <!-- group list item end -->
                             </div>
                         </div>
-                        <!-- group list carousel start -->
+                        
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="categories-group-wrapper">
-                        <!-- section title start -->
+                        
                         <div class="section-title-append">
                             <h4>Phòng thường</h4>
                             <div class="slick-append"></div>
                         </div>
-                        <!-- section title start -->
+                        
 
-                        <!-- group list carousel start -->
+                        
                         <div class="group-list-item-wrapper">
                             <div class="group-list-carousel">
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -496,9 +455,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
+                                
 
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -516,9 +475,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
+                                
 
-                                <!-- group list item start -->
+                                
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -536,9 +495,6 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -556,9 +512,6 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -576,46 +529,26 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
-
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
-
-                                <!-- group list item end -->
-
-                                <!-- group list item start -->
-
-                                <!-- group list item end -->
                             </div>
                         </div>
-                        <!-- group list carousel start -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- group room end -->
-
-    <!-- latest blog area start -->
     <section class="latest-blog-area section-padding pt-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <!-- section title start -->
                     <div class="section-title text-center">
                         <h2 class="title">latest blogs</h2>
                         <p class="sub-title">There are latest blog posts</p>
                     </div>
-                    <!-- section title start -->
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="blog-carousel-active slick-row-10 slick-arrow-style">
-                        <!-- blog post item start -->
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
@@ -631,9 +564,6 @@ require_once 'layout/menu.php';
                                 </h5>
                             </div>
                         </div>
-                        <!-- blog post item end -->
-
-                        <!-- blog post item start -->
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
@@ -649,9 +579,6 @@ require_once 'layout/menu.php';
                                 </h5>
                             </div>
                         </div>
-                        <!-- blog post item end -->
-
-                        <!-- blog post item start -->
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
@@ -667,9 +594,6 @@ require_once 'layout/menu.php';
                                 </h5>
                             </div>
                         </div>
-                        <!-- blog post item end -->
-
-                        <!-- blog post item start -->
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
@@ -685,9 +609,6 @@ require_once 'layout/menu.php';
                                 </h5>
                             </div>
                         </div>
-                        <!-- blog post item end -->
-
-                        <!-- blog post item start -->
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
@@ -703,13 +624,11 @@ require_once 'layout/menu.php';
                                 </h5>
                             </div>
                         </div>
-                        <!-- blog post item end -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- latest blog area end -->
 
 
 </main>

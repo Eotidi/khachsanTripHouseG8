@@ -140,6 +140,5 @@ require_once 'layout/menu.php';
 </main>
 
 <?php
-require_once 'layout/mini.php';
 require_once 'layout/footer.php';
 ?>

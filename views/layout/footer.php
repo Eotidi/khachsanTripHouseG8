@@ -97,12 +97,6 @@
 <script src="assets/js/plugins/jqueryui.min.js"></script>
 <!-- Image zoom JS -->
 <script src="assets/js/plugins/image-zoom.min.js"></script>
-<!-- Images loaded JS -->
-<script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
-<!-- mail-chimp active js -->
-<script src="assets/js/plugins/ajaxchimp.js"></script>
-<!-- contact form dynamic js -->
-<script src="assets/js/plugins/ajax-mail.js"></script>
 <!-- google map api -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfmCVTjRI007pC1Yk2o2d_EhgkjTsFVN8"></script>
 <!-- google map active js -->

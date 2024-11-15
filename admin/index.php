@@ -31,9 +31,11 @@ match ($act) {
 
     // Danh muc
     'danh-muc-phong' =>(new AdminDanhMucPhongController())->danhSachDanhMucPhong(),
+    'xoa-danh-muc-phong'=>(new AdminDanhMucPhongController())->deleteDanhMucPhong(),
     'form-them-danh-muc' => (new AdminDanhMucPhongController())->formAddDanhMucPhong(),
     'postAddDanhMuc' => (new AdminDanhMucPhongController())->postAddDanhMucPhong(),
     'form-sua-danh-muc' => (new AdminDanhMucPhongController())->formEditDanhMucPhong(),
+    'postEditDanhMuc' => (new AdminDanhMucPhongController())->postEditDanhMucPhong()
     
 
     // Phong

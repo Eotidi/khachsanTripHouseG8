@@ -1,4 +1,4 @@
-  <?php require './views/layout/header.php'; ?>
+<?php require './views/layout/header.php'; ?>
   <!-- Navbar -->
   <?php require './views/layout/navbar.php'; ?>
   <!-- /.navbar -->
@@ -44,12 +44,17 @@
                     </tr>
                   </thead>
                   <tbody>
+                  <?php
+                  $stt = 0;
+                   foreach($listDanhMuc as $a) 
+                  { 
+                    $stt = $stt+1 ?>
                   <tr>
-                        <td>PHP</td>
-                        <td>PHP</td>
-                        <td>PHP</td>
+                        <td><?=$stt?></td>
+                        <td><?=$a["ten_loai"]?></td>
+                        <td><?=$a["mo_ta"]?></td>
                         <td>
-                          <a href="<?= BASE_URL_ADMIN . '?act=form-sua-danh-muc' ?>">
+                          <a href="<?= BASE_URL_ADMIN . '?act=form-sua-danh-muc&id='.$a["loai_id"] ?>">
                             <button class="btn btn-warning">Sửa</button>
                           </a>
                           <a href="#" onclick="return confirm('Bạn có đồng ý xóa hay không ?')">
@@ -57,6 +62,7 @@
                           </a>
                         </td>
                       </tr>
+                      <?php } ?>
                       </tbody>
                   <tfoot>
                     <tr>

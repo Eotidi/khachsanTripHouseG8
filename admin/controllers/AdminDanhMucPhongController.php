@@ -17,6 +17,7 @@ class AdminDanhMucPhongController{
         require_once './views/danhmucphong/addDanhMucPhong.php';
         // deleteSessionError();
     }
+    
     public function formEditDanhMucPhong(){
         // Ham nay dung de hien thi form nhap
         // Lay ra thong tin cua danh muc can sua

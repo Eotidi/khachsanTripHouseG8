@@ -21,6 +21,16 @@ class AdminDanhMucPhong{
         }
     }
 
+    public function deleteDanhMuc($id)
+    {
+        try {
+            $sql =  "DELETE FROM loaiphong WHERE `loaiphong`.`loai_id` = $id";
+            $this->conn->query($sql);
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+    }
+
     public function postAddDanhMucPhong($ten_loai, $mo_ta)
     {
         try {

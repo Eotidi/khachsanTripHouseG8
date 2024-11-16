@@ -34,5 +34,5 @@ match ($act) {
 
     'blog' => (new HomeController())->blog(),
 
-    
+//MinQ
 };

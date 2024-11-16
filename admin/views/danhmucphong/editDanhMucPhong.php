@@ -30,17 +30,17 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="" method="post">
+                        <form action="?act=postEditDanhMuc&id=<?=$danhmuc['loai_id']?>" method="post">
                             <input type="text" name="" value="" hidden>
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Sửa tên danh mục</label>
-                                    <input type="text" class="form-control" name="" value="" placeholder="Nhập tên danh mục">
+                                    <input type="text" class="form-control" id="ten_loai" name="ten_loai" value="<?=$danhmuc['ten_loai']?>" placeholder="Nhập tên danh mục">
                                     
                                 </div>
                                 <div class="form-group">
                                     <label>Mô tả</label>      
-                                    <textarea name="" id="" class="form-control" placeholder="Nhập mô tả" ></textarea>                          
+                                    <input type="text" name="mo_ta" id="mo_ta" value="<?=$danhmuc['mo_ta']?>" class="form-control" placeholder="Nhập mô tả" ></input>                          
                                 </div>
                             </div>
                             <!-- /.card-body -->

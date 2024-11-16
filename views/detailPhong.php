@@ -48,7 +48,6 @@ require_once 'layout/menu.php';
                                             <img src="assets/img/room/room-2.jpg" alt="room-details" />
                                         </div>
                                     <!-- <?php ?> -->
-
                                 </div>
                             </div>
                             <div class="col-lg-7">

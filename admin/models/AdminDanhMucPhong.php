@@ -58,7 +58,7 @@ class AdminDanhMucPhong{
     {
         
         try {
-            $sql = "UPDATE `loaiphong` SET `ten_loai` = '$ten_loai', `mo_ta` = '$mo_ta' WHERE `loaiphong`.`loai_id` = $id";
+            $sql = "UPDATE `loaiphong` SET `ten_loai` = '{$ten_loai}', `mo_ta` = '{$mo_ta}' WHERE `loaiphong`.`loai_id` = $id";
         $this->conn->query($sql);
         } catch (\Throwable $th) {
             echo $th;

@@ -25,7 +25,7 @@
                                                     <li><a href="#">Phòng Thường</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="<?= BASE_URL ?>">Blog</a></li>
+                                            <li><a href="<?= BASE_URL. '?act=blog' ?>">Blog</a></li>
                                             <li><a href="<?= BASE_URL. '?act=gioi-thieu' ?>">Giới thiệu</a></li>
                                             <li><a href="<?= BASE_URL. '?act=lien-he' ?>">Liên hệ</a></li>
                                         </ul>

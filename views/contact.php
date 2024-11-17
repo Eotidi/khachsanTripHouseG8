@@ -4,7 +4,6 @@ require_once 'layout/menu.php';
 ?>
 
 <main>
-        <!-- breadcrumb area start -->
         <div class="breadcrumb-area">
             <div class="container">
                 <div class="row">
@@ -21,15 +20,9 @@ require_once 'layout/menu.php';
                 </div>
             </div>
         </div>
-        <!-- breadcrumb area end -->
-
-        <!-- google map start -->
         <div class="map-area section-padding">
             <div id="google-map"></div>
         </div>
-        <!-- google map end -->
-
-        <!-- contact area start -->
         <div class="contact-area section-padding pt-0">
             <div class="container">
                 <div class="row">
@@ -39,10 +32,10 @@ require_once 'layout/menu.php';
                             <form id="contact-form" action="https://whizthemes.com/mail-php/genger/mail.php" method="post" class="contact-form">
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="first_name" placeholder="Name *" type="text" required>
+                                        <input name="" placeholder="Name *" type="text" required>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="phone" placeholder="Phone *" type="text" required>
+                                        <input name="" placeholder="Phone *" type="text" required>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
                                         <input name="email_address" placeholder="Email *" type="text" required>
@@ -85,7 +78,6 @@ require_once 'layout/menu.php';
                 </div>
             </div>
         </div>
-        <!-- contact area end -->
     </main>
 
 <?php

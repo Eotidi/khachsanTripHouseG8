@@ -11,7 +11,7 @@ require_once './controllers/HomeController.php';
 
 require_once './models/Phong.php';
 require_once './models/Taikhoan.php';
-// Route
+// Route 
 $act = $_GET['act'] ?? '/';
 
 match ($act) {
@@ -33,6 +33,4 @@ match ($act) {
     'lien-he' => (new HomeController())->lienHe(),
 
     'blog' => (new HomeController())->blog(),
-
-//MinQ
 };

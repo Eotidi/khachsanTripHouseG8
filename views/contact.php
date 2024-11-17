@@ -20,10 +20,7 @@ require_once 'layout/menu.php';
                 </div>
             </div>
         </div>
-        <div class="map-area section-padding">
-            <div id="google-map"></div>
-        </div>
-        <div class="contact-area section-padding pt-0">
+        <div class="contact-area section-padding pt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">

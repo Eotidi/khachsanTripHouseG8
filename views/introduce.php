@@ -45,20 +45,25 @@ require_once 'layout/menu.php';
             </div>
             <div class="">
                 <h1 class=" text-2xl font-bold text-justify">About Us</h1>
-                <h2 class=" my-4 text-base font-normal text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit ac lectus integer ac morbi egestas nunc. Tempus, nisl, tellus cum euismod nisi molestie a. Nullam luctus vulputate urna, gravida aliquet non orci, sit sit. Feugiat ullamcorper arcu sed magna.
+                <h2 class=" my-4 text-base font-normal text-justify">
+                    
                 </h2>
                 <h3 class=" text-base font-normal text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit ac lectus integer ac morbi egestas nunc. Tempus, nisl, tellus cum euismod nisi molestie a. Nullam luctus vulputate urna, gravida aliquet non orci, sit sit. Feugiat ullamcorper arcu sed magna.
+                    Nằm ngay trung tâm thành phố Hà Nội, TripHouse là điểm dừng chân lý tưởng để bạn khám phá những địa điểm nổi tiếng. Chỉ cần bước ra khỏi khách sạn, bạn đã có thể hòa mình vào nhịp sống sôi động của thành phố.
+                    Hãy để TripHouse là điểm khởi đầu cho những chuyến đi đầy hứng khởi của bạn.
                 </h3>
             </div>
         </div>
         <div class="grid grid-flow-col py-5">
             <div class="">
-                <h1 class=" text-2xl font-bold text-justify">Hotel</h1>
-                <h2 class=" my-4 text-base font-normal text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit ac lectus integer ac morbi egestas nunc. Tempus, nisl, tellus cum euismod nisi molestie a. Nullam luctus vulputate urna, gravida aliquet non orci, sit sit. Feugiat ullamcorper arcu sed magna.
+                <h1 class=" text-2xl font-bold text-justify">TripHouse Hotel</h1>
+                <h2 class=" my-4 text-base font-normal text-justify">
+                    Đến với TripHouse, bạn không chỉ đơn thuần là nghỉ ngơi mà còn được trải nghiệm một hành trình khám phá bản thân.
+                    Với không gian ấm cúng, thiết kế tinh tế và dịch vụ chu đáo, chúng tôi cam kết mang đến cho bạn những khoảnh khắc đáng nhớ. Hãy để TripHouse trở thành ngôi nhà thứ hai của bạn mỗi khi đến.
                 </h2>
                 <h3 class=" text-base font-normal text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit ac lectus integer ac morbi egestas nunc. Tempus, nisl, tellus cum euismod nisi molestie a. Nullam luctus vulputate urna, gravida aliquet non orci, sit sit. Feugiat ullamcorper arcu sed magna.
+                    Nằm ngay trung tâm thành phố Hà Nội, TripHouse là điểm dừng chân lý tưởng để bạn khám phá những địa điểm nổi tiếng. Chỉ cần bước ra khỏi khách sạn, bạn đã có thể hòa mình vào nhịp sống sôi động của thành phố.
+                    Hãy để TripHouse là điểm khởi đầu cho những chuyến đi đầy hứng khởi của bạn.
                 </h3>
             </div>
             <div class="ml-5">

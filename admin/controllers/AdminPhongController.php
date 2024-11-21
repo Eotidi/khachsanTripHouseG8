@@ -103,7 +103,7 @@ class AdminPhongController
         $ten_phong = $_POST['ten_phong'] ?? '';
         $gia_phong = $_POST['gia_phong'] ?? '';
         $hinh_anh = $_POST['hinh_anh'] ?? '';
-        $loai_phong_id = $_POST['loai_phong_id'] ?? '';
+        $loai_phong_id = $_POST['loai_phong_id'] ?? null;
         $trang_thai_id = $_POST['trang_thai_id'] ?? '';
         $mo_ta = $_POST['mo_ta'] ?? '';
         $kieu_phong_id = $_POST['kieu_phong_id'] ?? '';

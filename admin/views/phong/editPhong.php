@@ -26,7 +26,7 @@
                         <div class="card-tools">
                         </div>
                     </div>
-                    <form action="<?= BASE_URL_ADMIN . '?act=sua-phong' ?>" method="post">
+                    <form action="<?= BASE_URL_ADMIN . '?act=sua-phong&id='.$phong['id'] ?>" method="post">
                         <div class="card-body row">
                             <div class="form-group col-12">
                                 <label>Số phòng</label>
@@ -42,8 +42,19 @@
 
                             <div class="form-group col-6">
                                 <label>Loại phòng</label>
+                                <input type="hidden" name="loai_phong_id" value="<?=$phong['loai_phong_id']?>">
                                 <select class="form-control" name="loai_phong_id" id="exampleFormControlSelect1">
-                                    <option selected disabled>Chọn loại phòng</option>
+                                <option selected disabled>
+                                    <?php
+                                        if($phong['loai_phong_id']==1)
+                                        {
+                                            echo "VIP";
+                                        }
+                                        elseif($phong['loai_phong_id']==2)
+                                        {
+                                            echo "Normal";
+                                        }
+                                    ?>
                                     <?php foreach ($listDanhMuc as $danhMuc): ?>
                                         <option value="<?= $danhMuc['id'] ?>"><?= $danhMuc['ten_loai'] ?></option>
                                     <?php endforeach; ?>
@@ -52,8 +63,19 @@
 
                             <div class="form-group col-6">
                                 <label>Kiểu phòng</label>
+                                <input type="hidden" name="kieu_phong_id" value="<?=$phong['kieu_phong_id']?>">
                                 <select class="form-control" name="kieu_phong_id" id="exampleFormControlSelect1">
-                                    <option selected disabled>Chọn kiểu phòng</option>
+                                <option selected disabled>
+                                    <?php
+                                        if($phong['kieu_phong_id']==1)
+                                        {
+                                            echo "Đơn";
+                                        }
+                                        elseif($phong['kieu_phong_id']==2)
+                                        {
+                                            echo "Đôi";
+                                        }
+                                    ?>
                                     <option value="1">Đơn</option>
                                     <option value="2">Đôi</option>
                                     <!-- PHP -->
@@ -69,8 +91,20 @@
 
                             <div class="form-group col-12">
                                 <label>Trạng thái</label>
+                                <input type="hidden" name="trang_thai_id" value="<?=$phong['trang_thai_id']?>">
                                 <select class="form-control" name="trang_thai_id" id="exampleFormControlSelect1">
-                                    <option selected disabled>Chọn trạng thái</option>
+                                    <option selected disabled>
+                                    <?php
+                                        if($phong['trang_thai_id']==1)
+                                        {
+                                            echo "Còn phòng";
+                                        }
+                                        elseif($phong['trang_thai_id']==2)
+                                        {
+                                            echo "Hết phòng";
+                                        }
+                                    ?>
+                                    </option>
                                     <option value="1">Còn phòng</option>
                                     <option value="2">Hết phòng</option>
                                 </select>

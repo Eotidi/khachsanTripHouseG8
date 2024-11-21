@@ -55,24 +55,6 @@
                     </div>
                 </div>
             </div>
-            <div class="row align-items-center mt-20">
-                <div class="col-md-8">
-                    <div class="footer-payment">
-                        <img src="assets/img/payment.png" alt="payment method">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="copyright-text text-center">
-                        <p>&copy; 2024 <b>Hotel</b> Made with <i class="fa fa-heart text-danger"></i> by <a href="https://hasthemes.com/"><b>TripHouse</b></a></p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </footer>

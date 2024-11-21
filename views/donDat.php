@@ -56,33 +56,6 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-5 ml-auto">
-                    <!-- Cart Calculation Area -->
-                    <div class="cart-calculator-wrapper">
-                        <div class="cart-calculate-items">
-                            <h6>Cart Totals</h6>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <tr>
-                                        <td>Sub Total</td>
-                                        <td>$230</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Shipping</td>
-                                        <td>$70</td>
-                                    </tr>
-                                    <tr class="total">
-                                        <td>Total</td>
-                                        <td class="total-amount">$300</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                        <a href="checkout.html" class="btn btn-sqr d-block">Proceed Checkout</a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
     </div>

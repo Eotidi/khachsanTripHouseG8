@@ -4,23 +4,7 @@ require_once 'layout/menu.php';
 ?>
 
 <main>
-        <div class="breadcrumb-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="breadcrumb-wrap">
-                            <nav aria-label="breadcrumb">
-                                <ul class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i></a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">contact us</li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="contact-area section-padding pt-5">
+        <div class="contact-area section-padding pt-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -35,14 +19,14 @@ require_once 'layout/menu.php';
                                         <input name="" placeholder="Phone *" type="text" required>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="email_address" placeholder="Email *" type="text" required>
+                                        <input name="" placeholder="Email *" type="text" required>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6">
-                                        <input name="contact_subject" placeholder="Subject *" type="text">
+                                        <input name="" placeholder="Subject *" type="text">
                                     </div>
                                     <div class="col-12">
                                         <div class="contact2-textarea text-center">
-                                            <textarea placeholder="Message *" name="message" class="form-control2" required=""></textarea>
+                                            <textarea placeholder="Message *" name="" class="form-control2" required=""></textarea>
                                         </div>
                                         <div class="contact-btn">
                                             <button class="btn btn-sqr" type="submit">Send Message</button>
@@ -62,9 +46,9 @@ require_once 'layout/menu.php';
                                 est notare quam littera gothica, quam nunc putamus parum claram anteposuerit litterarum
                                 formas human.</p>
                             <ul>
-                                <li><i class="fa fa-fax"></i> Address : No 40 Baria Sreet 133/2 NewYork City</li>
-                                <li><i class="fa fa-phone"></i> E-mail: info@yourdomain.com</li>
-                                <li><i class="fa fa-envelope-o"></i> +88013245657</li>
+                                <li><i class="fa fa-fax"></i> Address :  Trinh-Van-Bo Street</li>
+                                <li><i class="fa fa-phone"></i> E-mail:  triphouse@gmail.com</li>
+                                <li><i class="fa fa-envelope-o"></i>(098) 668 6868</li>
                             </ul>
                             <div class="working-time">
                                 <h6>Working Hours</h6>

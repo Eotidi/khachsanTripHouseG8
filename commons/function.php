@@ -21,4 +21,14 @@ function connectDB()
     } catch (PDOException $e) {
         echo ("Connection failed: " . $e->getMessage());
     }
+
+    function deleteSessionError()
+{
+    if (isset($_SESSION['flash'])) {
+        // Huy session sau khi da tai trang 
+        unset($_SESSION['flash']);
+        unset($_SESSION['error']);
+        // session_unset();
+    }
+}
 }

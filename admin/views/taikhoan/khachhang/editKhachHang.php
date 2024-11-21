@@ -69,14 +69,6 @@
                                     <input type="text" class="form-control" name="" value="" placeholder="Địa chỉ">
                                     
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="inputStatus">Trạng thái tài khoản</label>
-                                    <select id="inputStatus" name="trang_thai" class="form-control custom-select">
-                                        <option  value="1">Active</option>
-                                        <option  value="2">Inactive</option>
-                                    </select>
-                                </div>
                             </div>
                             <!-- /.card-body -->
 

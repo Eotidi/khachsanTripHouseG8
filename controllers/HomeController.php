@@ -59,4 +59,8 @@ class HomeController
     public function blog(){
         require_once './views/blog.php';
     }
+
+    public function donDat(){
+        require_once './views/donDat.php';
+    }
 }

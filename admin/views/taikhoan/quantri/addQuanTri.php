@@ -30,17 +30,20 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="" method="post">
+                        <form action="<?= BASE_URL_ADMIN . '?act=them-quan-tri' ?>" method="post">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Họ tên</label>
-                                    <input type="text" class="form-control" name="" placeholder="Nhập họ tên">
+                                    <input type="text" class="form-control" name="he_ten" placeholder="Nhập họ tên" required>
                                     
                                 </div>
                                 <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="number" min="0" class="form-control" name="dien_thoai" placeholder="Nhập sdt" required>
+                                </div>
+                                <div class="form-group">
                                     <label>Email</label>
-                                    <input type="text" class="form-control" name="" placeholder="Nhập email">
-                                    
+                                    <input type="text" class="form-control" name="email" placeholder="Nhập email" required>
                                 </div>
                             </div>
                             <!-- /.card-body -->

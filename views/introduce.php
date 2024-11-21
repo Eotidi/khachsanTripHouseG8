@@ -119,20 +119,7 @@ require_once 'layout/menu.php';
                                 </div>
                             </figure>
                         </div>
-                        <div class="room-item">
-                            <figure class="room-thumb">
-                                <a href="#">
-                                    <img class="pri-img" src="assets/img/team/LyHuy.png" alt="ourTeam">
-                                    <img class="sec-img" src="assets/img/team/LyHuy.png" alt="ourTeam">
-                                </a>
-                                <div class="cart-hover">
-                                    <div class=" text-center">
-                                        <h3 class=" text-white">Phùng Lý Huy</h3>
-                                        <h3 class=" text-white">PH51340</h3>
-                                    </div>
-                                </div>
-                            </figure>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

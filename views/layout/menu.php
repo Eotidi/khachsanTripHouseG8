@@ -66,7 +66,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="#" class="mini-btn">
+                                            <a href="<?= BASE_URL . '?act=don-dat' ?>" class="mini-btn">
                                             <i class="fa-solid fa-shop"></i>
                                             </a>
                                             

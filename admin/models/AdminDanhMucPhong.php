@@ -12,7 +12,7 @@ class AdminDanhMucPhong{
     public function getAllDanhMucPhong(){
         
         try {
-            $sql = "SELECT * FROM `loaiphong`";
+            $sql = "SELECT * FROM `loai_phongs`";
         $stmt = $this->conn->query($sql);
         $data = $stmt->fetchAll();
         return $data;
@@ -24,17 +24,17 @@ class AdminDanhMucPhong{
     public function deleteDanhMuc($id)
     {
         try {
-            $sql =  "DELETE FROM loaiphong WHERE `loaiphong`.`loai_id` = $id";
+            $sql =  "DELETE FROM loai_phongs WHERE `loai_phongs`.`id` = $id";
             $this->conn->query($sql);
         } catch (\Throwable $th) {
             //throw $th;
         }
     }
 
-    public function postAddDanhMucPhong($ten_loai, $mo_ta)
+    public function insertDanhMucPhong($ten_loai, $mo_ta)
     {
         try {
-            $sql = "INSERT INTO `loaiphong` (`ten_loai`, `mo_ta`) VALUES ('$ten_loai', '$mo_ta')";
+            $sql = "INSERT INTO `loai_phongs` (`ten_loai`, `mo_ta`) VALUES ('$ten_loai', '$mo_ta')";
         $this->conn->query($sql);
         } catch (\Throwable $a) {
             echo $a;
@@ -45,7 +45,7 @@ class AdminDanhMucPhong{
     public function getDetailDanhMucPhong($id){
         
         try {
-            $sql = "SELECT * FROM `loaiphong` WHERE `loaiphong`.`loai_id`=$id";
+            $sql = "SELECT * FROM `loai_phongs` WHERE `loai_phongs`.`id`=$id";
             $stmt = $this->conn->query($sql);
             $data = $stmt->fetch();
             return $data;
@@ -58,7 +58,7 @@ class AdminDanhMucPhong{
     {
         
         try {
-            $sql = "UPDATE `loaiphong` SET `ten_loai` = '{$ten_loai}', `mo_ta` = '{$mo_ta}' WHERE `loaiphong`.`loai_id` = $id";
+            $sql = "UPDATE `loai_phongs` SET `ten_loai` = '{$ten_loai}', `mo_ta` = '{$mo_ta}' WHERE `loai_phongs`.`id` = $id";
         $this->conn->query($sql);
         } catch (\Throwable $th) {
             echo $th;

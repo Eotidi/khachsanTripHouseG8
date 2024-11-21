@@ -41,27 +41,26 @@
                                         <th>Họ tên</th>
                                         <th>Email</th>
                                         <th>Số điện thoại</th>
-                                        <th>Trạng thái</th>
                                         <th>Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                    <?php foreach ($listQuanTri as $key => $quanTri) : ?>
                                         <tr>
-                                            <td>PHP</td>
-                                            <td>PHP</td>
-                                            <td>PHP</td>
-                                            <td>PHP</td>
-                                            <td>PHP</td>
+                                            <td><?= $key + 1 ?></td>
+                                            <td><?= $quanTri['ho_ten'] ?></td>
+                                            <td><?= $quanTri['email'] ?></td>
+                                            <td><?= $quanTri['dien_thoai'] ?></td>
                                             <td>
-                                                <a href="<?= BASE_URL_ADMIN . '?act=form-sua-quan-tri' ?>">
+                                                <a href="<?= BASE_URL_ADMIN?>">
                                                     <button class="btn btn-warning">Sửa</button>
                                                 </a>
-                                                <a href="" onclick="return confirm('Bạn có đồng ý reset password hay không ?')">
+                                                <a href="<?= BASE_URL_ADMIN?>" onclick="return confirm('Bạn có đồng ý reset password hay không ?')">
                                                     <button class="btn btn-danger">Reset</button>
                                                 </a>
                                             </td>
                                         </tr>
+                                    <?php endforeach; ?>
 
                                 </tbody>
                                 <tfoot>
@@ -70,7 +69,6 @@
                                         <th>Họ tên</th>
                                         <th>Email</th>
                                         <th>Số điện thoại</th>
-                                        <th>Trạng thái</th>
                                         <th>Thao tác</th>
                                     </tr>
                                 </tfoot>

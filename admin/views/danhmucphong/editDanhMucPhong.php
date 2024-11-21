@@ -30,7 +30,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="?act=postEditDanhMuc&id=<?=$danhmuc['loai_id']?>" method="post">
+                        <form action="?act=postEditDanhMuc&id=<?=$danhmuc['id']?>" method="post">
                             <input type="text" name="" value="" hidden>
                             <div class="card-body">
                                 <div class="form-group">

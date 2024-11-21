@@ -53,10 +53,10 @@
                       <td><?= $a["ten_loai"] ?></td>
                       <td><?= $a["mo_ta"] ?></td>
                       <td>
-                        <a href="?act=form-sua-danh-muc&id=<?=$a['loai_id']?>">
+                        <a href="?act=form-sua-danh-muc&id=<?=$a['id']?>">
                           <button class="btn btn-warning">Sửa</button>
                         </a>
-                        <a href="?act=xoa-danh-muc-phong&id=<?=$a['loai_id']?>" onclick="return confirm('Bạn có đồng ý xóa hay không ?')">
+                        <a href="?act=xoa-danh-muc-phong&id=<?=$a['id']?>" onclick="return confirm('Bạn có đồng ý xóa hay không ?')">
                           <button class="btn btn-danger">Xóa</button>
                         </a>
                       </td>

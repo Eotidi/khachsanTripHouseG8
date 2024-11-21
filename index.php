@@ -33,4 +33,6 @@ match ($act) {
     'lien-he' => (new HomeController())->lienHe(),
 
     'blog' => (new HomeController())->blog(),
+
+    'don-dat' => (new HomeController())->donDat(),
 };

@@ -32,31 +32,27 @@
                             <tbody style="font-size: x-large;">
                                 <tr>
                                     <th>Họ tên:</th>
-                                    <td>PHP</td>
+                                    <td>NULL</td>
                                 </tr>
                                 <tr>
                                     <th>Ngày sinh:</th>
-                                    <td>PHP</td>
+                                    <td>NULL</td>
                                 </tr>
                                 <tr>
                                     <th>Email:</th>
-                                    <td>PHP</td>
+                                    <td>NULL</td>
                                 </tr>
                                 <tr>
                                     <th>Số điện thoại:</th>
-                                    <td>PHP</td>
+                                    <td>NULL</td>
                                 </tr>
                                 <tr>
                                     <th>Giới tinh:</th>
-                                    <td>PHP</td>
+                                    <td>NULL</td>
                                 </tr>
                                 <tr>
                                     <th>Địa chỉ:</th>
-                                    <td>PHP</td>
-                                </tr>
-                                <tr>
-                                    <th>Trạng thái:</th>
-                                    <td>PHP</td>
+                                    <td>NULL</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -73,19 +69,18 @@
                                     <th>Số điện thoại</th>
                                     <th>Ngày đặt</th>
                                     <th>Tổng tiền</th>
-                                    <th>Trạng thái</th>
                                     <th>Thao tác</th>
                                 </tr>
                             </thead>
                             <tbody>
 
                                     <tr>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
 
                                         <td>
                                             <div class="btn-group">

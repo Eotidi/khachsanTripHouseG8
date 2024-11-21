@@ -16,10 +16,9 @@
                     <h1>Quản lý danh sách phòng</h1>
                 </div>
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </section>
 
-    <!-- Main content -->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
@@ -28,64 +27,65 @@
                         <div class="card-header">
                             <h3 class="card-title">Thêm phòng</h3>
                         </div>
-                        <!-- /.card-header -->
-                        <!-- form start -->
-                        <form action="" method="post" enctype="multipart/form-data">
+                        <form action="<?= BASE_URL_ADMIN . '?act=them-phong' ?>" method="post">
                             <div class="card-body row">
                                 <div class="form-group col-12">
                                     <label>Số phòng</label>
-                                    <input type="text" class="form-control" name="" placeholder="Nhập số phòng">
-                                    
+                                    <input type="text" class="form-control" name="ten_phong" placeholder="Nhập số phòng" required>
+
                                 </div>
-                                
-                                <div class="form-group col-6">
-                                    <label>Giá phòng</label>
-                                    <input type="number" min='0' class="form-control" name="" placeholder="Nhập giá phòng">
-                                    
-                                </div>
-                                
-                                <div class="form-group col-6">
-                                    <label>Giá khuyến mãi</label>
-                                    <input type="number" min='0' class="form-control" name="" placeholder="Nhập giá khuyến mãi">
-                                    
-                                </div>
-                                
 
                                 <div class="form-group col-6">
-                                    <label>Ngày hết hạn</label>
-                                    <input type="date" class="form-control" name="">
-                                    
+                                    <label>Giá phòng</label>
+                                    <input type="number" min='0' class="form-control" name="gia_phong" placeholder="Nhập giá phòng" required>
+
                                 </div>
-                                
+
                                 <div class="form-group col-6">
-                                    <label>Danh mục</label>
-                                    <select class="form-control" name="" id="exampleFormControlSelect1">
-                                        <option selected disabled>Chọn danh mục phòng</option>
-                                        <!-- PHP -->
+                                    <label>Loại phòng</label>
+                                    <select class="form-control" name="loai_phong_id" id="exampleFormControlSelect1">
+                                        <option selected disabled>Chọn loại phòng</option>
+                                        <?php foreach ($listDanhMuc as $danhMuc): ?>
+                                            <option value="<?= $danhMuc['id'] ?>"><?= $danhMuc['ten_loai'] ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
-                                
+
+                                <div class="form-group col-6">
+                                    <label>Kiểu phòng</label>
+                                    <select class="form-control" name="kieu_phong_id" id="exampleFormControlSelect1">
+                                        <option selected disabled>Chọn kiểu phòng</option>
+                                        <option value="1">Đơn</option>
+                                        <option value="2">Đôi</option>
+                                        <!-- PHP -->
+                                        
+                                    </select>
+                                </div>
+
                                 <div class="form-group col-6">
                                     <label>Hình ảnh</label>
-                                    <input type="file" class="form-control" name="">
+                                    <input type="text" class="form-control" name="hinh_anh" placeholder="Nhập link hình ảnh" required>
                                     <!-- PHP -->
                                 </div>
 
-                                <div class="form-group col-6">
+                                <div class="form-group col-12">
                                     <label>Trạng thái</label>
-                                    <select class="form-control" name="" id="exampleFormControlSelect1">
+                                    <select class="form-control" name="trang_thai_id" id="exampleFormControlSelect1">
                                         <option selected disabled>Chọn trạng thái</option>
                                         <option value="1">Còn phòng</option>
                                         <option value="2">Hết phòng</option>
                                     </select>
                                     <!-- PHP -->
+                                    <?php
+                                    if (isset($_SESSION['trang_thai_id'])) { ?>
+                                        <p class="text-danger"><?= $_SESSION['trang_thai_id'] ?></p>
+                                    <?php } ?>
                                 </div>
                                 <div class="form-group col-12">
-                                    <label>Mô tả</label>      
-                                    <textarea name="" id="" class="form-control" placeholder="Nhập mô tả"></textarea>                          
+                                    <label>Mô tả</label>
+                                    <textarea name="mo_ta" id="mo_ta" class="form-control" placeholder="Nhập mô tả"></textarea>
                                 </div>
                             </div>
-                            <!-- /.card-body -->
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary">Thêm phòng</button>
@@ -93,16 +93,10 @@
                         </form>
                     </div>
                 </div>
-                <!-- /.col -->
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
-<!-- <footer> -->
 <?php include './views/layout/footer.php'; ?>
 </body>
 

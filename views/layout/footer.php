@@ -80,5 +80,9 @@
 <script src="assets/js/plugins/slick.min.js"></script>
 <script src="assets/js/plugins/nice-select.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-<HASH>" crossorigin="anonymous"></script>
+
 </body>
+
 </html>

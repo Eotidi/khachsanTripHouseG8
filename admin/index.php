@@ -33,7 +33,7 @@ match ($act) {
     'danh-muc-phong' =>(new AdminDanhMucPhongController())->danhSachDanhMucPhong(),
     'xoa-danh-muc-phong'=>(new AdminDanhMucPhongController())->deleteDanhMucPhong(),
     'form-them-danh-muc' => (new AdminDanhMucPhongController())->formAddDanhMucPhong(),
-    'postAddDanhMuc' => (new AdminDanhMucPhongController())->postAddDanhMucPhong(),
+    'them-danh-muc' => (new AdminDanhMucPhongController())->postAddDanhMucPhong(),
     'form-sua-danh-muc' => (new AdminDanhMucPhongController())->formEditDanhMucPhong(),
     'postEditDanhMuc' => (new AdminDanhMucPhongController())->postEditDanhMucPhong(),
     
@@ -41,17 +41,25 @@ match ($act) {
     // Phong
     'phong' => (new AdminPhongController())->danhSachPhong(),
     'form-them-phong' => (new AdminPhongController())->formAddPhong(),
+    'them-phong' => (new AdminPhongController())->postAddPhong(),
     'chi-tiet-phong' => (new AdminPhongController())->detailPhong(),
     'form-sua-phong' => (new AdminPhongController())->formEditPhong(),
+    'sua-phong' => (new AdminPhongController())->postEditPhong(),
+    'xoa-phong' => (new AdminPhongController())->deletePhong(),
+
+    //
+    // 'update-binh-luan' => (new AdminPhongController())->updateTrangThaiBinhLuan(),
 
     // Don dat
     'don-dat' => (new AdminDonDatController())->danhSachDonDat(),
     'form-sua-don-dat' => (new AdminDonDatController())->formEditDonDat(),
     'chi-tiet-don-dat' => (new AdminDonDatController())->detailDonDat(),
+    'sua-don-dat' => (new AdminDonDatController())->postEditDonDat(),
 
     // Quan tri
     'list-tai-khoan-quan-tri' =>(new AdminTaiKhoanController())->danhSachQuanTri(),
     'form-them-quan-tri' =>(new AdminTaiKhoanController())->formAddQuanTri(),
+    'them-quan-tri' =>(new AdminTaiKhoanController())->postAddQuanTri(),
     'form-sua-quan-tri' =>(new AdminTaiKhoanController())->formEditQuanTri(),
 
     // Khach hang 

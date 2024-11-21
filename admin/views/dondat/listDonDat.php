@@ -48,7 +48,7 @@
                         <td><?= $donDat['check_in'] ?></td>
                         <td><?= $donDat['check_out'] ?></td>
                         <td><?= $donDat['don_gia'] ?></td>
-                        <td><?= $donDat['trang_thai_id'] == 3 ? "Đã thanh toán" : "Chưa thanh toán"?></td>
+                        <td><?= $donDat['trang_thai_id'] == 1 ? "Đã xử lý" : "Đang xử lý"?></td>
                         <td>
                           <div class="btn-group">
                             <a href="<?= BASE_URL_ADMIN . '?act=chi-tiet-don-dat&id=' .$donDat['id'] ?>">

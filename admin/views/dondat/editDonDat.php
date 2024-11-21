@@ -22,7 +22,7 @@
                         <div class="card-header">
                             <h3 class="card-title">Sửa thông tin đơn đặt: </h3>
                         </div>
-                        <form action="<?= BASE_URL_ADMIN . '?act=sua-don-dat' ?>" method="post">
+                        <form action="<?= BASE_URL_ADMIN . '?act=sua-don-dat&id='.$donDat['id'] ?>" method="post">
                             <div class="card-body row">
                                 <div class="form-group col-12">
                                     <label>Tên khách hàng</label>
@@ -48,10 +48,22 @@
                                 </div>
                                 <div class="form-group col-4">
                                     <label for="inputStatus">Trạng thái đơn đặt</label>
+                                    <input type="hidden" name="kieu_phong_id" value="<?=$donDat['trang_thai_id']?>">
                                     <select id="inputStatus" name="trang_thai_id" class="form-control custom-select">
-                                    <?php foreach ($listTrangThaiDonDat as $trangThai): ?>
-                                        <option value="<?= $trangThai['id'] ?>"><?= $trangThai['ten_trang_thai'] ?></option>
-                                    <?php endforeach; ?>
+                                    <option selected disabled>
+                                    <?php
+                                        if($donDat['trang_thai_id']==1)
+                                        {
+                                            echo "Đã xử lý";
+                                        }
+                                        elseif($donDat['trang_thai_id']==2)
+                                        {
+                                            echo "Đang xử lý";
+                                        }
+                                    ?>
+                                    <option value="1">Đã xử lý</option>
+                                    <option value="2">Đang xử lý</option>
+
                                     </select>
 
                                 </div>

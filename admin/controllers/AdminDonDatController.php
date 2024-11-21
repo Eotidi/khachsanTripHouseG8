@@ -39,7 +39,7 @@ class AdminDonDatController
         $trang_thai_id = $_POST['trang_thai_id'];
         $ghi_chu = $_POST['ghi_chu'];
         $this->modelDonDat->updateDonDat($id,$ho_ten,$dien_thoai,$check_in,$check_out,$email,$trang_thai_id,$ghi_chu);
-        header("Location: " . BASE_URL_ADMIN . '?act=sua-don-dat');
+        header("Location: " . BASE_URL_ADMIN . '?act=don-dat');
                 exit();
     }
 

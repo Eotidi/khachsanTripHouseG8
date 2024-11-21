@@ -56,61 +56,6 @@ require_once 'layout/menu.php';
                                 <li><a href="#">May (10)</a></li>
                             </ul>
                         </div>
-                        <div class="blog-sidebar">
-                            <h5 class="title">recent post</h5>
-                            <div class="recent-post">
-                                <div class="recent-post-item">
-                                    <figure class="product-thumb">
-                                        <a href="blog-details.html">
-                                            <img src="assets/img/blog/blog-img1.jpg" alt="blog image">
-                                        </a>
-                                    </figure>
-                                    <div class="recent-post-description">
-                                        <div class="product-name">
-                                            <h6><a href="blog-details.html">Auctor gravida enim</a></h6>
-                                            <p>march 10 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="recent-post-item">
-                                    <figure class="product-thumb">
-                                        <a href="blog-details.html">
-                                            <img src="assets/img/blog/blog-img2.jpg" alt="blog image">
-                                        </a>
-                                    </figure>
-                                    <div class="recent-post-description">
-                                        <div class="product-name">
-                                            <h6><a href="blog-details.html">gravida auctor dnim</a></h6>
-                                            <p>march 18 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="recent-post-item">
-                                    <figure class="product-thumb">
-                                        <a href="blog-details.html">
-                                            <img src="assets/img/blog/blog-img3.jpg" alt="blog image">
-                                        </a>
-                                    </figure>
-                                    <div class="recent-post-description">
-                                        <div class="product-name">
-                                            <h6><a href="blog-details.html">enim auctor gravida</a></h6>
-                                            <p>march 14 2019</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="blog-sidebar">
-                            <h5 class="title">Tags</h5>
-                            <ul class="blog-tags">
-                                <li><a href="#">camera</a></li>
-                                <li><a href="#">computer</a></li>
-                                <li><a href="#">bag</a></li>
-                                <li><a href="#">watch</a></li>
-                                <li><a href="#">smartphone</a></li>
-                                <li><a href="#">shoes</a></li>
-                            </ul>
-                        </div>
                     </aside>
                 </div>
                 <div class="col-lg-9 order-1 order-lg-2">
@@ -237,18 +182,6 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-
-
-                        <div class="paginatoin-area text-center">
-                            <ul class="pagination-box">
-                                <li><a class="previous" href="#"><i class="pe-7s-angle-left"></i></a></li>
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a class="next" href="#"><i class="pe-7s-angle-right"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

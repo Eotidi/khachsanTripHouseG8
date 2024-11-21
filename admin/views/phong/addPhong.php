@@ -44,10 +44,9 @@
                                 <div class="form-group col-6">
                                     <label>Loại phòng</label>
                                     <select class="form-control" name="loai_phong_id" id="exampleFormControlSelect1">
-                                        <option selected disabled>Chọn loại phòng</option>
-                                        <?php foreach ($listDanhMuc as $danhMuc): ?>
-                                            <option value="<?= $danhMuc['id'] ?>"><?= $danhMuc['ten_loai'] ?></option>
-                                        <?php endforeach; ?>
+                                    <option selected disabled>Chọn kiểu phòng</option>
+                                        <option value="1">VIP</option>
+                                        <option value="2">Normal</option>
                                     </select>
                                 </div>
 

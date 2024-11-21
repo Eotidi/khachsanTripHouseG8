@@ -28,7 +28,7 @@ require_once 'layout/menu.php';
                     <div class="shop-room-wrapper">
                         <div class="shop-top-bar">
                             <div class="row align-items-center">
-                                
+
                                 <div class="col-lg-3 col-md-6 order-1 order-md-2">
                                     <div class="top-bar-right">
                                         <div class="room-short">
@@ -51,7 +51,7 @@ require_once 'layout/menu.php';
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
+
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
@@ -67,24 +67,24 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
+                                    <figure class="room-thumb">
+                                        <a href="room-details.html">
+                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
+                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
+                                        </a>
+                                        <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
                                         </div>
+                                    </figure>
+                                    <div class="room-content-list">
+                                        <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
+                                        <div class="price-box">
+                                            <span class="price-regular">$0.00</span>
+                                            <span class="price-old"><del>$0.00</del></span>
+                                        </div>
+                                        <p>Mo ta</p>
                                     </div>
+                                </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="room-item">
@@ -93,7 +93,7 @@ require_once 'layout/menu.php';
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
+
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
@@ -109,24 +109,24 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
+                                    <figure class="room-thumb">
+                                        <a href="room-details.html">
+                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
+                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
+                                        </a>
+                                        <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
                                         </div>
+                                    </figure>
+                                    <div class="room-content-list">
+                                        <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
+                                        <div class="price-box">
+                                            <span class="price-regular">$0.00</span>
+                                            <span class="price-old"><del>$0.00</del></span>
+                                        </div>
+                                        <p>Mo ta</p>
                                     </div>
+                                </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="room-item">
@@ -135,7 +135,7 @@ require_once 'layout/menu.php';
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
+
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
@@ -151,24 +151,24 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
+                                    <figure class="room-thumb">
+                                        <a href="room-details.html">
+                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
+                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
+                                        </a>
+                                        <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
                                         </div>
+                                    </figure>
+                                    <div class="room-content-list">
+                                        <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
+                                        <div class="price-box">
+                                            <span class="price-regular">$0.00</span>
+                                            <span class="price-old"><del>$0.00</del></span>
+                                        </div>
+                                        <p>Mo ta</p>
                                     </div>
+                                </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="room-item">
@@ -177,7 +177,7 @@ require_once 'layout/menu.php';
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
+
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
@@ -193,24 +193,24 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
+                                    <figure class="room-thumb">
+                                        <a href="room-details.html">
+                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
+                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
+                                        </a>
+                                        <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
                                         </div>
+                                    </figure>
+                                    <div class="room-content-list">
+                                        <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
+                                        <div class="price-box">
+                                            <span class="price-regular">$0.00</span>
+                                            <span class="price-old"><del>$0.00</del></span>
+                                        </div>
+                                        <p>Mo ta</p>
                                     </div>
+                                </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="room-item">
@@ -219,7 +219,7 @@ require_once 'layout/menu.php';
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
+
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
@@ -235,24 +235,24 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
+                                    <figure class="room-thumb">
+                                        <a href="room-details.html">
+                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
+                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
+                                        </a>
+                                        <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
                                         </div>
+                                    </figure>
+                                    <div class="room-content-list">
+                                        <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
+                                        <div class="price-box">
+                                            <span class="price-regular">$0.00</span>
+                                            <span class="price-old"><del>$0.00</del></span>
+                                        </div>
+                                        <p>Mo ta</p>
                                     </div>
+                                </div>
                             </div>
                             <div class="col-md-4 col-sm-6">
                                 <div class="room-item">
@@ -261,7 +261,7 @@ require_once 'layout/menu.php';
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
+
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
@@ -277,276 +277,24 @@ require_once 'layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="room-item">
                                     <figure class="room-thumb">
                                         <a href="room-details.html">
                                             <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
                                             <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
                                         </a>
-                                    
                                         <div class="cart-hover">
                                             <button class="btn btn-cart">Xem chi tiết</button>
                                         </div>
                                     </figure>
-                                    <div class="room-caption text-center">
-                                        <h6 class="room-name">
-                                            <a href="room-details.html">Name room</a>
-                                        </h6>
+                                    <div class="room-content-list">
+                                        <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
                                         <div class="price-box">
                                             <span class="price-regular">$0.00</span>
                                             <span class="price-old"><del>$0.00</del></span>
                                         </div>
+                                        <p>Mo ta</p>
                                     </div>
                                 </div>
-                                <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="room-item">
-                                    <figure class="room-thumb">
-                                        <a href="room-details.html">
-                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                        </a>
-                                    
-                                        <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                        </div>
-                                    </figure>
-                                    <div class="room-caption text-center">
-                                        <h6 class="room-name">
-                                            <a href="room-details.html">Name room</a>
-                                        </h6>
-                                        <div class="price-box">
-                                            <span class="price-regular">$0.00</span>
-                                            <span class="price-old"><del>$0.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="room-item">
-                                    <figure class="room-thumb">
-                                        <a href="room-details.html">
-                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                        </a>
-                                    
-                                        <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                        </div>
-                                    </figure>
-                                    <div class="room-caption text-center">
-                                        <h6 class="room-name">
-                                            <a href="room-details.html">Name room</a>
-                                        </h6>
-                                        <div class="price-box">
-                                            <span class="price-regular">$0.00</span>
-                                            <span class="price-old"><del>$0.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="room-item">
-                                    <figure class="room-thumb">
-                                        <a href="room-details.html">
-                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                        </a>
-                                    
-                                        <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                        </div>
-                                    </figure>
-                                    <div class="room-caption text-center">
-                                        <h6 class="room-name">
-                                            <a href="room-details.html">Name room</a>
-                                        </h6>
-                                        <div class="price-box">
-                                            <span class="price-regular">$0.00</span>
-                                            <span class="price-old"><del>$0.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="room-item">
-                                    <figure class="room-thumb">
-                                        <a href="room-details.html">
-                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                        </a>
-                                    
-                                        <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                        </div>
-                                    </figure>
-                                    <div class="room-caption text-center">
-                                        <h6 class="room-name">
-                                            <a href="room-details.html">Name room</a>
-                                        </h6>
-                                        <div class="price-box">
-                                            <span class="price-regular">$0.00</span>
-                                            <span class="price-old"><del>$0.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="room-item">
-                                    <figure class="room-thumb">
-                                        <a href="room-details.html">
-                                            <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                        </a>
-                                    
-                                        <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                        </div>
-                                    </figure>
-                                    <div class="room-caption text-center">
-                                        <h6 class="room-name">
-                                            <a href="room-details.html">Name room</a>
-                                        </h6>
-                                        <div class="price-box">
-                                            <span class="price-regular">$0.00</span>
-                                            <span class="price-old"><del>$0.00</del></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="room-list-item">
-                                        <figure class="room-thumb">
-                                            <a href="room-details.html">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
-                                            </a>
-                                            <div class="cart-hover">
-                                            <button class="btn btn-cart">Xem chi tiết</button>
-                                            </div>
-                                        </figure>
-                                        <div class="room-content-list">
-                                            <h5 class="room-name"><a href="room-details.html">Name room</a></h5>
-                                            <div class="price-box">
-                                                <span class="price-regular">$0.00</span>
-                                                <span class="price-old"><del>$0.00</del></span>
-                                            </div>
-                                            <p>Mo ta</p>
-                                        </div>
-                                    </div>
                             </div>
                         </div>
                         <div class="paginatoin-area text-center">

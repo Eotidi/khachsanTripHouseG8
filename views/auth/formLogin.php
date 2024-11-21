@@ -32,12 +32,6 @@ require_once 'views/layout/menu.php';
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
                             <h5 class="text-center">ĐĂNG NHẬP</h5>
-                            <?php
-                            if (isset($_SESSION['error'])) { ?>
-                                <p class="text-danger login-box-msg text-center"><?= $_SESSION['error'] ?></p>
-                            <?php } else { ?>
-                                <p class="login-box-msg" class="text-center">Vui lòng đăng nhập</p>
-                            <?php } ?>
                             <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
                                 <div class="single-input-item">
                                     <input type="email" placeholder="Email or Username" name="email" required />

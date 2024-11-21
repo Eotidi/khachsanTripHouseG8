@@ -49,7 +49,7 @@ require_once 'layout/menu.php';
                                     <td>Check in</td>
                                     <td>Check out</td>
                                     <td>Trạng thái</td>
-                                    <td><button class="btn btn-primary">BUTTON</button></td>
+                                    <td><button class="btn btn-danger">BUTTON</button></td>
                                 </tr>
                             </tbody>
                         </table>

@@ -100,8 +100,8 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá khuyến mãi</span>
-                                                <span class="price-old"><del>Giá gốc</del></span>
+                                                <span class="price-regular"></span>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -123,8 +123,8 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá khuyến mãi</span>
-                                                <span class="price-old"><del>Giá gốc</del></span>
+                                                <span class="price-regular">Giá phòng</span>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -146,8 +146,8 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá khuyến mãi</span>
-                                                <span class="price-old"><del>Giá gốc</del></span>
+                                                <span class="price-regular">Giá phòng</span>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -169,8 +169,8 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá khuyến mãi</span>
-                                                <span class="price-old"><del>Giá gốc</del></span>
+                                                <span class="price-regular">Giá phòng</span>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -536,7 +536,7 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
-    <section class="latest-blog-area section-padding pt-0">
+    <!-- <section class="latest-blog-area section-padding pt-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -628,7 +628,7 @@ require_once 'layout/menu.php';
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
 
 </main>

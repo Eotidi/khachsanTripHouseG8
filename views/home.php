@@ -536,13 +536,13 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
-    <!-- <section class="latest-blog-area section-padding pt-0">
+    <section class="latest-blog-area section-padding pt-0">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h2 class="title">latest blogs</h2>
-                        <p class="sub-title">There are latest blog posts</p>
+                        <h2 class="title">Blog mới nhất</h2>
+                        <p class="sub-title">Có những bài đăng trên blog mới nhất</p>
                     </div>
                 </div>
             </div>
@@ -552,13 +552,10 @@ require_once 'layout/menu.php';
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="assets/img/blog/blog-img1.jpg" alt="blog image">
+                                    <img src="https://cdn1.ivivu.com/iVivu/2018/09/25/10/khach-san-muong-thanh-luxury-nhat-le-quang-binh-1-800x450.webp?o=png" alt="blog image">
                                 </a>
                             </figure>
                             <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p>25/03/2019 | <a href="#">Corano</a></p>
-                                </div>
                                 <h5 class="blog-title">
                                     <a href="blog-details.html">Celebrity Daughter Opens Up About Having Her Eye Color Changed</a>
                                 </h5>
@@ -567,13 +564,10 @@ require_once 'layout/menu.php';
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="assets/img/blog/blog-img2.jpg" alt="blog image">
+                                    <img src="https://cdn1.ivivu.com/iVivu/2018/09/25/10/khach-san-muong-thanh-luxury-nhat-le-quang-binh-15-800x450.webp?o=png" alt="blog image">
                                 </a>
                             </figure>
                             <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p>25/03/2019 | <a href="#">Corano</a></p>
-                                </div>
                                 <h5 class="blog-title">
                                     <a href="blog-details.html">Children Left Home Alone For 4 Days In TV series Experiment</a>
                                 </h5>
@@ -582,13 +576,10 @@ require_once 'layout/menu.php';
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="assets/img/blog/blog-img3.jpg" alt="blog image">
+                                    <img src="https://cdn1.ivivu.com/iVivu/2018/09/25/10/khach-san-muong-thanh-luxury-nhat-le-quang-binh-16-800x450.webp?o=png" alt="blog image">
                                 </a>
                             </figure>
                             <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p>25/03/2019 | <a href="#">Corano</a></p>
-                                </div>
                                 <h5 class="blog-title">
                                     <a href="blog-details.html">Lotto Winner Offering Up Money To Any Man That Will Date Her</a>
                                 </h5>
@@ -597,13 +588,10 @@ require_once 'layout/menu.php';
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="assets/img/blog/blog-img4.jpg" alt="blog image">
+                                    <img src="https://cdn1.ivivu.com/iVivu/2018/09/25/10/khach-san-muong-thanh-luxury-nhat-le-quang-binh-2-800x450.webp?o=png" alt="blog image">
                                 </a>
                             </figure>
                             <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p>25/03/2019 | <a href="#">Corano</a></p>
-                                </div>
                                 <h5 class="blog-title">
                                     <a href="blog-details.html">People are Willing Lie When Comes Money, According to Research</a>
                                 </h5>
@@ -612,13 +600,10 @@ require_once 'layout/menu.php';
                         <div class="blog-post-item">
                             <figure class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="assets/img/blog/blog-img.jpg" alt="blog image">
+                                    <img src="https://cdn1.ivivu.com/iVivu/2018/09/25/10/khach-san-muong-thanh-luxury-nhat-le-quang-binh-14-800x450.webp?o=png" alt="blog image">
                                 </a>
                             </figure>
                             <div class="blog-content">
-                                <div class="blog-meta">
-                                    <p>25/03/2019 | <a href="#">Corano</a></p>
-                                </div>
                                 <h5 class="blog-title">
                                     <a href="blog-details.html">romantic Love Stories Of Hollywoodâ€™s Biggest Celebrities</a>
                                 </h5>
@@ -628,7 +613,7 @@ require_once 'layout/menu.php';
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
 </main>

@@ -26,3 +26,15 @@
     border: none;
     cursor: pointer;
 }
+.pri-img {
+    width: 300px; /* Chiều rộng cố định */
+    height: 200px; /* Chiều cao cố định */
+    object-fit: cover; /* Cắt ảnh để vừa với kích thước */
+    object-position: center; /* Đặt trọng tâm ảnh */
+  }
+  .sec-img1 {
+    width: 300px; /* Chiều rộng cố định */
+    height: 200px; /* Chiều cao cố định */
+    object-fit: cover; /* Cắt ảnh để vừa với kích thước */
+    object-position: center; /* Đặt trọng tâm ảnh */
+  }

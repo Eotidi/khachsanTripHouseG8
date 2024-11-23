@@ -19,6 +19,7 @@ class Phong {
             return $stmt->fetchAll();
 
         }catch(Exception $e){
+            echo($e);
         }
     }
     

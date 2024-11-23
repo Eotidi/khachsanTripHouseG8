@@ -35,11 +35,13 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
-    <div class="service-policy section-padding">
+    <section class="room-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                <div class="service-policy section-padding">
         <div class="body1">
             <form action="">
                 <div class="search-container1">
@@ -63,12 +65,6 @@ require_once 'layout/menu.php';
             </form>
         </div>
     </div>
-
-    <section class="room-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-
                     <div class="section-title text-center">
                         <h2 class="title">Các phòng của chúng tôi</h2>
                         <p class="sub-title">Thông tin phòng được cập nhật liên tục</p>
@@ -85,9 +81,9 @@ require_once 'layout/menu.php';
                                     <?php foreach ($listPhong as $key => $phong): ?>
                                         <div class="room-item">
                                             <figure class="room-thumb">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>">
-                                                    <img class="pri-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="roon">
-                                                    <img class="sec-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="room">
+                                                <a href="#">
+                                                    <img class="pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
+                                                    <img class="sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
                                                 </a>
 
                                                 <div class="cart-hover">
@@ -98,10 +94,10 @@ require_once 'layout/menu.php';
 
 
                                                 <h6 class="room-name">
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><?= $phong['ten_phong'] ?></a>
                                                 </h6>
                                                 <div class="price-box">
-                                                    <span class="">Giá phòng: 0.00$:</span>
+                                                    <span class="">Giá phòng:<?= $phong['gia_phong'] ?></span>
 
                                                 </div>
                                             </div>
@@ -129,18 +125,19 @@ require_once 'layout/menu.php';
             <div class="row">
                 <div class="col-12">
                     <div class="room-carousel-4_2 slick-row-10 slick-arrow-style">
-                        <div class="room-item">
+                        <?php foreach($listPhong as $key => $phong): ?>
+                            <div class="room-item">
                             <figure class="room-thumb">
                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                    <img class="pri-img" src="assets/img/room/room-1.jpg" alt="room">
-                                    <img class="sec-img" src="assets/img/room/room-1.jpg" alt="room">
+                                    <img class="pri-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
+                                    <img class="sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
                                 </a>
                                 <div class="cart-hover">
                                     <button class="btn btn-cart">Xem chi tiết phòng</button>
                                 </div>
                             </figure>
-
                         </div>
+                        <?php endforeach; ?>
 
                     </div>
                 </div>

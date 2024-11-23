@@ -86,8 +86,8 @@ require_once 'layout/menu.php';
                                         <div class="room-item">
                                             <figure class="room-thumb">
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>">
-                                                    <img class="pri-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="roon">
-                                                    <img class="sec-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="room">
+                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?=$phong['hinh_anh'] ?>" alt="roon">
+                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?=$phong['hinh_anh'] ?>" alt="room">
                                                 </a>
 
                                                 <div class="cart-hover">

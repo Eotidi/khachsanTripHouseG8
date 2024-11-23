@@ -81,9 +81,9 @@ require_once 'layout/menu.php';
                                     <?php foreach ($listPhong as $key => $phong): ?>
                                         <div class="room-item">
                                             <figure class="room-thumb">
-                                                <a href="#">
-                                                    <img class="pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
-                                                    <img class="sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
+                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>">
+                                                    <img class="pri-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="roon">
+                                                    <img class="sec-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="room">
                                                 </a>
 
                                                 <div class="cart-hover">

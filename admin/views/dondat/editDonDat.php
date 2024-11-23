@@ -26,12 +26,12 @@
                             <div class="card-body row">
                                 <div class="form-group col-12">
                                     <label>Tên khách hàng</label>
-                                    <input type="text" class="form-control" name="ho_ten" value="<?= $donDat['ho_ten'] ?>" placeholder="Nhập tên khách hàng">
+                                    <input type="text" class="form-control" name="ho_ten" value="<?= $donDat['ho_ten'] ?>" placeholder="Nhập tên khách hàng" disabled>
 
                                 </div>
                                 <div class="form-group col-12">
                                     <label>Số điện thoại</label>
-                                    <input type="text" class="form-control" name="dien_thoai" value="<?= $donDat['dien_thoai'] ?>" placeholder="Nhập số điện thoại ">
+                                    <input type="text" class="form-control" name="dien_thoai" value="<?= $donDat['dien_thoai'] ?>" placeholder="Nhập số điện thoại " readonly>
                                 </div>
                                 <div class="form-group col-6">
                                     <label>Check_in</label>
@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="form-group col-4">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" name="email" value="<?= $donDat['email'] ?>" placeholder="Nhập email khách hàng">
+                                    <input type="email" class="form-control" name="email" value="<?= $donDat['email'] ?>" placeholder="Nhập email khách hàng" readonly>
 
                                 </div>
                                 <div class="form-group col-4">

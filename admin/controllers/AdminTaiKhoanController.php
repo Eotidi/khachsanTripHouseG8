@@ -41,7 +41,7 @@ class AdminTaiKhoanController
             }
             $_SESSION['error'] = $error;
             if (empty($error)) {
-                $password = password_hash('123456', PASSWORD_BCRYPT);
+                // $password = password_hash('123456', PASSWORD_BCRYPT);
 
                 $chuc_vu_id = 1;
 
@@ -49,8 +49,8 @@ class AdminTaiKhoanController
                     $ho_ten,
                     $email,
                     $dien_thoai,
-                    $password,
-                    $chuc_vu_id
+                    // $password,
+                    $chuc_vu_id,
                 );
 
                 header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
@@ -63,16 +63,33 @@ class AdminTaiKhoanController
         }
     }
 
+    public function deleteQuanTri()
+    {
+        $id = $_GET['id'];
+        $this->modelTaiKhoan->deleteTaiKhoan($id);
+        header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
+                exit();
+    }
 
     public function formEditQuanTri()
     {
-        // $id_quan_tri = $_GET['id_quan_tri'];
-        // $quanTri = $this->modelTaiKhoan->getDetailTaiKhoan($id_quan_tri);
+        $id = $_GET['id'];
+        $quanTri = $this->modelTaiKhoan->getDetailTaiKhoanQT($id);
 
         require_once './views/taikhoan/quantri/editQuanTri.php';
         // deleteSessionError();
     }
 
+    public function postEditQt()
+    {
+        $id = $_GET['id'];
+        $ho_ten = $_POST['ho_ten'];
+        $email = $_POST['email'];
+        $dien_thoai = $_POST['dien_thoai'];
+        $this ->modelTaiKhoan->postUpdateQt($id,$ho_ten,$email,$dien_thoai);
+        header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
+                exit();
+    }
     public function danhSachKhachHang()
     {
         $listKhachHang = $this->modelTaiKhoan->getAllTaiKhoan(2);
@@ -89,7 +106,7 @@ class AdminTaiKhoanController
     public function detailKhachHang()
     {
         $id_khach_hang = $_GET['id'];
-        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
+        // $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
         // $listDonDat = $this->modelDonDat->getDonDatFromKhachHang($id_khach_hang);
         // $listBinhLuan = $this->modelPhong->getBinhLuanFromKhachHang($id_khach_hang);
         require_once './views/taikhoan/khachhang/detailKhachHang.php';

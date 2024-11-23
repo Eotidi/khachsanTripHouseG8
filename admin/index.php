@@ -61,7 +61,8 @@ match ($act) {
     'form-them-quan-tri' =>(new AdminTaiKhoanController())->formAddQuanTri(),
     'them-quan-tri' =>(new AdminTaiKhoanController())->postAddQuanTri(),
     'form-sua-quan-tri' =>(new AdminTaiKhoanController())->formEditQuanTri(),
-
+    'postEditQt' =>(new AdminTaiKhoanController())->postEditQt(),
+    'xoa-tai-khoan-qt' =>(new AdminTaiKhoanController())->deleteQuanTri(),
     // Khach hang 
     'list-tai-khoan-khach-hang' =>(new AdminTaiKhoanController())->danhSachKhachHang(),
     'form-sua-khach-hang' =>(new AdminTaiKhoanController())->formEditKhachHang(),

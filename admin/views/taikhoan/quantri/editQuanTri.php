@@ -30,24 +30,24 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="" method="post">
+                        <form action="?act=postEditQt&id=<?=$quanTri['id']?>" method="post">
                             <input type="hidden" name="" value="">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Họ tên</label>
-                                    <input type="text" class="form-control" name="" value="">
+                                    <input type="text" class="form-control" name="ho_ten" value="<?=$quanTri['ho_ten']?>">
                                     
                                 </div>
 
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" name="" value="">
+                                    <input type="email" class="form-control" name="email" value="<?=$quanTri['email']?>">
                                     
                                 </div>
 
                                 <div class="form-group">
                                     <label>Số điện thoại</label>
-                                    <input type="text" class="form-control" name="" value="">
+                                    <input type="text" class="form-control" name="dien_thoai" value="<?=$quanTri['dien_thoai']?>">
                                     
                                 </div>
                             </div>

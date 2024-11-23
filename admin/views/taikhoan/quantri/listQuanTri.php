@@ -52,11 +52,11 @@
                                             <td><?= $quanTri['email'] ?></td>
                                             <td><?= $quanTri['dien_thoai'] ?></td>
                                             <td>
-                                                <a href="<?= BASE_URL_ADMIN?>">
+                                                <a href="<?= BASE_URL_ADMIN."?act=form-sua-quan-tri&id=".$quanTri['id']?>">
                                                     <button class="btn btn-warning">Sửa</button>
                                                 </a>
-                                                <a href="<?= BASE_URL_ADMIN?>" onclick="return confirm('Bạn có đồng ý reset password hay không ?')">
-                                                    <button class="btn btn-danger">Reset</button>
+                                                <a href="<?= BASE_URL_ADMIN."?act=xoa-tai-khoan-qt&id=".$quanTri['id']?>" onclick="return confirm('Bạn có chắc chắn xóa hay không ?')">
+                                                    <button class="btn btn-danger">Xóa</button>
                                                 </a>
                                             </td>
                                         </tr>

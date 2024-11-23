@@ -5,7 +5,7 @@ require_once 'layout/menu.php';
 <main>
     <section class="slider-area">
         <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
-            
+
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider1.png">
                     <div class="container">
@@ -15,7 +15,7 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            
+
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider2.png">
                     <div class="container">
@@ -25,7 +25,7 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            
+
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider3.png">
                     <div class="container">
@@ -35,7 +35,7 @@ require_once 'layout/menu.php';
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
     </section>
@@ -68,12 +68,12 @@ require_once 'layout/menu.php';
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+
                     <div class="section-title text-center">
                         <h2 class="title">Các phòng của chúng tôi</h2>
                         <p class="sub-title">Thông tin phòng được cập nhật liên tục</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="row">
@@ -82,98 +82,31 @@ require_once 'layout/menu.php';
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tab1">
                                 <div class="room-carousel-4 slick-row-10 slick-arrow-style">
-                                    <div class="room-item">
-                                        <figure class="room-thumb">
-                                            <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                <img class="pri-img" src="assets/img/room/room-2.jpg" src="<?= BASE_URL  ?>" alt="roon">
-                                                <img class="sec-img" src="assets/img/room/room-2.jpg" src="<?= BASE_URL  ?>" alt="room">
-                                            </a>
-                                            
-                                            <div class="cart-hover">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
-                                            </div>
-                                        </figure>
-                                        <div class="room-caption text-center">
+                                    <?php foreach ($listPhong as $key => $phong): ?>
+                                        <div class="room-item">
+                                            <figure class="room-thumb">
+                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>">
+                                                    <img class="pri-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="roon">
+                                                    <img class="sec-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="room">
+                                                </a>
+
+                                                <div class="cart-hover">
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
+                                                </div>
+                                            </figure>
+                                            <div class="room-caption text-center">
 
 
-                                            <h6 class="room-name">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="">Giá phòng: 0.00$:</span>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="room-item">
-                                        <figure class="room-thumb">
-                                            <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                <img class="pri-img" src="assets/img/room/room-1.jpg" src="<?= BASE_URL  ?>" alt="roon">
-                                                <img class="sec-img" src="assets/img/room/room-1.jpg" src="<?= BASE_URL  ?>" alt="room">
-                                            </a>
-                                            
-                                            <div class="cart-hover">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
-                                            </div>
-                                        </figure>
-                                        <div class="room-caption text-center">
+                                                <h6 class="room-name">
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
+                                                </h6>
+                                                <div class="price-box">
+                                                    <span class="">Giá phòng: 0.00$:</span>
 
-
-                                            <h6 class="room-name">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="">Giá phòng: 0.00$</span>
-                                                
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="room-item">
-                                        <figure class="room-thumb">
-                                            <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                <img class="pri-img" src="assets/img/room/room-3.jpg" src="<?= BASE_URL  ?>" alt="roon">
-                                                <img class="sec-img" src="assets/img/room/room-3.jpg" src="<?= BASE_URL  ?>" alt="room">
-                                            </a>
-                                            
-                                            <div class="cart-hover">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
-                                            </div>
-                                        </figure>
-                                        <div class="room-caption text-center">
-
-
-                                            <h6 class="room-name">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="">Giá phòng: 0.00$</span>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="room-item">
-                                        <figure class="room-thumb">
-                                            <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                <img class="pri-img" src="assets/img/room/room-4.jpg" src="<?= BASE_URL  ?>" alt="roon">
-                                                <img class="sec-img" src="assets/img/room/room-4.jpg" src="<?= BASE_URL  ?>" alt="room">
-                                            </a>
-                                            
-                                            <div class="cart-hover">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
-                                            </div>
-                                        </figure>
-                                        <div class="room-caption text-center">
-
-
-                                            <h6 class="room-name">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">số phòng</a>
-                                            </h6>
-                                            <div class="price-box">
-                                                <span class="">Giá phòng: 0.00$</span>
-                                                
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -186,11 +119,11 @@ require_once 'layout/menu.php';
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+
                     <div class="section-title text-center">
                         <h2 class="title">Phòng nổi bật</h2>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="row">
@@ -206,7 +139,7 @@ require_once 'layout/menu.php';
                                     <button class="btn btn-cart">Xem chi tiết phòng</button>
                                 </div>
                             </figure>
-                            
+
                         </div>
 
                     </div>
@@ -214,17 +147,17 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
-    
+
     <section class="testimonial-area section-padding bg-img" data-bg="https://mega.com.vn/media/news/2204_khung_powerpoint_lam_slide_dep__9_.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    
+
                     <div class="section-title text-center">
                         <h2 class="title">Các lời đánh giá</h2>
                         <p class="sub-title">Họ nói gì ?</p>
                     </div>
-                    
+
                 </div>
             </div>
             <div class="row">
@@ -315,17 +248,17 @@ require_once 'layout/menu.php';
                 </div>
                 <div class="col-lg-3">
                     <div class="categories-group-wrapper">
-                        
+
                         <div class="section-title-append">
                             <h4>Phòng VIP</h4>
                             <div class="slick-append"></div>
                         </div>
-                        
 
-                        
+
+
                         <div class="group-list-item-wrapper">
                             <div class="group-list-carousel">
-                                
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -360,9 +293,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                
 
-                                
+
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -380,9 +313,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                
 
-                                
+
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -400,9 +333,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                
 
-                                
+
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -422,22 +355,22 @@ require_once 'layout/menu.php';
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-lg-3">
                     <div class="categories-group-wrapper">
-                        
+
                         <div class="section-title-append">
                             <h4>Phòng thường</h4>
                             <div class="slick-append"></div>
                         </div>
-                        
 
-                        
+
+
                         <div class="group-list-item-wrapper">
                             <div class="group-list-carousel">
-                                
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -455,9 +388,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                
 
-                                
+
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">
@@ -475,9 +408,9 @@ require_once 'layout/menu.php';
                                         </div>
                                     </div>
                                 </div>
-                                
 
-                                
+
+
                                 <div class="group-slide-item">
                                     <div class="group-item">
                                         <div class="group-item-thumb">

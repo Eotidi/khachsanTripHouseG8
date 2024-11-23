@@ -71,7 +71,7 @@ require_once 'layout/menu.php';
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <p>10/04/2019 | <a href="#">Corano</a></p>
+                                            
                                         </div>
                                         <h4 class="blog-title">
                                             <a href="blog-details.html">Celebrity Daughter Opens Up About Having Her Eye
@@ -103,7 +103,7 @@ require_once 'layout/menu.php';
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <p>12/04/2019 | <a href="#">Corano</a></p>
+                                            
                                         </div>
                                         <h4 class="blog-title">
                                             <a href="blog-details.html">Lotto Winner Offering Up Money To Any Man That

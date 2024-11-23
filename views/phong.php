@@ -44,14 +44,13 @@ require_once 'layout/menu.php';
                             </div>
                         </div>
                         <div class="shop-room-wrap grid-view row mbn-30 pt-2">
-
-                            <div class="col-md-4 col-sm-6">
-                                <?php foreach ($listPhong as $key => $phong): ?>
+                            <?php foreach ($listPhong as $key => $phong): ?>
+                                <div class="col-md-4 col-sm-6">
                                     <div class="room-item">
                                         <figure class="room-thumb">
                                             <a href="room-details.html">
-                                                <img class="pri-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
-                                                <img class="sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
+                                                <img class="pri-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="room">
+                                                <img class="sec-img" src="<?= BASE_URL . $phong['hinh_anh'] ?>" alt="room">
                                             </a>
 
                                             <div class="cart-hover">
@@ -87,9 +86,9 @@ require_once 'layout/menu.php';
                                             <p>Mo ta</p>
                                         </div>
                                     </div>
-                                <?php endforeach; ?>
-                            </div>
 
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                         <div class="paginatoin-area text-center">
                             <ul class="pagination-box">

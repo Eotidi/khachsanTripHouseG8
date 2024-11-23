@@ -41,7 +41,7 @@
 
           <li class="nav-item">
             <a href="<?= BASE_URL_ADMIN . '?act=phong' ?>" class="nav-link">
-            <i class="fa-solid fa-house"></i>
+            <i class="nav-icon fa-solid fa-house"></i>
               <p>
                 Phòng
               </p>

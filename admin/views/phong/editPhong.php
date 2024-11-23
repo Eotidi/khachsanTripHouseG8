@@ -116,7 +116,7 @@
                             </div>
                             <div class="form-group col-12">
                                 <label>Mô tả</label>
-                                <textarea name="mo_ta" id="mo_ta" class="form-control" placeholder="Nhập mô tả"></textarea value="<?= $phong['mo_ta'] ?>">
+                                <input name="mo_ta" id="mo_ta" class="form-control" placeholder="Nhập mô tả"></input value="<?= $phong['mo_ta'] ?>">
                             </div>
                         </div>
                         <!-- /.card-body -->

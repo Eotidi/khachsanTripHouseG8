@@ -34,7 +34,7 @@
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Họ tên</label>
-                                    <input type="text" class="form-control" name="he_ten" placeholder="Nhập họ tên" required>
+                                    <input type="text" class="form-control" name="ho_ten" placeholder="Nhập họ tên" required>
                                     
                                 </div>
                                 <div class="form-group">

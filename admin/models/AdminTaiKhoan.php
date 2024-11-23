@@ -28,22 +28,12 @@ class AdminTaiKhoan
         $ho_ten,
         $email,
         $dien_thoai,
-        $password,
+        // $password = 123456,
         $chuc_vu_id
     ) {
         try {
-            $sql = 'INSERT INTO tai_khoans ( ho_ten, email, mat_khau, chuc_vu_id,dien_thoai) 
-            VALUES (:ho_ten, :email, :password, :chuc_vu_id,:dien_thoai)';
-
-            $stmt = $this->conn->prepare($sql);
-
-            $stmt->execute([
-                ':ho_ten' => $ho_ten,
-                ':email' => $email,
-                ':dien_thoai' => $dien_thoai,
-                ':password' => $password,
-                ':chuc_vu_id' => $chuc_vu_id
-            ]);
+            $sql = "INSERT INTO `tai_khoans` (`ho_ten`, `password`, `dien_thoai`, `email`, `chuc_vu_id`) VALUES ('$ho_ten', '123456', '$dien_thoai', '$email', '$chuc_vu_id')";
+            $this->conn->query($sql);
 
             return true;
         } catch (Exception $e) {
@@ -51,11 +41,44 @@ class AdminTaiKhoan
         }
     }
 
-    public function getDetailTaiKhoan()
+    public function deleteTaiKhoan($id)
     {
-        //    Cau lenh SQL
+        try {
+            $sql = "DELETE FROM tai_khoans WHERE `tai_khoans`.`id` = $id";
+            $this->conn->query($sql);
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
+    public function getDetailTaiKhoanQT($id)
+    {
+        //    Cau lenh SQL
+        try {
+            $sql = "SELECT * FROM tai_khoans WHERE id = $id";
+
+            $stmt= $this->conn->query($sql);
+            $data= $stmt->fetch();
+
+
+            return $data;
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
+
+    public function postUpdateQt($id,$ho_ten,$email,$dien_thoai)
+    {
+        try {
+            $sql = "UPDATE `tai_khoans` SET `ho_ten` = '$ho_ten', `dien_thoai` = '$dien_thoai', `email` = '$email' WHERE `tai_khoans`.`id` = $id";
+            $this->conn->query($sql);
+
+            return true;
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
     public function checkLogin()
     {
         //    Cau lenh SQL ket hop PHP

@@ -59,7 +59,7 @@ require_once 'layout/menu.php';
         </div>
     </div>
     </div>
-    <!-- cart main wrapper end -->
+    <!-- cart main wrapper end .-->
 </main>
 
 <?php

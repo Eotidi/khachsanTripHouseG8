@@ -100,7 +100,7 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular"></span>
+                                                <span class="">Giá phòng: 0.00$:</span>
                                                 
                                             </div>
                                         </div>
@@ -123,7 +123,7 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá phòng</span>
+                                                <span class="">Giá phòng: 0.00$</span>
                                                 
                                             </div>
                                         </div>
@@ -146,7 +146,7 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">Số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá phòng</span>
+                                                <span class="">Giá phòng: 0.00$</span>
                                                 
                                             </div>
                                         </div>
@@ -169,7 +169,7 @@ require_once 'layout/menu.php';
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">số phòng</a>
                                             </h6>
                                             <div class="price-box">
-                                                <span class="price-regular">Giá phòng</span>
+                                                <span class="">Giá phòng: 0.00$</span>
                                                 
                                             </div>
                                         </div>
@@ -215,7 +215,7 @@ require_once 'layout/menu.php';
         </div>
     </section>
     
-    <section class="testimonial-area section-padding bg-img" data-bg="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA4L3Jhd3BpeGVsb2ZmaWNlMjBfYV9jbG9zZV91cF9vZl9hX2NvbG9yZnVsX2ZsdWlkX2Fic3RyYWN0X3BhbGVfd18xYTg4YWI2Ny1jMzdmLTQ2ZTctYjk5OC1hMjI2N2U3YmI4ODBfMi5qcGc.jpg">
+    <section class="testimonial-area section-padding bg-img" data-bg="https://mega.com.vn/media/news/2204_khung_powerpoint_lam_slide_dep__9_.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -337,7 +337,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Diamond Exclusive ring</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$50.00</span>
+                                                <span class="">$50.00</span>
                                                 <span class="price-old"><del>$29.99</del></span>
                                             </div>
                                         </div>
@@ -354,7 +354,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Handmade Golden ring</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$55.00</span>
+                                                <span class="">$55.00</span>
                                                 <span class="price-old"><del>$30.00</del></span>
                                             </div>
                                         </div>
@@ -374,7 +374,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     exclusive gold Jewelry</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$45.00</span>
+                                                <span class="">$45.00</span>
                                                 <span class="price-old"><del>$25.00</del></span>
                                             </div>
                                         </div>
@@ -394,7 +394,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Perfect Diamond earring</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$50.00</span>
+                                                <span class="">$50.00</span>
                                                 <span class="price-old"><del>$29.99</del></span>
                                             </div>
                                         </div>
@@ -414,7 +414,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Handmade Golden Necklace</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$90.00</span>
+                                                <span class="">$90.00</span>
                                                 <span class="price-old"><del>$100.</del></span>
                                             </div>
                                         </div>
@@ -449,7 +449,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Handmade Golden Necklace</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$50.00</span>
+                                                <span class="">$50.00</span>
                                                 <span class="price-old"><del>$29.99</del></span>
                                             </div>
                                         </div>
@@ -469,7 +469,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Handmade Golden Necklaces</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$55.00</span>
+                                                <span class="">$55.00</span>
                                                 <span class="price-old"><del>$30.00</del></span>
                                             </div>
                                         </div>
@@ -489,7 +489,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     exclusive silver top bracellet</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$45.00</span>
+                                                <span class="">$45.00</span>
                                                 <span class="price-old"><del>$25.00</del></span>
                                             </div>
                                         </div>
@@ -506,7 +506,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     top Perfect Diamond necklace</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$50.00</span>
+                                                <span class="">$50.00</span>
                                                 <span class="price-old"><del>$29.99</del></span>
                                             </div>
                                         </div>
@@ -523,7 +523,7 @@ require_once 'layout/menu.php';
                                             <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
                                                     Diamond Exclusive earrings</a></h5>
                                             <div class="price-box">
-                                                <span class="price-regular">$90.00</span>
+                                                <span class="">$90.00</span>
                                                 <span class="price-old"><del>$100.</del></span>
                                             </div>
                                         </div>

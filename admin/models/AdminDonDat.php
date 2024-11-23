@@ -76,13 +76,10 @@ class AdminDonDat
         }
     }
 
-    public function updateDonDat($id,$ho_ten,$dien_thoai,$check_in,$check_out,$email,$trang_thai_id,$ghi_chu)
+    public function updateDonDat($id,$check_in,$check_out,$trang_thai_id,$ghi_chu)
     {
         try {
-            $sql = "UPDATE `don_dats` SET `ho_ten` = '{$ho_ten}' , `dien_thoai` = '{$dien_thoai}'
-            , `check_in` = '{$check_in}', `check_out` = '{$check_out}'
-            , `email` = '{$email}', `trang_thai_id` = '{$trang_thai_id}
-            , `ghi_chu` = '{$ghi_chu}'WHERE `don_dats`.`id` = $id";
+            $sql = "UPDATE `don_dats` SET `check_in` = '$check_in', `check_out` = '$check_out', `trang_thai_id` = '$trang_thai_id', `ghi_chu` = '$ghi_chu' WHERE `don_dats`.`id` = $id";
         $this->conn->query($sql);
         } catch (\Throwable $th) {
             echo $th;

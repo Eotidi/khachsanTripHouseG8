@@ -3,6 +3,7 @@ class HomeController
 {
     public $modelPhong;
     public $modelTaiKhoan;
+
     public function __construct()
     {
         $this->modelPhong = new Phong;
@@ -36,21 +37,25 @@ class HomeController
     public function postLogin()
     {
         // PHP
-    } 
+    }
 
-    public function gioiThieu(){
+    public function gioiThieu()
+    {
         require_once './views/introduce.php';
     }
 
-    public function lienHe(){
+    public function lienHe()
+    {
         require_once './views/contact.php';
     }
 
-    public function blog(){
+    public function blog()
+    {
         require_once './views/blog.php';
     }
 
-    public function donDat(){
+    public function donDat()
+    {
         require_once './views/donDat.php';
     }
 }

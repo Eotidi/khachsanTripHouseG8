@@ -32,25 +32,31 @@ require_once 'layout/menu.php';
                     <div class="col-lg-12">
                         <table class="table">
                             <thead class=".bg-danger-subtle">
-                                <tr>
+                                <tr class="text-center">
                                     <th scope="col">MÃ ĐƠN</th>
                                     <th scope="col">HỌ TÊN</th>
                                     <th scope="col">ĐIỆN THOẠI</th>
                                     <th scope="col">CHECK IN</th>
                                     <th scope="col">CHECK OUT</th>
                                     <th scope="col">TRẠNG THÁI</th>
+                                    <th scope="col">ACTIONS</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <th scope="row">Mã đơn</th>
-                                    <td>Họ tên</td>
-                                    <td>Điện thoại</td>
-                                    <td>Check in</td>
-                                    <td>Check out</td>
-                                    <td>Trạng thái</td>
-                                    <td><button class="btn btn-danger">BUTTON</button></td>
-                                </tr>
+                                <?php foreach ($listDon as $key => $donDat): ?>
+                                    <tr class="text-center">
+                                        <th scope="row"><?= $donDat['ma_don'] ?></th>
+                                        <td>Họ tên</td>
+                                        <td>Điện thoại</td>
+                                        <td>Check in</td>
+                                        <td>Check out</td>
+                                        <td>Trạng thái</td>
+                                        <td>
+                                            <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">DELETE</button>
+                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded" class="btn btn-info">EDIT</button>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

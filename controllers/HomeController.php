@@ -22,7 +22,13 @@ class HomeController
 
     public function chiTietPhong()
     {
-        $phongDetail = $this->modelPhong->getDetailPhong();
+
+        // Ham nay dung de hien thi form nhap
+        // Lay ra thong tin cua san pham can sua
+        $id = $_GET['id'];
+        $phongDetail = $this->modelPhong->getDetailPhong($id);
+        $listBinhLuan = $this->modelPhong->getAllBinhLuan($id);
+
 
         require_once './views/detailPhong.php';
     }

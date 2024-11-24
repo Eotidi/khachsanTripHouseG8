@@ -22,7 +22,7 @@
                     <div class="col-12 col-sm-6">
                         <h3 class="d-inline-block d-sm-none"></h3>
                         <div class="col-12">
-                            <img style="width: 400px; height: 400px" src="<?= $phong['hinh_anh'] ?>" class="product-image" alt="Product Image">
+                            <img style="width: 400px; height: 400px; object-fit: cover; " src="<?= $phong['hinh_anh'] ?>" class="product-image" alt="Product Image">
                         </div>
                         <div class="col-12 product-image-thumbs">
 

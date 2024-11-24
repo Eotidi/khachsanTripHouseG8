@@ -6,7 +6,6 @@ class Phong {
         $this->conn = connectDB();
     }
 
-    // Viet ham lay toan bo danh sach san pham
     public function getAllPhong(){
         // Cau lenh SQL
         try{
@@ -21,10 +20,6 @@ class Phong {
         }catch(Exception $e){
             echo($e);
         }
-    }
-    
-    public function getAllRoom(){
-        // Cau lenh SQL
     }
     public function getDetailPhong(){
         // Cau lenh SQL

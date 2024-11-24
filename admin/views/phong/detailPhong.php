@@ -60,18 +60,18 @@
                             </thead>
                             <tbody>
 
-                            <?php foreach ($listBinhLuan as $key => $danhgia) : ?>
+                                <?php foreach ($listBinhLuan as $key => $danhgia) : ?>
                                     <tr>
                                         <td><?= $key + 1 ?></td>
                                         <td>
-                                                <?= $danhgia['ho_ten'] ?>
+                                            <?= $danhgia['ho_ten'] ?>
                                         </td>
                                         <td><?= $danhgia['noi_dung'] ?></td>
                                         <td><?= $danhgia['ngay_danh_gia'] ?></td>
                                         <td><?= $danhgia['trang_thai_id'] == 1 ? 'Hiển thị' : 'Bị ẩn' ?></td>
                                         <td>
                                             <form action="" <?= BASE_URL_ADMIN . '?act=update-trang-thai-binh-luan' ?> method="post">
-                                                <input type="hidden" name="id_binh_luan" >
+                                                <input type="hidden" name="id_binh_luan">
                                                 <input type="hidden" name="name_view">
                                                 <input type="hidden" name="id_khach_hang">
                                                 <button onclick="return confirm('Bạn có muốn ẩn bình luận không ?')" class="btn btn-warning">

@@ -3,8 +3,6 @@ require_once 'layout/header.php';
 require_once 'layout/menu.php';
 // print_r($listBinhLuan);
 ?>
-
-
 <main>
     <div class="breadcrumb-area">
         <div class="container">

@@ -31,9 +31,9 @@ class HomeController
     {
         // Ham nay dung de hien thi form nhap
         // Lay ra thong tin cua san pham can sua
-
-        $phongDetail = $this->modelPhong->getDetailPhong();
-
+        $id = $_GET['id'];
+        $phongDetail = $this->modelPhong->getDetailPhong($id);
+        $listBinhLuan = $this->modelPhong->getAllBinhLuan($id);
         require_once './views/detailPhong.php';
     }
 

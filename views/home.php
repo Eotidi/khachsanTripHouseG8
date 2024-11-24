@@ -81,18 +81,24 @@ require_once 'layout/menu.php';
                                     <?php foreach ($listPhong as $key => $phong): ?>
                                         <div class="room-item">
                                             <figure class="room-thumb">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>">
-                                                    <img style="width: 300px; height:200px; object-fit: cover;" class="pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
-                                                    <img style="width: 300px; height:200px; object-fit: cover;" class="sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
+
+                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?=$phong['hinh_anh'] ?>" alt="roon">
+                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?=$phong['hinh_anh'] ?>" alt="room">
+
                                                 </a>
 
                                                 <div class="cart-hover">
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id='. $phong['id'] ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
                                                 </div>
                                             </figure>
                                             <div class="room-caption text-center">
                                                 <h6 class="room-name">
+
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id='. $phong['id'] ?>">Số phòng</a>
+
                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><?= $phong['ten_phong'] ?></a>
+
                                                 </h6>
                                                 <div class="price-box">
                                                     <span class="">Giá phòng:<?= $phong['gia_phong'] ?> $</span>

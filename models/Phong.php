@@ -23,8 +23,8 @@ class Phong
             echo ($e);
         }
     }
-    public function getDetailPhong()
-    {
+    public function getDetailPhong(){
         // Cau lenh SQL
     }
-}
+} 
+?>

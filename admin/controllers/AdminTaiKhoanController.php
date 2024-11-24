@@ -2,14 +2,11 @@
 class AdminTaiKhoanController
 {
     public $modelTaiKhoan;
-    public $modelDonDat;
-    public $modelPhong;
 
     public function __construct()
     {
         $this->modelTaiKhoan = new AdminTaiKhoan();
-        $this->modelDonDat = new AdminDonDat();
-        $this->modelPhong = new AdminPhong();
+
     }
 
     public function danhSachQuanTri()
@@ -27,11 +24,15 @@ class AdminTaiKhoanController
     }
     public function postAddQuanTri()
     {
+        // kiểm tra xem dữ liệu có phải được submit lên không 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            // lấy ra dữ liệu 
+
             $ho_ten = $_POST['ho_ten'] ?? '';
             $email = $_POST['email'] ?? '';
             $dien_thoai = $_POST['dien_thoai'] ?? '';
 
+            // tạo 1 mảng trống để chứa dữ liệu 
             $error = [];
             if (empty($ho_ten)) {
                 $error['ho_ten'] = "Họ tên không được để trống";
@@ -75,7 +76,7 @@ class AdminTaiKhoanController
     {
         $id = $_GET['id'];
         $quanTri = $this->modelTaiKhoan->getDetailTaiKhoanQT($id);
-
+        // var_dump($quanTri);die;
         require_once './views/taikhoan/quantri/editQuanTri.php';
         // deleteSessionError();
     }

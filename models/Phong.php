@@ -6,7 +6,6 @@ class Phong {
         $this->conn = connectDB();
     }
 
-    // Viet ham lay toan bo danh sach san pham
     public function getAllPhong(){
         // Cau lenh SQL
         try{
@@ -19,14 +18,18 @@ class Phong {
             return $stmt->fetchAll();
 
         }catch(Exception $e){
+            echo($e);
         }
     }
-    
+
+
     public function getAllRoom(){
         // Cau lenh SQL
     }
 
     public function getDetailPhong($id){
+
+
         // Cau lenh SQL
         try{
             $sql = "SELECT * FROM `phongs` WHERE `phongs`.`id`=$id";

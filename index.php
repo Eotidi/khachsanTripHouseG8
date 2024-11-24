@@ -19,8 +19,6 @@ match ($act) {
     '/' => (new HomeController())->home(), // Truong hop dac biet
 
     'phong' => (new HomeController())->phong(),
-
-    'danh-sach-phong' => (new HomeController())->danhSachPhong(),
     
     'chi-tiet-phong' => (new HomeController())->chiTietPhong(),
 

@@ -66,12 +66,12 @@ require_once 'layout/menu.php';
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb">
                                         <a href="blog-details.html">
-                                            <img src="assets/img/blog/blog-img1.jpg" alt="blog image">
+                                            <img style="width: 400px; height:200px; object-fit: cover;" src="assets/img/blog/blog-img1.jpg" alt="blog image">
                                         </a>
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            
+
                                         </div>
                                         <h4 class="blog-title">
                                             <a href="blog-details.html">Celebrity Daughter Opens Up About Having Her Eye
@@ -86,24 +86,24 @@ require_once 'layout/menu.php';
                                         <div class="blog-carousel-2 slick-row-15 slick-arrow-style slick-dot-style">
                                             <div class="blog-single-slide">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/blog-img5.jpg" alt="blog image">
+                                                    <img style="width: 400px; height:200px; object-fit: cover;" src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="blog image">
                                                 </a>
                                             </div>
                                             <div class="blog-single-slide">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/blog-img4.jpg" alt="blog image">
+                                                    <img style="width: 400px; height:200px; object-fit: cover;" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="blog image">
                                                 </a>
                                             </div>
                                             <div class="blog-single-slide">
                                                 <a href="blog-details.html">
-                                                    <img src="assets/img/blog/blog-img3.jpg" alt="blog image">
+                                                    <img style="width: 400px; height:200px; object-fit: cover;" src="https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsfGVufDB8fDB8fHww" alt="blog image">
                                                 </a>
                                             </div>
                                         </div>
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            
+
                                         </div>
                                         <h4 class="blog-title">
                                             <a href="blog-details.html">Lotto Winner Offering Up Money To Any Man That
@@ -115,16 +115,11 @@ require_once 'layout/menu.php';
                             <div class="col-md-6">
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb ratio ratio-16x9">
-                                        <iframe
-                                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/501298839&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+                                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66810925&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                                     </figure>
                                     <div class="blog-content">
-                                        <div class="blog-meta">
-                                            <p>15/04/2019 | <a href="#">Corano</a></p>
-                                        </div>
                                         <h4 class="blog-title">
-                                            <a href="blog-details.html">Children Left Home Alone For 4 Days In TV series
-                                                Experiment</a>
+                                            <a href="blog-details.html">Christina Perri - A Thousand Years</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -132,16 +127,14 @@ require_once 'layout/menu.php';
                             <div class="col-md-6">
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb ratio ratio-16x9">
-                                        <iframe src="https://www.youtube.com/embed/4qNHr0W6F0o"
-                                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                        <iframe width="783" height="522" src="https://www.youtube.com/embed/abPmZCZZrFA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <p>05/04/2019 | <a href="#">Corano</a></p>
                                         </div>
                                         <h4 class="blog-title">
-                                            <a href="blog-details.html">People are Willing Lie When Comes Money,
-                                                According to Research</a>
+                                            <a href="https://www.youtube.com/embed/abPmZCZZrFA">SƠN TÙNG M-TP | ĐỪNG LÀM TRÁI TIM ANH ĐAU | OFFICIAL MUSIC VIDEO</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -150,12 +143,11 @@ require_once 'layout/menu.php';
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb">
                                         <a href="blog-details.html">
-                                            <img src="assets/img/blog/blog-img5.jpg" alt="blog image">
+                                            <img style="width: 400px; height:200px; object-fit: cover;" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdGVsfGVufDB8fDB8fHww" alt="blog image">
                                         </a>
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <p>02/04/2019 | <a href="#">Corano</a></p>
                                         </div>
                                         <h4 class="blog-title">
                                             <a href="blog-details.html">romantic Love Stories Of Hollywood’s Biggest
@@ -168,12 +160,11 @@ require_once 'layout/menu.php';
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb">
                                         <a href="blog-details.html">
-                                            <img src="assets/img/blog/blog-img3.jpg" alt="blog image">
-                                        </a>
+                                            <img style="width: 400px; height:200px; object-fit: cover;" src="assets/img/blog/blog-img3.jpg" alt="blog image">
+                                        </a> 
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">
-                                            <p>25/03/2019 | <a href="#">Corano</a></p>
                                         </div>
                                         <h4 class="blog-title">
                                             <a href="blog-details.html">Celebrity Daughter Opens Up About Having Her Eye

@@ -8,7 +8,7 @@ class AdminTaiKhoanController
         $this->modelTaiKhoan = new AdminTaiKhoan();
 
     }
-
+    
     public function danhSachQuanTri()
     {
         $listQuanTri = $this->modelTaiKhoan->getAllTaiKhoan(1);
@@ -69,7 +69,7 @@ class AdminTaiKhoanController
         $id = $_GET['id'];
         $this->modelTaiKhoan->deleteTaiKhoan($id);
         header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
-                exit();
+        exit();
     }
 
     public function formEditQuanTri()
@@ -87,9 +87,9 @@ class AdminTaiKhoanController
         $ho_ten = $_POST['ho_ten'];
         $email = $_POST['email'];
         $dien_thoai = $_POST['dien_thoai'];
-        $this ->modelTaiKhoan->postUpdateQt($id,$ho_ten,$email,$dien_thoai);
+        $this->modelTaiKhoan->postUpdateQt($id, $ho_ten, $email, $dien_thoai);
         header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
-                exit();
+        exit();
     }
     public function danhSachKhachHang()
     {
@@ -119,10 +119,7 @@ class AdminTaiKhoanController
         // deleteSessionError();
     }
 
-    public function login()
-    {
-        
-    }
+    public function login() {}
 
     public function logout()
     {

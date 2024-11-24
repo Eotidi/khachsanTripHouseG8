@@ -19,11 +19,7 @@
 
                                             </li>
 
-                                            <li><a href="<?= BASE_URL .'?act=phong' ?>">Loại phòng <i class="fa fa-angle-down"></i></a>
-                                                <ul class="dropdown">
-                                                    <li><a href="#">Phòng VIP</a></li>
-                                                    <li><a href="#">Phòng Thường</a></li>
-                                                </ul>
+                                            <li><a href="<?= BASE_URL .'?act=phong' ?>">Loại phòng </a>
                                             </li>
                                             <li><a href="<?= BASE_URL. '?act=blog' ?>">Blog</a></li>
                                             <li><a href="<?= BASE_URL. '?act=gioi-thieu' ?>">Giới thiệu</a></li>

@@ -3,6 +3,7 @@ class HomeController
 {
     public $modelPhong;
     public $modelTaiKhoan;
+
     public function __construct()
     {
         $this->modelPhong = new Phong;
@@ -16,23 +17,19 @@ class HomeController
 
     public function phong()
     {
+        $listPhong = $this->modelPhong->getAllPhong();
         require_once './views/phong.php';
-    }
-
-    public function danhSachPhong()
-    {
-        // echo "This is danh sach san pham";
-        $listPhong = $this->modelPhong->getAllRoom();
-        // var_dump($listProduct);die();
-        require_once './views/listPhong.php';
     }
 
     public function chiTietPhong()
     {
+
         // Ham nay dung de hien thi form nhap
         // Lay ra thong tin cua san pham can sua
+        $id = $_GET['id'];
+        $phongDetail = $this->modelPhong->getDetailPhong($id);
+        $listBinhLuan = $this->modelPhong->getAllBinhLuan($id);
 
-        $phongDetail = $this->modelPhong->getDetailPhong();
 
         require_once './views/detailPhong.php';
     }
@@ -46,21 +43,25 @@ class HomeController
     public function postLogin()
     {
         // PHP
-    } 
+    }
 
-    public function gioiThieu(){
+    public function gioiThieu()
+    {
         require_once './views/introduce.php';
     }
 
-    public function lienHe(){
+    public function lienHe()
+    {
         require_once './views/contact.php';
     }
 
-    public function blog(){
+    public function blog()
+    {
         require_once './views/blog.php';
     }
 
-    public function donDat(){
+    public function donDat()
+    {
         require_once './views/donDat.php';
     }
 }

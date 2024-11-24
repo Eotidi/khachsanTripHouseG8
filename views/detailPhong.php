@@ -1,9 +1,8 @@
 <?php
 require_once 'layout/header.php';
 require_once 'layout/menu.php';
+// print_r($listBinhLuan);
 ?>
-
-
 <main>
     <div class="breadcrumb-area">
         <div class="container">
@@ -53,30 +52,43 @@ require_once 'layout/menu.php';
                             <div class="col-lg-7">
                                 <div class="room-details-des">
                                     <div class="manufacturer-name">
-                                        <a href="#">PHP</a>
+                                        <a href="#"><?php if($phongDetail['loai_phong_id']==1){echo "VIP";} else {echo "NORMAL";} ?></a>
                                     </div>
-                                    <h3 class="room-name">PHP</h3>
+                                    <h3 class="room-name"><?=$phongDetail['ten_phong']?></h3>
                                     <div class="ratings d-flex">
 
                                         <div class="pro-review">
                                             <!-- <?php ?> -->
-                                            <span>PHP</span>
+                                            <span><?= count($listBinhLuan)?> đánh giá</span>
                                         </div>
                                     </div>
                                     <div class="price-box">
                                         <!--  -->
-                                            <span class="price-regular">PHP</span>
-                                            <span class="price-old"><del>PHP</del></span>
+                                            <span class="price-regular"><?=$phongDetail['gia_phong']?>$</span>
+                                           
                                         <!--  -->
-                                            <span class="price-regular">PHP</span>
+                                            <!-- <span class="price-regular">PHP</span> -->
                                         <!--  -->
                                     </div>
 
                                     <div class="availability">
-                                        <i class="fa fa-check-circle"></i>
-                                        <span>PHP</span>
+                                        <?php if($phongDetail['trang_thai_id']==1)
+                                        {
+                                        ?>
+                                            <i class="fa fa-check-circle"></i>
+                                            <span>Còn phòng</span>
+                                        <?php
+                                        } elseif($phongDetail['trang_thai_id']==2)
+                                        {
+                                        ?>
+                                            <i class="fa fa-times-circle" style="color:red"></i>
+                                            <span>Hết phòng</span>
+                                        <?php
+                                        }
+                                        ?>
+                                        
                                     </div>
-                                    <p class="pro-desc">PHP</p>
+                                    <p class="pro-desc"><?=$phongDetail['mo_ta']?></p>
                                     <form action="#" method="post">
                                         <div class="quantity-cart-box d-flex align-items-center">
                                             
@@ -105,18 +117,42 @@ require_once 'layout/menu.php';
                                             <!-- <?php 
                                             ?> -->
                                                 <form action="#" class="review-form">
-                                                    <div class="total-reviews">
-                                                        <div class="rev-avatar">
-                                                            <img src="" alt="AVT">
-                                                        </div>
-                                                        <div class="review-box">
-
-                                                            <div class="post-author">
-                                                                <p><span>Name: PHP </span><i class="fa-solid fa-grip-lines-vertical"></i> Ngày đăng: PHP</p>
+                                                    <?php foreach($listBinhLuan as $a)
+                                                    {
+                                                        if($a['trang_thai']===1)
+                                                        {
+                                                            ?>
+                                                            <div class="total-reviews">
+                                                            <div class="rev-avatar">
+                                                            <?php if($a['avt_link']==null)
+                                                            {
+                                                                $nameParts = explode(' ', $a['ho_ten']); // Tách họ và tên thành mảng
+                                                                $lastName = end($nameParts);
+                                                            ?>
+                                                                <div class="avt-null">
+                                                                    <p class="namenull"><?=$lastName?></p>
+                                                                </div>
+                                                            <?php 
+                                                            }
+                                                            else { ?>
+                                                                
+                                                                <img src="<?=$a['avt_link']?>" alt="AVT">
+                                                            <?php } ?>
                                                             </div>
-                                                            <p>Nội dung</p>
+                                                            <div class="review-box">
+    
+                                                                <div class="post-author">
+                                                                    <p><span><?=$a['ho_ten']?>  </span><i class="fa-solid fa-grip-lines-vertical"></i>  <?=$a['ngay_danh_gia']?></p>
+                                                                </div>
+                                                                <p><?=$a['noi_dung']?></p>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                        <?php
+                                                        }
+                                                    }
+                                                        ?>
+                                                        
+                                                    
                                                 <!-- <?php  ?> -->
 
                                                 <div class="form-group row">

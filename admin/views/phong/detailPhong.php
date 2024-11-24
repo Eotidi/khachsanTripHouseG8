@@ -22,7 +22,7 @@
                     <div class="col-12 col-sm-6">
                         <h3 class="d-inline-block d-sm-none"></h3>
                         <div class="col-12">
-                            <img style="width: 400px; height: 400px" src="<?= $phong['hinh_anh'] ?>" class="product-image" alt="Product Image">
+                            <img style="width: 400px; height: 400px; object-fit: cover; " src="<?= $phong['hinh_anh'] ?>" class="product-image" alt="Product Image">
                         </div>
                         <div class="col-12 product-image-thumbs">
 
@@ -60,18 +60,18 @@
                             </thead>
                             <tbody>
 
-                            <?php foreach ($listBinhLuan as $key => $danhgia) : ?>
+                                <?php foreach ($listBinhLuan as $key => $danhgia) : ?>
                                     <tr>
                                         <td><?= $key + 1 ?></td>
                                         <td>
-                                                <?= $danhgia['ho_ten'] ?>
+                                            <?= $danhgia['ho_ten'] ?>
                                         </td>
                                         <td><?= $danhgia['noi_dung'] ?></td>
                                         <td><?= $danhgia['ngay_danh_gia'] ?></td>
                                         <td><?= $danhgia['trang_thai_id'] == 1 ? 'Hiển thị' : 'Bị ẩn' ?></td>
                                         <td>
                                             <form action="" <?= BASE_URL_ADMIN . '?act=update-trang-thai-binh-luan' ?> method="post">
-                                                <input type="hidden" name="id_binh_luan" >
+                                                <input type="hidden" name="id_binh_luan">
                                                 <input type="hidden" name="name_view">
                                                 <input type="hidden" name="id_khach_hang">
                                                 <button onclick="return confirm('Bạn có muốn ẩn bình luận không ?')" class="btn btn-warning">

@@ -19,9 +19,9 @@
 
                                             </li>
 
-                                            <li><a href="<?= BASE_URL .'?act=phong' ?>">Loại phòng </a>
+                                            <li><a href="<?= BASE_URL .'?act=phong' ?>">Phòng </a>
                                             </li>
-                                            <li><a href="<?= BASE_URL. '?act=blog' ?>">Blog</a></li>
+                                            <li><a href="<?= BASE_URL. '?act=blog' ?>">Tin tức</a></li>
                                             <li><a href="<?= BASE_URL. '?act=gioi-thieu' ?>">Giới thiệu</a></li>
                                             <li><a href="<?= BASE_URL. '?act=lien-he' ?>">Liên hệ</a></li>
                                         </ul>

@@ -5,7 +5,6 @@ require_once 'layout/menu.php';
 <main>
     <section class="slider-area">
         <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
-
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider1.png">
                     <div class="container">
@@ -37,7 +36,7 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
-    <section class="room-area section-padding">
+    <section class="room-area section-padding" style="margin-top: -100px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -95,13 +94,11 @@ require_once 'layout/menu.php';
                                             <div class="room-caption text-center">
                                                 <h6 class="room-name">
 
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id='. $phong['id'] ?>">Số phòng</a>
-
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>"><?= $phong['ten_phong'] ?></a>
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id='. $phong['id'] ?>">Phòng <?= $phong['ten_phong'] ?></a>
 
                                                 </h6>
                                                 <div class="price-box">
-                                                    <span class="">Giá phòng:<?= $phong['gia_phong'] ?> $</span>
+                                                    <span class="">Giá phòng: <?= $phong['gia_phong'] ?> $</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -283,7 +280,7 @@ require_once 'layout/menu.php';
             <div class="row">
                 <div class="col-12">
                     <div class="section-title text-center">
-                        <h2 class="title">Blog mới nhất</h2>
+                        <h2 class="title">Tin tức mới nhất</h2>
                         <p class="sub-title">Có những bài đăng trên blog mới nhất</p>
                     </div>
                 </div>
@@ -299,7 +296,7 @@ require_once 'layout/menu.php';
                             </figure>
                             <div class="blog-content">
                                 <h5 class="blog-title">
-                                    <a href="blog-details.html">Celebrity Daughter Opens Up About Having Her Eye Color Changed</a>
+                                    <a href="blog-details.html">“10 Điều Cần Lưu Ý Khi Chọn Khách Sạn Cho Kỳ Nghỉ Của Bạn”</a>
                                 </h5>
                             </div>
                         </div>
@@ -311,7 +308,7 @@ require_once 'layout/menu.php';
                             </figure>
                             <div class="blog-content">
                                 <h5 class="blog-title">
-                                    <a href="blog-details.html">Children Left Home Alone For 4 Days In TV series Experiment</a>
+                                    <a href="blog-details.html">“Làm Thế Nào Để Tận Hưởng Kỳ Nghỉ 5 Sao Với Ngân Sách 3 Sao?”</a>
                                 </h5>
                             </div>
                         </div>
@@ -323,7 +320,7 @@ require_once 'layout/menu.php';
                             </figure>
                             <div class="blog-content">
                                 <h5 class="blog-title">
-                                    <a href="blog-details.html">Lotto Winner Offering Up Money To Any Man That Will Date Her</a>
+                                    <a href="blog-details.html">“Top 5 Điểm Đến Gần Khách Sạn [Tên Khách Sạn] Không Thể Bỏ Lỡ”</a>
                                 </h5>
                             </div>
                         </div>
@@ -335,7 +332,7 @@ require_once 'layout/menu.php';
                             </figure>
                             <div class="blog-content">
                                 <h5 class="blog-title">
-                                    <a href="blog-details.html">People are Willing Lie When Comes Money, According to Research</a>
+                                    <a href="blog-details.html">“Bí Quyết Đặt Phòng Khách Sạn Giá Tốt Vào Mùa Cao Điểm”</a>
                                 </h5>
                             </div>
                         </div>
@@ -347,7 +344,7 @@ require_once 'layout/menu.php';
                             </figure>
                             <div class="blog-content">
                                 <h5 class="blog-title">
-                                    <a href="blog-details.html">romantic Love Stories Of Hollywoodâ€™s Biggest Celebrities</a>
+                                    <a href="blog-details.html">“Tầm Quan Trọng Của Khách Sạn Trong Trải Nghiệm Du Lịch”</a>
                                 </h5>
                             </div>
                         </div>

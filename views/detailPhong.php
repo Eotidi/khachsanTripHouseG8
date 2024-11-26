@@ -270,37 +270,37 @@ require_once 'layout/menu.php';
     <div>
         <div class="overlay" id="overlay"></div>
         <div class="form-container" id="booking-form">
-            <h3>Đặt Phòng Ngay</h3>
-            <label for="checkin-date">Ngày Nhận Phòng:</label>
-            <input type="date" id="checkin-date">
-
-            <label for="checkout-date">Ngày Trả Phòng:</label>
-            <input type="date" id="checkout-date">
-
-            <button class="btn btn-cart2" id="btn-submit">Xác Nhận</button>
-            <button class="btn btn-cart2" id="btn-cancel">Hủy</button>
+            <form action="">
+                <h3>Đặt Phòng Ngay</h3>
+                <div class="single-input-item">
+                    <label for="checkin-date">Ngày Nhận Phòng:</label>
+                    <input type="date" id="checkin-date">
+                </div>
+                <div class="single-input-item" style="margin-top: -5px;">
+                    <label for="checkout-date">Ngày Trả Phòng:</label>
+                    <input type="date" id="checkout-date">
+                </div>
+                <button class="btn btn-cart2" id="btn-submit">Xác Nhận</button>
+                <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel">Hủy</button>
+            </form>
         </div>
         <script>
-            // Lấy các phần tử
             const bookButton = document.getElementById('btn-book');
             const formContainer = document.getElementById('booking-form');
             const overlay = document.getElementById('overlay');
             const cancelButton = document.getElementById('btn-cancel');
             const submitButton = document.getElementById('btn-submit');
 
-            // Hiển thị form và overlay khi nhấn nút "Đặt Phòng"
             bookButton.addEventListener('click', (event) => {
-                event.preventDefault(); // Ngăn hành động mặc định (nếu có)
+                event.preventDefault(); 
                 formContainer.classList.add('show');
                 overlay.classList.add('show');
             });
 
-            // Ngăn chặn sự kiện click trên form không lan ra ngoài overlay
             formContainer.addEventListener('click', (event) => {
-                event.stopPropagation(); // Ngăn sự kiện click lan đến overlay
+                event.stopPropagation(); 
             });
 
-            // Ẩn form và overlay khi nhấn nút "Hủy" hoặc click ra ngoài overlay
             cancelButton.addEventListener('click', hideForm);
             overlay.addEventListener('click', hideForm);
 
@@ -309,7 +309,6 @@ require_once 'layout/menu.php';
                 overlay.classList.remove('show');
             }
 
-            // Xử lý khi nhấn nút "Xác Nhận"
             submitButton.addEventListener('click', () => {
                 const checkinDate = document.getElementById('checkin-date').value;
                 const checkoutDate = document.getElementById('checkout-date').value;

@@ -62,6 +62,19 @@ require_once 'layout/menu.php';
                     <div class="blog-item-wrapper">
 
                         <div class="row mbn-30">
+                            
+                        <div class="col-md-6">
+                                <div class="blog-post-item mb-30">
+                                    <figure class="blog-thumb ratio ratio-16x9">
+                                        <iframe width="928" height="522" src="https://www.youtube.com/embed/aocSFqtnzMk" title="LƯỚT TRÊN CON SÓNG - Dangrangto rủ Trần Lả Lướt kill con beat disco | Rap Việt 2024 [Performance]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </figure>
+                                    <div class="blog-content">
+                                        <h4 class="blog-title">
+                                            <a href="blog-details.html">LƯỚT TRÊN CON SÓNG - Dangrangto rủ Trần Lả Lướt kill con beat disco | Rap Việt 2024 [Performance]</a>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-6">
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb">
@@ -115,18 +128,6 @@ require_once 'layout/menu.php';
                             <div class="col-md-6">
                                 <div class="blog-post-item mb-30">
                                     <figure class="blog-thumb ratio ratio-16x9">
-                                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/66810925&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-                                    </figure>
-                                    <div class="blog-content">
-                                        <h4 class="blog-title">
-                                            <a href="blog-details.html">Christina Perri - A Thousand Years</a>
-                                        </h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="blog-post-item mb-30">
-                                    <figure class="blog-thumb ratio ratio-16x9">
                                         <iframe width="783" height="522" src="https://www.youtube.com/embed/abPmZCZZrFA" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                                     </figure>
@@ -161,7 +162,7 @@ require_once 'layout/menu.php';
                                     <figure class="blog-thumb">
                                         <a href="blog-details.html">
                                             <img style="width: 400px; height:200px; object-fit: cover;" src="assets/img/blog/blog-img3.jpg" alt="blog image">
-                                        </a> 
+                                        </a>
                                     </figure>
                                     <div class="blog-content">
                                         <div class="blog-meta">

@@ -79,9 +79,9 @@ class AdminTaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
-    public function checkLogin()
-    {
-        //    Cau lenh SQL ket hop PHP
 
+    public function checkLogin($email,$password)
+    {
+        
     }
 }

@@ -6,9 +6,8 @@ class AdminTaiKhoanController
     public function __construct()
     {
         $this->modelTaiKhoan = new AdminTaiKhoan();
-
     }
-    
+
     public function danhSachQuanTri()
     {
         $listQuanTri = $this->modelTaiKhoan->getAllTaiKhoan(1);
@@ -123,6 +122,9 @@ class AdminTaiKhoanController
 
     public function logout()
     {
-        // PHP
+        if (isset($_SESSION['user_admin'])) {
+            unset($_SESSION['user_admin']);
+            header('Location:' . BASE_URL_ADMIN . '?act=login-admin');
+        }
     }
 }

@@ -7,22 +7,21 @@
                         <div class="widget-title">
                             <div class="widget-logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo/logo.png" alt="brand logo" style="border-radius: 100px;">
+                                    <img src="assets/img/logo/logo.png" alt="logo khách sạn" style="border-radius: 100px;">
                                 </a>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="widget-item">
-                        <h6 class="widget-title">Contact Us</h6>
+                        <h6 class="widget-title">Liên Hệ</h6>
                         <div class="widget-body">
                             <address class="contact-block">
                                 <ul>
-                                    <li><i class="fa-solid fa-house"></i> Trinh-Van-Bo Street</li>
-                                    <li><i class="fa-solid fa-envelope"></i><a href="#">triphousegroup8@gmail.com</a></li>
-                                    <li><i class="fa-solid fa-phone"></i><a href="#">(098) 668 6868</a></li>
+                                    <li><i class="fa-solid fa-house"></i> Số 123, Đường Trịnh Văn Bô, Hà Nội</li>
+                                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:support@triphouse.com">support@triphouse.com</a></li>
+                                    <li><i class="fa-solid fa-phone"></i><a href="tel:+84986686868">(098) 668 6868</a></li>
                                 </ul>
                             </address>
                         </div>
@@ -30,22 +29,21 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="widget-item">
-                        <h6 class="widget-title">Information</h6>
+                        <h6 class="widget-title">Thông Tin</h6>
                         <div class="widget-body">
                             <ul class="info-list">
-                                <li><a href="#">about us</a></li>
-                                <li><a href="#">Delivery Information</a></li>
-                                <li><a href="#">privet policy</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">contact us</a></li>
-                                <li><a href="#">site map</a></li>
+                                <li><a href="#">Về Chúng Tôi</a></li>
+                                <li><a href="#">Chính Sách Phòng</a></li>
+                                <li><a href="#">Quy Định Đặt Phòng</a></li>
+                                <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                                <li><a href="#">Liên Hệ</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <div class="widget-item">
-                        <h6 class="widget-title">Follow Us</h6>
+                        <h6 class="widget-title">Kết Nối Với Chúng Tôi</h6>
                         <div class="widget-body social-link">
                             <a href="#"><i class="fa-brands fa-facebook"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -64,8 +62,6 @@
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-<HASH>" crossorigin="anonymous"></script>
-    <script src="../js.js"></script>
-
 </body>
 
 </html>

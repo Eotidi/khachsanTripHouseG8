@@ -109,3 +109,11 @@ class AdminTaiKhoan
 
     // }
 }
+
+
+    public function checkLogin($email,$password)
+    {
+        
+    }
+}
+

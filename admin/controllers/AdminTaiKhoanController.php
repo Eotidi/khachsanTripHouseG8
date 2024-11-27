@@ -150,6 +150,9 @@ class AdminTaiKhoanController
 
     public function logout()
     {
-        // PHP
+        if (isset($_SESSION['user_admin'])) {
+            unset($_SESSION['user_admin']);
+            header('Location:' . BASE_URL_ADMIN . '?act=login-admin');
+        }
     }
 }

@@ -221,6 +221,120 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
+
+    <style>
+        /* CSS cơ bản */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        .form-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .form-container.show {
+            display: block;
+        }
+
+        .btn {
+            cursor: pointer;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+            margin-left: 28px;
+            margin-top: 10px;
+        }
+
+        .btn-cart2 {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+    <div>
+        <div class="overlay" id="overlay"></div>
+        <div class="form-container" id="booking-form">
+            <form id="bookingForm">
+                <h3>Đặt Phòng Ngay</h3>
+                <div class="single-input-item">
+                    <label for="checkin-date">Ngày Nhận Phòng:</label>
+                    <input type="date" id="checkin-date">
+                </div>
+                <div class="single-input-item" style="margin-top: -5px;">
+                    <label for="checkout-date">Ngày Trả Phòng:</label>
+                    <input type="date" id="checkout-date">
+                </div>
+                <button class="btn btn-cart2" id="btn-submit" type="button">Xác Nhận</button>
+                <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel" type="button">Hủy</button>
+            </form>
+        </div>
+        <script>
+            const bookButton = document.getElementById('btn-book');
+            const formContainer = document.getElementById('booking-form');
+            const overlay = document.getElementById('overlay');
+            const cancelButton = document.getElementById('btn-cancel');
+            const bookingForm = document.getElementById('bookingForm');
+
+            // Hiển thị form khi nhấn nút "Đặt Phòng"
+            bookButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                formContainer.classList.add('show');
+                overlay.classList.add('show');
+            });
+
+            // Ẩn form khi nhấn overlay hoặc nút "Hủy"
+            cancelButton.addEventListener('click', hideForm);
+            overlay.addEventListener('click', hideForm);
+
+            // Ngăn việc click form bên trong làm tắt form
+            formContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
+
+            function hideForm() {
+                formContainer.classList.remove('show');
+                overlay.classList.remove('show');
+            }
+
+            // Chặn hành động mặc định của nút Submit để không chuyển trang
+            bookingForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Form đã được xác nhận!');
+            });
+
+            document.getElementById('btn-submit').addEventListener('click', () => {
+                alert('Xác nhận đặt phòng thành công!');
+                hideForm();
+            });
+        </script>
+    </div>
+
 </main>
 
 <?php

@@ -3,6 +3,8 @@ require_once 'layout/header.php';
 require_once 'layout/menu.php';
 // print_r($listBinhLuan);
 ?>
+
+
 <main>
     <div class="breadcrumb-area">
         <div class="container">
@@ -30,71 +32,70 @@ require_once 'layout/menu.php';
                             <div class="col-lg-5">
                                 <div class="room-large-slider">
                                     <!-- <?php ?> -->
-                                    <div class="pro-large-img img-zoom">
-                                        <img src="<?= $phongDetail['hinh_anh'] ?>" alt="room-details" />
-                                    </div>
+                                        <div class="pro-large-img img-zoom">
+                                            <img src="assets/img/room/room-1.jpg" alt="room-details" />
+                                        </div>
                                     <!-- <?php  ?> -->
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
                                     <!-- <?php ?> -->
-                                    <div class="pro-nav-thumb">
-                                        <img style="width: 300px; height:80px; object-fit: cover;" src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
-                                    </div>
-                                    <div class="pro-nav-thumb">
-                                        <img style="width: 300px; height: 80px;; object-fit: cover;" src="https://plus.unsplash.com/premium_photo-1676321688630-9558e7d2be10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
-                                    </div>
-                                    <div class="pro-nav-thumb">
-                                        <img style="width: 300px; height: 80px;; object-fit: cover;" src="https://images.unsplash.com/photo-1527986654082-0b5b3fef2632?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
-                                    </div>
+                                        <div class="pro-nav-thumb">
+                                            <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                        </div>
+                                        <div class="pro-nav-thumb">
+                                            <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                        </div>
+                                        <div class="pro-nav-thumb">
+                                            <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                        </div>
                                     <!-- <?php ?> -->
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="room-details-des">
                                     <div class="manufacturer-name">
-                                        <a href="#"><?php if ($phongDetail['loai_phong_id'] == 1) {
-                                                        echo "VIP";
-                                                    } else {
-                                                        echo "NORMAL";
-                                                    } ?></a>
+                                        <a href="#"><?php if($phongDetail['loai_phong_id']==1){echo "VIP";} else {echo "NORMAL";} ?></a>
                                     </div>
-                                    <h3 class="room-name"><?= $phongDetail['ten_phong'] ?></h3>
+                                    <h3 class="room-name"><?=$phongDetail['ten_phong']?></h3>
                                     <div class="ratings d-flex">
 
                                         <div class="pro-review">
                                             <!-- <?php ?> -->
-                                            <span><?= count($listBinhLuan) ?> đánh giá</span>
+                                            <span><?= count($listBinhLuan)?> đánh giá</span>
                                         </div>
                                     </div>
                                     <div class="price-box">
                                         <!--  -->
-                                        <span class="price-regular"><?= $phongDetail['gia_phong'] ?>$</span>
-
+                                            <span class="price-regular"><?=$phongDetail['gia_phong']?>$</span>
+                                           
                                         <!--  -->
-                                        <!-- <span class="price-regular">PHP</span> -->
+                                            <!-- <span class="price-regular">PHP</span> -->
                                         <!--  -->
                                     </div>
 
                                     <div class="availability">
-                                        <?php if ($phongDetail['trang_thai_id'] == 1) {
+                                        <?php if($phongDetail['trang_thai_id']==1)
+                                        {
                                         ?>
                                             <i class="fa fa-check-circle"></i>
                                             <span>Còn phòng</span>
                                         <?php
-                                        } elseif ($phongDetail['trang_thai_id'] == 2) {
+                                        } elseif($phongDetail['trang_thai_id']==2)
+                                        {
                                         ?>
                                             <i class="fa fa-times-circle" style="color:red"></i>
                                             <span>Hết phòng</span>
                                         <?php
                                         }
                                         ?>
-
+                                        
                                     </div>
-                                    <p class="pro-desc"><?= $phongDetail['mo_ta'] ?></p>
+                                    <p class="pro-desc"><?=$phongDetail['mo_ta']?></p>
                                     <form action="#" method="post">
                                         <div class="quantity-cart-box d-flex align-items-center">
+                                            
                                             <div class="action_link">
-                                                <button class="btn btn-cart2" id="btn-book">Đặt Phòng</button>
+                                                <button class="btn btn-cart2">Đặt phòng</button>
                                             </div>
                                         </div>
                                     </form>
@@ -115,41 +116,45 @@ require_once 'layout/menu.php';
                                     <div class="tab-content reviews-tab">
 
                                         <div class="tab-pane fade show active" id="tab_three">
-                                            <!-- <?php
-                                                    ?> -->
-                                            <form action="#" class="review-form">
-                                                <?php foreach ($listBinhLuan as $a) {
-                                                    if ($a['trang_thai'] === 1) {
-                                                ?>
-                                                        <div class="total-reviews">
+                                            <!-- <?php 
+                                            ?> -->
+                                                <form action="#" class="review-form">
+                                                    <?php foreach($listBinhLuan as $a)
+                                                    {
+                                                        if($a['trang_thai']===1)
+                                                        {
+                                                            ?>
+                                                            <div class="total-reviews">
                                                             <div class="rev-avatar">
-                                                                <?php if ($a['avt_link'] == null) {
-                                                                    $nameParts = explode(' ', $a['ho_ten']); // Tách họ và tên thành mảng
-                                                                    $lastName = end($nameParts);
-                                                                ?>
-                                                                    <div class="avt-null">
-                                                                        <p class="namenull"><?= $lastName ?></p>
-                                                                    </div>
-                                                                <?php
-                                                                } else { ?>
-
-                                                                    <img src="<?= $a['avt_link'] ?>" alt="AVT">
-                                                                <?php } ?>
+                                                            <?php if($a['avt_link']==null)
+                                                            {
+                                                                $nameParts = explode(' ', $a['ho_ten']); // Tách họ và tên thành mảng
+                                                                $lastName = end($nameParts);
+                                                            ?>
+                                                                <div class="avt-null">
+                                                                    <p class="namenull"><?=$lastName?></p>
+                                                                </div>
+                                                            <?php 
+                                                            }
+                                                            else { ?>
+                                                                
+                                                                <img src="<?=$a['avt_link']?>" alt="AVT">
+                                                            <?php } ?>
                                                             </div>
                                                             <div class="review-box">
-
+    
                                                                 <div class="post-author">
-                                                                    <p><span><?= $a['ho_ten'] ?> </span><i class="fa-solid fa-grip-lines-vertical"></i> <?= $a['ngay_danh_gia'] ?></p>
+                                                                    <p><span><?=$a['ho_ten']?>  </span><i class="fa-solid fa-grip-lines-vertical"></i>  <?=$a['ngay_danh_gia']?></p>
                                                                 </div>
-                                                                <p><?= $a['noi_dung'] ?></p>
+                                                                <p><?=$a['noi_dung']?></p>
                                                             </div>
                                                         </div>
-                                                <?php
+                                                        <?php
+                                                        }
                                                     }
-                                                }
-                                                ?>
-
-
+                                                        ?>
+                                                        
+                                                    
                                                 <!-- <?php  ?> -->
 
                                                 <div class="form-group row">
@@ -164,7 +169,7 @@ require_once 'layout/menu.php';
                                                 <div class="buttons">
                                                     <button class="btn btn-sqr" type="submit">Bình luận</button>
                                                 </div>
-                                            </form>
+                                                </form>
                                         </div>
                                     </div>
                                 </div>
@@ -188,12 +193,12 @@ require_once 'layout/menu.php';
             <div class="row">
                 <div class="col-12">
                     <div class="room-carousel-4 slick-row-10 slick-arrow-style">
-                        <!-- <?php foreach($listPhong as $key => $phong): ?> -->
+                        <!-- <?php ?> -->
                         <div class="room-item">
                             <figure class="room-thumb">
                                 <a href="#">
-                                <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?=$phong['hinh_anh'] ?>" alt="roon">
-                                <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?=$phong['hinh_anh'] ?>" alt="room">
+                                    <img class="pri-img" src="assets/img/room/room-5.jpg" alt="room">
+                                    <img class="sec-img" src="assets/img/room/room-5.jpg" alt="room">
                                 </a>
 
                                 <div class="cart-hover">
@@ -210,12 +215,13 @@ require_once 'layout/menu.php';
                                 </div>
                             </div>
                         </div>
-                        <!-- <?php endforeach;  ?> -->
+                        <!-- <?php  ?> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <style>
         /* CSS cơ bản */
         .overlay {
@@ -328,7 +334,9 @@ require_once 'layout/menu.php';
             });
         </script>
     </div>
+
 </main>
+
 <?php
 require_once 'layout/footer.php';
 ?>

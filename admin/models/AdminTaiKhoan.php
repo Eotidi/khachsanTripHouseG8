@@ -23,6 +23,19 @@ class AdminTaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
+    public function getAllTaiKhoanAD()
+    {
+        //    Cau lenh SQL
+        try {
+            $sql = "SELECT * FROM tai_khoans";
+
+            $stmt = $this->conn->query($sql);
+            $data = $stmt->fetchAll();
+            return $data;
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
 
     public function insertTaiKhoan(
         $ho_ten,
@@ -79,9 +92,28 @@ class AdminTaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
+    // public function checkLogin($email,$password)
+    // {
+    //     //    Cau lenh SQL ket hop PHP
+    //     try {
+    //         $sql = "SELECT * FROM tai_khoans WHERE email = $email";
+
+    //         $stmt= $this->conn->query($sql);
+    //         $data= $stmt->fetch();
+
+
+    //         return $data;
+    //     } catch (Exception $e) {
+    //         echo "LOI" . $e->getMessage();
+    //     }
+
+    // }
+}
+
 
     public function checkLogin($email,$password)
     {
         
     }
 }
+

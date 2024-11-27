@@ -11,6 +11,8 @@ require_once './controllers/HomeController.php';
 
 require_once './models/Phong.php';
 require_once './models/Taikhoan.php';
+require_once './models/DonDat.php';
+
 // Route 
 $act = $_GET['act'] ?? '/';
 

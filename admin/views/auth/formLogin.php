@@ -118,7 +118,11 @@
                 <a href="#" class="h1"><b>TripHouse</b></a>
             </div>
             <div class="card-body">
+
+                <form action="?act=check-login-admin" method="post">
+
                 <form action="<?= BASE_URL_ADMIN . '?act=check-login-admin' ?>" method="post">
+
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email" name="email">
                         <div class="input-group-append">

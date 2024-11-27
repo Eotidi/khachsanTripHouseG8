@@ -32,7 +32,7 @@ require_once 'views/layout/menu.php';
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
                             <h5 class="text-center">ĐĂNG NHẬP</h5>
-                            <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
+                            <form action="#" method="post">
                                 <div class="single-input-item">
                                     <input type="email" placeholder="Email or Username" name="email" required />
                                 </div>

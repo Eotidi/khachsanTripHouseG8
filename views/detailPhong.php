@@ -188,12 +188,12 @@ require_once 'layout/menu.php';
             <div class="row">
                 <div class="col-12">
                     <div class="room-carousel-4 slick-row-10 slick-arrow-style">
-                        <!-- <?php ?> -->
+                        <!-- <?php foreach($listPhong as $key => $phong): ?> -->
                         <div class="room-item">
                             <figure class="room-thumb">
                                 <a href="#">
-                                    <img class="pri-img" src="assets/img/room/room-5.jpg" alt="room">
-                                    <img class="sec-img" src="assets/img/room/room-5.jpg" alt="room">
+                                <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?=$phong['hinh_anh'] ?>" alt="roon">
+                                <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?=$phong['hinh_anh'] ?>" alt="room">
                                 </a>
 
                                 <div class="cart-hover">
@@ -210,7 +210,7 @@ require_once 'layout/menu.php';
                                 </div>
                             </div>
                         </div>
-                        <!-- <?php  ?> -->
+                        <!-- <?php endforeach;  ?> -->
                     </div>
                 </div>
             </div>

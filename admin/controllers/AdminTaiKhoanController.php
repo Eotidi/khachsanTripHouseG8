@@ -91,6 +91,8 @@ class AdminTaiKhoanController
         header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
         exit();
     }
+
+    //  ======================================= code BE của khách hàng =================================
     public function danhSachKhachHang()
     {
         $listKhachHang = $this->modelTaiKhoan->getAllTaiKhoan(2);

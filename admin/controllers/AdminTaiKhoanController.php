@@ -6,9 +6,8 @@ class AdminTaiKhoanController
     public function __construct()
     {
         $this->modelTaiKhoan = new AdminTaiKhoan();
-
     }
-    
+
     public function danhSachQuanTri()
     {
         $listQuanTri = $this->modelTaiKhoan->getAllTaiKhoan(1);
@@ -119,7 +118,35 @@ class AdminTaiKhoanController
         // deleteSessionError();
     }
 
-    public function login() {}
+    public function login()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $listUser = $this->modelTaiKhoan->getAllTaiKhoanAD();
+            foreach ($listUser as $a) {
+
+                if (($email == $a['email']) && ($password == $a['password'])) {
+                    if (($a['trang_thai_id'] == 1) && ($a['chuc_vu_id'] == 1)) {
+                        $_SESSION['user_id'] = $a['id'];
+                        $_SESSION['user_name'] = $a['ho_ten'];
+                        header("Location:" . BASE_URL_ADMIN);
+                    } elseif ($a['chuc_vu_id'] !== 1) {
+                        echo "Tài khoản ko hợp lệ";
+                        exit();
+                    } elseif ($a['trang_thai_id'] !== 1) {
+                        echo "Tài khoản bị cấm";
+                        exit();
+                    }
+                    exit();
+                } else {
+                    echo "Loi";
+                }
+            }
+        }
+    }
+
+
 
     public function logout()
     {

@@ -3,11 +3,12 @@ class HomeController
 {
     public $modelPhong;
     public $modelTaiKhoan;
-
+    public $modelDonDat;
     public function __construct()
     {
         $this->modelPhong = new Phong;
         $this->modelTaiKhoan = new TaiKhoan;
+        $this->modelDonDat = new DonDat;
     }
     public function home()
     {
@@ -62,6 +63,7 @@ class HomeController
 
     public function donDat()
     {
+        $listDon = $this->modelDonDat->getAllDonDat();
         require_once './views/donDat.php';
     }
 }

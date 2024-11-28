@@ -90,17 +90,4 @@ class AdminTaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
-<<<<<<< HEAD
-
-
-
-
-    public function checkLogin($email,$password)
-    {
-        
-    }
 }
-
-=======
-}
->>>>>>> 92c6e7dd5f4f21b2162f65c6bc62850efe7cf064

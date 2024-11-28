@@ -44,6 +44,7 @@
                                             <?php
                                             if (isset($_SESSION['user_name'])) {
                                                 echo $_SESSION['user_name'];
+                                                
                                             } ?>
                                         </label>
                                         <li class="user-hover">

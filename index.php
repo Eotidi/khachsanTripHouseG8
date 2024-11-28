@@ -18,7 +18,7 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     // route
-    '/' => (new HomeController())->home(), // Truong hop dac biet
+    '/' => (new HomeController())->home(),
 
     'phong' => (new HomeController())->phong(),
     

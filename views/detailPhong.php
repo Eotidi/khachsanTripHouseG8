@@ -3,6 +3,8 @@ require_once 'layout/header.php';
 require_once 'layout/menu.php';
 // print_r($listBinhLuan);
 ?>
+
+
 <main>
     <div class="breadcrumb-area">
         <div class="container">
@@ -31,20 +33,20 @@ require_once 'layout/menu.php';
                                 <div class="room-large-slider">
                                     <!-- <?php ?> -->
                                     <div class="pro-large-img img-zoom">
-                                        <img src="<?= $phongDetail['hinh_anh'] ?>" alt="room-details" />
+                                        <img src="assets/img/room/room-1.jpg" alt="room-details" />
                                     </div>
                                     <!-- <?php  ?> -->
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
                                     <!-- <?php ?> -->
                                     <div class="pro-nav-thumb">
-                                        <img style="width: 300px; height:80px; object-fit: cover;" src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
+                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img style="width: 300px; height: 80px;; object-fit: cover;" src="https://plus.unsplash.com/premium_photo-1676321688630-9558e7d2be10?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
+                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
                                     </div>
                                     <div class="pro-nav-thumb">
-                                        <img style="width: 300px; height: 80px;; object-fit: cover;" src="https://images.unsplash.com/photo-1527986654082-0b5b3fef2632?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
+                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
                                     </div>
                                     <!-- <?php ?> -->
                                 </div>
@@ -93,8 +95,9 @@ require_once 'layout/menu.php';
                                     <p class="pro-desc"><?= $phongDetail['mo_ta'] ?></p>
                                     <form action="#" method="post">
                                         <div class="quantity-cart-box d-flex align-items-center">
+
                                             <div class="action_link">
-                                                <button class="btn btn-cart2" id="btn-book">Đặt Phòng</button>
+                                                <button class="btn btn-cart2" id="btn-book">Đặt phòng</button>
                                             </div>
                                         </div>
                                     </form>
@@ -216,72 +219,77 @@ require_once 'layout/menu.php';
             </div>
         </div>
     </section>
+
     <style>
+        /* CSS cơ bản */
         .overlay {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
         }
 
         .overlay.show {
-            opacity: 1;
-            visibility: visible;
+            display: block;
         }
 
         .form-container {
+            display: none;
             position: fixed;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%) scale(0.9);
-            width: 300px;
+            transform: translate(-50%, -50%);
+            background: white;
             padding: 20px;
-            background: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            width: 300px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
         }
 
         .form-container.show {
-            opacity: 1;
-            visibility: visible;
-            transform: translate(-50%, -50%) scale(1);
+            display: block;
         }
 
-        .form-container h3 {
-            margin: 0 0 10px;
-        }
-
-        .form-container input,
-        .form-container button {
-            width: 100%;
-            margin: 10px 0;
+        .btn {
+            cursor: pointer;
+            margin: 5px 0;
+            border: none;
             border-radius: 5px;
-            border: 1px solid #ccc;
+            width: 200px;
+            margin-left: 28px;
+            margin-top: 10px;
+        }
+
+        .btn-cart2 {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .btn-danger {
+            background: #f44336;
+            color: white;
         }
     </style>
     <div>
         <div class="overlay" id="overlay"></div>
         <div class="form-container" id="booking-form">
-            <form action="">
-                <h3>Đặt Phòng Ngay</h3>
-                <div class="single-input-item">
-                    <label for="checkin-date">Ngày Nhận Phòng:</label>
-                    <input type="date" id="checkin-date">
+            <form id="bookingForm">
+                <h3 class="text-center" style="color: darkturquoise;">Đặt Phòng Ngay</h3>
+                <div class="single-input-item my-3">
+                    <label for="check_in">Ngày Nhận Phòng:</label>
+                    <input class="my-1" type="date" id="check_in">
                 </div>
-                <div class="single-input-item" style="margin-top: -5px;">
-                    <label for="checkout-date">Ngày Trả Phòng:</label>
-                    <input type="date" id="checkout-date">
+                <div class="single-input-item my-3" style="margin-top: -5px;">
+                    <label for="checkout_out">Ngày Trả Phòng:</label>
+                    <input class="my-1" type="date" id="check_out">
                 </div>
-                <button class="btn btn-cart2" id="btn-submit">Xác Nhận</button>
-                <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel">Hủy</button>
+                <button class="btn btn-cart2" id="btn-submit" type="button">Xác Nhận</button>
+                <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel" type="button">Hủy</button>
             </form>
         </div>
         <script>
@@ -289,41 +297,44 @@ require_once 'layout/menu.php';
             const formContainer = document.getElementById('booking-form');
             const overlay = document.getElementById('overlay');
             const cancelButton = document.getElementById('btn-cancel');
-            const submitButton = document.getElementById('btn-submit');
+            const bookingForm = document.getElementById('bookingForm');
 
+            // Hiển thị form khi nhấn nút "Đặt Phòng"
             bookButton.addEventListener('click', (event) => {
-                event.preventDefault(); 
+                event.preventDefault();
                 formContainer.classList.add('show');
                 overlay.classList.add('show');
             });
 
-            formContainer.addEventListener('click', (event) => {
-                event.stopPropagation(); 
-            });
-
+            // Ẩn form khi nhấn overlay hoặc nút "Hủy"
             cancelButton.addEventListener('click', hideForm);
             overlay.addEventListener('click', hideForm);
+
+            // Ngăn việc click form bên trong làm tắt form
+            formContainer.addEventListener('click', (event) => {
+                event.stopPropagation();
+            });
 
             function hideForm() {
                 formContainer.classList.remove('show');
                 overlay.classList.remove('show');
             }
 
-            submitButton.addEventListener('click', () => {
-                const checkinDate = document.getElementById('checkin-date').value;
-                const checkoutDate = document.getElementById('checkout-date').value;
-                const guests = document.getElementById('guests').value;
+            // Chặn hành động mặc định của nút Submit để không chuyển trang
+            bookingForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+                alert('Form đã được xác nhận!');
+            });
 
-                if (checkinDate && checkoutDate && guests) {
-                    alert(`Bạn đã đặt phòng từ ngày ${checkinDate} đến ngày ${checkoutDate} cho ${guests} khách.`);
-                    hideForm();
-                } else {
-                    alert('Vui lòng điền đầy đủ thông tin.');
-                }
+            document.getElementById('btn-submit').addEventListener('click', () => {
+                alert('Xác nhận đặt phòng thành công!');
+                hideForm();
             });
         </script>
     </div>
+
 </main>
+
 <?php
 require_once 'layout/footer.php';
 ?>

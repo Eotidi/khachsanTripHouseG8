@@ -19,11 +19,11 @@
 
                                             </li>
 
-                                            <li><a href="<?= BASE_URL .'?act=phong' ?>">Phòng </a>
+                                            <li><a href="<?= BASE_URL . '?act=phong' ?>">Phòng </a>
                                             </li>
-                                            <li><a href="<?= BASE_URL. '?act=blog' ?>">Tin tức</a></li>
-                                            <li><a href="<?= BASE_URL. '?act=gioi-thieu' ?>">Giới thiệu</a></li>
-                                            <li><a href="<?= BASE_URL. '?act=lien-he' ?>">Liên hệ</a></li>
+                                            <li><a href="<?= BASE_URL . '?act=blog' ?>">Tin tức</a></li>
+                                            <li><a href="<?= BASE_URL . '?act=gioi-thieu' ?>">Giới thiệu</a></li>
+                                            <li><a href="<?= BASE_URL . '?act=lien-he' ?>">Liên hệ</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-lg-4">
                             <div class="header-right d-flex align-items-center justify-content-xl-between justify-content-lg-end">
-                                <div class="header-search-container">
+                                <div class="header-search-container mx-5">
                                     <button class="search-trigger d-xl-none d-lg-block"><i class="pe-7s-search"></i></button>
                                     <form class="header-search-box d-lg-none d-xl-block">
                                         <input type="text" placeholder="Nhập loại phòng " class="header-search-field">
@@ -42,30 +42,31 @@
                                     <ul class="nav justify-content-end">
                                         <label for="">
                                             <?php
-                                            if (isset($_SESSION['user_client'])) {
-                                                echo $_SESSION['user_client'];
+                                            if (isset($_SESSION['user_name'])) {
+                                                echo $_SESSION['user_name'];
                                             } ?>
                                         </label>
                                         <li class="user-hover">
                                             <a href="#">
-                                            <i class="fa-solid fa-user"></i>
+                                                <i class="fa-solid fa-user"></i>
                                             </a>
                                             <ul class="dropdown-list">
-                                            <?php
-                                            if (!isset($_SESSION['user_client'])) {
-                                                ?>
-                                                <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng nhập</a></li>
                                                 <?php
-                                            }else{?>
-                                                <li><a href="#">Tài khoản</a></li>
-                                                <?php } ?>
+                                                if (!isset($_SESSION['user_name'])) {
+                                                ?>
+                                                    <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng nhập</a></li>
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng nhập</a></li>
+                                                <?php
+                                                } ?>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="<?= BASE_URL . '?act=don-dat' ?>" class="mini-btn">
-                                            <i class="fa-solid fa-shop"></i>
+                                            <a href="<?= BASE_URL . '?act=don-dat' ?>" class="minicart-btn">
+                                                <i class="fa-solid fa-shop"></i>
                                             </a>
-                                            
                                         </li>
                                     </ul>
                                 </div>

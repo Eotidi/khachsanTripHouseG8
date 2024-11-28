@@ -11,6 +11,8 @@ require_once './controllers/HomeController.php';
 
 require_once './models/Phong.php';
 require_once './models/Taikhoan.php';
+require_once './models/DonDat.php';
+
 // Route 
 $act = $_GET['act'] ?? '/';
 
@@ -24,6 +26,10 @@ match ($act) {
 
     'login' => (new HomeController())->formLogin(),
 
+    'register' => (new HomeController())->formRegister(),
+
+    'check-register' => (new HomeController())->postRegister(),
+
     'check-login'=> (new HomeController())->postLogin(),
 
     'gioi-thieu' => (new HomeController())->gioiThieu(),
@@ -33,4 +39,7 @@ match ($act) {
     'blog' => (new HomeController())->blog(),
 
     'don-dat' => (new HomeController())->donDat(),
+
+
+    
 };

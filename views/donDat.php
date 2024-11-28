@@ -1,6 +1,7 @@
 <?php
 require_once 'layout/header.php';
 require_once 'layout/menu.php';
+
 ?>
 
 <main>
@@ -46,11 +47,11 @@ require_once 'layout/menu.php';
                                 <?php foreach ($listDon as $key => $donDat): ?>
                                     <tr class="text-center">
                                         <th scope="row"><?= $donDat['ma_don'] ?></th>
-                                        <td>Họ tên</td>
-                                        <td>Điện thoại</td>
-                                        <td>Check in</td>
-                                        <td>Check out</td>
-                                        <td>Trạng thái</td>
+                                        <td><?= $donDat['ho_ten'] ?></td>
+                                        <td><?= $donDat['dien_thoai'] ?></td>
+                                        <td><?= $donDat['check_in'] ?></td>
+                                        <td><?= $donDat['check_out'] ?></td>
+                                        <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>
                                         <td>
                                             <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">DELETE</button>
                                             <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded" class="btn btn-info">EDIT</button>

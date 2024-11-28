@@ -31,8 +31,8 @@ require_once 'views/layout/menu.php';
                     <!-- Login Content Start -->
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
-                            <h5 class="text-center">ĐĂNG NHẬP</h5>
-                            <form action="<?= BASE_URL . '?act=check-login' ?>" method="post">
+                            <h5 class="text-center">ĐĂNG KÝ</h5>
+                            <form action="<?= BASE_URL. '?act=check-register' ?>" method="post">
                                 <div class="single-input-item">
                                     <input type="email" placeholder="Email or Username" name="email" required />
                                 </div>
@@ -40,13 +40,16 @@ require_once 'views/layout/menu.php';
                                     <input type="password" placeholder="Enter your Password" name="password" required />
                                 </div>
                                 <div class="single-input-item">
+                                    <input type="password" placeholder="Confirm Password" name="confirm_password" required />
+                                </div>
+                                <div class="single-input-item">
                                     <div class="login-reg-form-meta d-flex align-items-center justify-content-between">
 
-                                        <a href="<?= BASE_URL . '?act=register' ?>" class="forget-pwd">Đăng ký</a>
+                                        <a href="<?= BASE_URL . '?act=login' ?>" class="forget-pwd">Đăng nhập</a>
                                     </div>
                                 </div>
                                 <div class="single-input-item">
-                                    <button class="btn btn-sqr">ĐĂNG NHẬP</button>
+                                    <button class="btn btn-sqr">ĐĂNG KÝ</button>
                                 </div>
                             </form>
                         </div>

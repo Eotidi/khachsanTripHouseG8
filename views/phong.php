@@ -48,17 +48,19 @@ require_once 'layout/menu.php';
                                         <div class="col-md-3">
                                             <div class="room-item pb-2">
                                                 <figure class="room-thumb">
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>">
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
                                                         <img style="width: 300px; height:200px; object-fit: cover;" class="pri-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
                                                         <img style="width: 300px; height:200px; object-fit: cover;" class="sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
                                                     </a>
                                                     <div class="cart-hover">
-                                                        <button class="btn btn-cart">Xem chi tiết</button>
+                                                        <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                            <button class="btn btn-cart">Xem chi tiết</button>
+                                                        </a>
                                                     </div>
                                                 </figure>
                                                 <div class="room-caption text-center">
                                                     <h6 class="room-name">
-                                                        <a href="<?= BASE_URL . '?act=chi-tiet-phong&id' . $phong['id'] ?>"><?= $phong['ten_phong'] ?></a>
+                                                        <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>"><?= $phong['ten_phong'] ?></a>
                                                     </h6>
                                                     <div class="price-box">
                                                         <span class="price-regular"><?= $phong['gia_phong'] ?><b> $</b></span>

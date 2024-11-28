@@ -32,70 +32,72 @@ require_once 'layout/menu.php';
                             <div class="col-lg-5">
                                 <div class="room-large-slider">
                                     <!-- <?php ?> -->
-                                        <div class="pro-large-img img-zoom">
-                                            <img src="assets/img/room/room-1.jpg" alt="room-details" />
-                                        </div>
+                                    <div class="pro-large-img img-zoom">
+                                        <img src="assets/img/room/room-1.jpg" alt="room-details" />
+                                    </div>
                                     <!-- <?php  ?> -->
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
                                     <!-- <?php ?> -->
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/room/room-2.jpg" alt="room-details" />
-                                        </div>
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/room/room-2.jpg" alt="room-details" />
-                                        </div>
-                                        <div class="pro-nav-thumb">
-                                            <img src="assets/img/room/room-2.jpg" alt="room-details" />
-                                        </div>
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                    </div>
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                    </div>
+                                    <div class="pro-nav-thumb">
+                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                    </div>
                                     <!-- <?php ?> -->
                                 </div>
                             </div>
                             <div class="col-lg-7">
                                 <div class="room-details-des">
                                     <div class="manufacturer-name">
-                                        <a href="#"><?php if($phongDetail['loai_phong_id']==1){echo "VIP";} else {echo "NORMAL";} ?></a>
+                                        <a href="#"><?php if ($phongDetail['loai_phong_id'] == 1) {
+                                                        echo "VIP";
+                                                    } else {
+                                                        echo "NORMAL";
+                                                    } ?></a>
                                     </div>
-                                    <h3 class="room-name"><?=$phongDetail['ten_phong']?></h3>
+                                    <h3 class="room-name"><?= $phongDetail['ten_phong'] ?></h3>
                                     <div class="ratings d-flex">
 
                                         <div class="pro-review">
                                             <!-- <?php ?> -->
-                                            <span><?= count($listBinhLuan)?> đánh giá</span>
+                                            <span><?= count($listBinhLuan) ?> đánh giá</span>
                                         </div>
                                     </div>
                                     <div class="price-box">
                                         <!--  -->
-                                            <span class="price-regular"><?=$phongDetail['gia_phong']?>$</span>
-                                           
+                                        <span class="price-regular"><?= $phongDetail['gia_phong'] ?>$</span>
+
                                         <!--  -->
-                                            <!-- <span class="price-regular">PHP</span> -->
+                                        <!-- <span class="price-regular">PHP</span> -->
                                         <!--  -->
                                     </div>
 
                                     <div class="availability">
-                                        <?php if($phongDetail['trang_thai_id']==1)
-                                        {
+                                        <?php if ($phongDetail['trang_thai_id'] == 1) {
                                         ?>
                                             <i class="fa fa-check-circle"></i>
                                             <span>Còn phòng</span>
                                         <?php
-                                        } elseif($phongDetail['trang_thai_id']==2)
-                                        {
+                                        } elseif ($phongDetail['trang_thai_id'] == 2) {
                                         ?>
                                             <i class="fa fa-times-circle" style="color:red"></i>
                                             <span>Hết phòng</span>
                                         <?php
                                         }
                                         ?>
-                                        
+
                                     </div>
-                                    <p class="pro-desc"><?=$phongDetail['mo_ta']?></p>
+                                    <p class="pro-desc"><?= $phongDetail['mo_ta'] ?></p>
                                     <form action="#" method="post">
                                         <div class="quantity-cart-box d-flex align-items-center">
-                                            
+
                                             <div class="action_link">
-                                                <button class="btn btn-cart2">Đặt phòng</button>
+                                                <button class="btn btn-cart2" id="btn-book">Đặt phòng</button>
                                             </div>
                                         </div>
                                     </form>
@@ -116,45 +118,41 @@ require_once 'layout/menu.php';
                                     <div class="tab-content reviews-tab">
 
                                         <div class="tab-pane fade show active" id="tab_three">
-                                            <!-- <?php 
-                                            ?> -->
-                                                <form action="#" class="review-form">
-                                                    <?php foreach($listBinhLuan as $a)
-                                                    {
-                                                        if($a['trang_thai']===1)
-                                                        {
-                                                            ?>
-                                                            <div class="total-reviews">
+                                            <!-- <?php
+                                                    ?> -->
+                                            <form action="#" class="review-form">
+                                                <?php foreach ($listBinhLuan as $a) {
+                                                    if ($a['trang_thai'] === 1) {
+                                                ?>
+                                                        <div class="total-reviews">
                                                             <div class="rev-avatar">
-                                                            <?php if($a['avt_link']==null)
-                                                            {
-                                                                $nameParts = explode(' ', $a['ho_ten']); // Tách họ và tên thành mảng
-                                                                $lastName = end($nameParts);
-                                                            ?>
-                                                                <div class="avt-null">
-                                                                    <p class="namenull"><?=$lastName?></p>
-                                                                </div>
-                                                            <?php 
-                                                            }
-                                                            else { ?>
-                                                                
-                                                                <img src="<?=$a['avt_link']?>" alt="AVT">
-                                                            <?php } ?>
+                                                                <?php if ($a['avt_link'] == null) {
+                                                                    $nameParts = explode(' ', $a['ho_ten']); // Tách họ và tên thành mảng
+                                                                    $lastName = end($nameParts);
+                                                                ?>
+                                                                    <div class="avt-null">
+                                                                        <p class="namenull"><?= $lastName ?></p>
+                                                                    </div>
+                                                                <?php
+                                                                } else { ?>
+
+                                                                    <img src="<?= $a['avt_link'] ?>" alt="AVT">
+                                                                <?php } ?>
                                                             </div>
                                                             <div class="review-box">
-    
+
                                                                 <div class="post-author">
-                                                                    <p><span><?=$a['ho_ten']?>  </span><i class="fa-solid fa-grip-lines-vertical"></i>  <?=$a['ngay_danh_gia']?></p>
+                                                                    <p><span><?= $a['ho_ten'] ?> </span><i class="fa-solid fa-grip-lines-vertical"></i> <?= $a['ngay_danh_gia'] ?></p>
                                                                 </div>
-                                                                <p><?=$a['noi_dung']?></p>
+                                                                <p><?= $a['noi_dung'] ?></p>
                                                             </div>
                                                         </div>
-                                                        <?php
-                                                        }
+                                                <?php
                                                     }
-                                                        ?>
-                                                        
-                                                    
+                                                }
+                                                ?>
+
+
                                                 <!-- <?php  ?> -->
 
                                                 <div class="form-group row">
@@ -169,7 +167,7 @@ require_once 'layout/menu.php';
                                                 <div class="buttons">
                                                     <button class="btn btn-sqr" type="submit">Bình luận</button>
                                                 </div>
-                                                </form>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
@@ -281,14 +279,14 @@ require_once 'layout/menu.php';
         <div class="overlay" id="overlay"></div>
         <div class="form-container" id="booking-form">
             <form id="bookingForm">
-                <h3>Đặt Phòng Ngay</h3>
-                <div class="single-input-item">
-                    <label for="checkin-date">Ngày Nhận Phòng:</label>
-                    <input type="date" id="checkin-date">
+                <h3 class="text-center" style="color: darkturquoise;">Đặt Phòng Ngay</h3>
+                <div class="single-input-item my-3">
+                    <label for="check_in">Ngày Nhận Phòng:</label>
+                    <input class="my-1" type="date" id="check_in">
                 </div>
-                <div class="single-input-item" style="margin-top: -5px;">
-                    <label for="checkout-date">Ngày Trả Phòng:</label>
-                    <input type="date" id="checkout-date">
+                <div class="single-input-item my-3" style="margin-top: -5px;">
+                    <label for="checkout_out">Ngày Trả Phòng:</label>
+                    <input class="my-1" type="date" id="check_out">
                 </div>
                 <button class="btn btn-cart2" id="btn-submit" type="button">Xác Nhận</button>
                 <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel" type="button">Hủy</button>

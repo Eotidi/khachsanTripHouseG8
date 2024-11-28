@@ -41,7 +41,6 @@ class AdminTaiKhoan
         $ho_ten,
         $email,
         $dien_thoai,
-        // $password = 123456,
         $chuc_vu_id
     ) {
         try {
@@ -59,7 +58,6 @@ class AdminTaiKhoan
         try {
             $sql = "DELETE FROM tai_khoans WHERE `tai_khoans`.`id` = $id";
             $this->conn->query($sql);
-
         } catch (\Throwable $th) {
             //throw $th;
         }
@@ -71,8 +69,8 @@ class AdminTaiKhoan
         try {
             $sql = "SELECT * FROM tai_khoans WHERE id = $id";
 
-            $stmt= $this->conn->query($sql);
-            $data= $stmt->fetch();
+            $stmt = $this->conn->query($sql);
+            $data = $stmt->fetch();
 
 
             return $data;
@@ -81,7 +79,7 @@ class AdminTaiKhoan
         }
     }
 
-    public function postUpdateQt($id,$ho_ten,$email,$dien_thoai)
+    public function postUpdateQt($id, $ho_ten, $email, $dien_thoai)
     {
         try {
             $sql = "UPDATE `tai_khoans` SET `ho_ten` = '$ho_ten', `dien_thoai` = '$dien_thoai', `email` = '$email' WHERE `tai_khoans`.`id` = $id";
@@ -92,6 +90,7 @@ class AdminTaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
+<<<<<<< HEAD
 
 
 
@@ -102,3 +101,6 @@ class AdminTaiKhoan
     }
 }
 
+=======
+}
+>>>>>>> 92c6e7dd5f4f21b2162f65c6bc62850efe7cf064

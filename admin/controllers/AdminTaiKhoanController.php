@@ -23,15 +23,12 @@ class AdminTaiKhoanController
     }
     public function postAddQuanTri()
     {
-        // kiểm tra xem dữ liệu có phải được submit lên không 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // lấy ra dữ liệu 
 
             $ho_ten = $_POST['ho_ten'] ?? '';
             $email = $_POST['email'] ?? '';
             $dien_thoai = $_POST['dien_thoai'] ?? '';
 
-            // tạo 1 mảng trống để chứa dữ liệu 
             $error = [];
             if (empty($ho_ten)) {
                 $error['ho_ten'] = "Họ tên không được để trống";
@@ -41,7 +38,6 @@ class AdminTaiKhoanController
             }
             $_SESSION['error'] = $error;
             if (empty($error)) {
-                // $password = password_hash('123456', PASSWORD_BCRYPT);
 
                 $chuc_vu_id = 1;
 
@@ -115,7 +111,6 @@ class AdminTaiKhoanController
     public function formLogin()
     {
         require_once "./views/auth/formLogin.php";
-        // deleteSessionError();
     }
 
     public function login()
@@ -128,7 +123,11 @@ class AdminTaiKhoanController
 
                 if (($email == $a['email']) && ($password == $a['password'])) {
                     if (($a['trang_thai_id'] == 1) && ($a['chuc_vu_id'] == 1)) {
+<<<<<<< HEAD
                         $_SESSION['user_id'] = $a['id'];
+=======
+                        $_SESSION['user_admin'] = $email;
+>>>>>>> 92c6e7dd5f4f21b2162f65c6bc62850efe7cf064
                         header("Location:" . BASE_URL_ADMIN);
                     } elseif ($a['chuc_vu_id'] !== 1) {
                         echo "Tài khoản ko hợp lệ";
@@ -139,13 +138,14 @@ class AdminTaiKhoanController
                     }
                     exit();
                 } else {
-                    echo "Loi";
+                    $_SESSION['error'] = $email;
+                    $_SESSION['flash'] = true;
+                    header("Location:" . BASE_URL_ADMIN . "?act=login-admin");
+                    exit();
                 }
             }
         }
     }
-
-
 
     public function logout()
     {

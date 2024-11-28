@@ -23,12 +23,18 @@ function connectDB()
     }
 
     function deleteSessionError()
-{
-    if (isset($_SESSION['flash'])) {
-        // Huy session sau khi da tai trang 
-        unset($_SESSION['flash']);
-        unset($_SESSION['error']);
-        // session_unset();
+    {
+        if (isset($_SESSION['flash'])) {
+            unset($_SESSION['flash']);
+            unset($_SESSION['error']);
+        }
     }
-}
+
+    function checkLoginAdmin()
+    {
+        if (!isset($_SESSION['user_admin'])) { 
+            header("Location: " . BASE_URL_ADMIN . '?act=login-admin');
+            exit();
+        }
+    }
 }

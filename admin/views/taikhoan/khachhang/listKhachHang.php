@@ -57,10 +57,10 @@
                                                     <a href="<?= BASE_URL_ADMIN .'?act=chi-tiet-khach-hang&id_khach_hang=' . $khachHang['id'] ?>">
                                                         <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
                                                     </a>
-                                                    <a href="<?= BASE_URL_ADMIN ?>">
+                                                    <a href="<?= BASE_URL_ADMIN .'?act=form-sua-khach-hang&id_khach_hang=' . $khachHang['id'] ?>">
                                                         <button class="btn btn-warning"><i class="fas fa-cogs"></i></button>
                                                     </a>
-                                                    <a href="<?= BASE_URL_ADMIN ?>" onclick="return confirm('Bạn có đồng ý reset password hay không ?')">
+                                                    <a href="<?= BASE_URL_ADMIN .'?act=reset-password&id_quan_tri=' . $khachHang['id'] ?>" onclick="return confirm('Bạn có đồng ý reset password hay không ?')">
                                                         <button class="btn btn-danger"><i class="fas fa-sync-alt"></i></button>
                                                     </a>
                                                 </div>

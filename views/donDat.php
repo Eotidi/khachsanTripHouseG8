@@ -32,29 +32,32 @@ require_once 'layout/menu.php';
                 <div class="row">
                     <div class="col-lg-12">
                         <table class="table">
-                            <thead class=".bg-danger-subtle">
+                            <thead>
                                 <tr class="text-center">
-                                    <th scope="col">MÃ ĐƠN</th>
-                                    <th scope="col">HỌ TÊN</th>
-                                    <th scope="col">ĐIỆN THOẠI</th>
-                                    <th scope="col">CHECK IN</th>
-                                    <th scope="col">CHECK OUT</th>
-                                    <th scope="col">TRẠNG THÁI</th>
-                                    <th scope="col">ACTIONS</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">MÃ ĐƠN</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">TÀI KHOẢN</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">ĐIỆN THOẠI</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">CHECK IN</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">CHECK OUT</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">TRẠNG THÁI</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">ACTIONS</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($listDon as $key => $donDat): ?>
                                     <tr class="text-center">
                                         <th scope="row"><?= $donDat['ma_don'] ?></th>
-                                        <td><?= $donDat['ho_ten'] ?></td>
+                                        <td><?= $_SESSION['user_name'] ?></td>
                                         <td><?= $donDat['dien_thoai'] ?></td>
                                         <td><?= $donDat['check_in'] ?></td>
                                         <td><?= $donDat['check_out'] ?></td>
                                         <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>
                                         <td>
-                                            <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">DELETE</button>
-                                            <button class="bg-blue-500 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded" class="btn btn-info">EDIT</button>
+                                            <?php if ($donDat['trang_thai_id'] == 1) { ?>
+                                                <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" type="submit" disabled>CANCEL</button>
+                                            <?php } else { ?>
+                                                <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">CANCEL</button>
+                                            <?php } ?>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

@@ -86,6 +86,8 @@ class AdminTaiKhoanController
         header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-quan-tri');
         exit();
     }
+
+    //  ======================================= code BE của khách hàng =================================
     public function danhSachKhachHang()
     {
         $listKhachHang = $this->modelTaiKhoan->getAllTaiKhoan(2);
@@ -95,8 +97,22 @@ class AdminTaiKhoanController
 
     public function formEditKhachHang()
     {
+        $id_khach_hang = $_GET['id_khach_hang'];
+        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoanQT($id_khach_hang);
+        // var_dump($quanTri);die;
         require_once './views/taikhoan/khachhang/editKhachHang.php';
         // deleteSessionError();
+    }
+
+    public function postEditKh()
+    {
+        $id = $_GET['id'];
+        $ho_ten = $_POST['ho_ten'];
+        $email = $_POST['email'];
+        $dien_thoai = $_POST['dien_thoai'];
+        $this->modelTaiKhoan->postUpdateQt($id, $ho_ten, $email, $dien_thoai);
+        header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-khach-hang');
+        exit();
     }
 
     public function detailKhachHang()

@@ -9,3 +9,4 @@ define('DB_PASSWORD', '');
 define('DB_NAME'    , 'triphousedb1'); 
 
 define('PATH_ROOT'    , __DIR__ . '/../');
+ 

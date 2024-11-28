@@ -31,24 +31,20 @@ require_once 'layout/menu.php';
                         <div class="row">
                             <div class="col-lg-5">
                                 <div class="room-large-slider">
-                                    <!-- <?php ?> -->
                                     <div class="pro-large-img img-zoom">
-                                        <img src="assets/img/room/room-1.jpg" alt="room-details" />
+                                        <img src="<?= $phongDetail['hinh_anh'] ?>" alt="room-details" />
                                     </div>
-                                    <!-- <?php  ?> -->
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">
-                                    <!-- <?php ?> -->
-                                    <div class="pro-nav-thumb">
-                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                    <div class="pro-nav-thumb" style="width: 100px; height:90px">
+                                        <img class="w-full h-full" src="https://images.unsplash.com/photo-1445991842772-097fea258e7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG90ZWx8ZW58MHx8MHx8fDA%3D" alt="room-details" />
                                     </div>
-                                    <div class="pro-nav-thumb">
-                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                    <div class="pro-nav-thumb" style="width: 100px; height:90px">
+                                        <img class="w-full h-full" src="https://images.unsplash.com/photo-1495365200479-c4ed1d35e1aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
                                     </div>
-                                    <div class="pro-nav-thumb">
-                                        <img src="assets/img/room/room-2.jpg" alt="room-details" />
+                                    <div class="pro-nav-thumb" style="width: 100px; height:90px">
+                                        <img class="w-full h-full" src="https://images.unsplash.com/photo-1529290130-4ca3753253ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
                                     </div>
-                                    <!-- <?php ?> -->
                                 </div>
                             </div>
                             <div class="col-lg-7">
@@ -191,29 +187,27 @@ require_once 'layout/menu.php';
             <div class="row">
                 <div class="col-12">
                     <div class="room-carousel-4 slick-row-10 slick-arrow-style">
-                        <!-- <?php ?> -->
-                        <div class="room-item">
-                            <figure class="room-thumb">
-                                <a href="#">
-                                    <img class="pri-img" src="assets/img/room/room-5.jpg" alt="room">
-                                    <img class="sec-img" src="assets/img/room/room-5.jpg" alt="room">
-                                </a>
-
-                                <div class="cart-hover">
-                                    <button class="btn btn-cart">Xem chi tiết</button>
-                                </div>
-                            </figure>
-                            <div class="room-caption text-center">
-                                <h6 class="room-name">
-                                    <a href="#">Name Room</a>
-                                </h6>
-                                <div class="price-box">
-                                    <span class="price-regular">PHP</span>
-                                    <span class="price-old"><del>PHP</del></span>
+                        <?php foreach ($listPhong as $key => $phong): ?>
+                            <div class="room-item">
+                                <figure class="room-thumb">
+                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                        <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
+                                        <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
+                                    </a>
+                                    <div class="cart-hover">
+                                        <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
+                                    </div>
+                                </figure>
+                                <div class="room-caption text-center">
+                                    <h6 class="room-name">
+                                        <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">Phòng <?= $phong['ten_phong'] ?></a>
+                                    </h6>
+                                    <div class="price-box">
+                                        <span class="">Giá phòng: <?= $phong['gia_phong'] ?> $</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- <?php  ?> -->
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
@@ -263,6 +257,7 @@ require_once 'layout/menu.php';
             width: 200px;
             margin-left: 28px;
             margin-top: 10px;
+            margin-right: 20px;
         }
 
         .btn-cart2 {

@@ -26,6 +26,10 @@ match ($act) {
 
     'login' => (new HomeController())->formLogin(),
 
+    'register' => (new HomeController())->formRegister(),
+
+    'check-register' => (new HomeController())->postRegister(),
+
     'check-login'=> (new HomeController())->postLogin(),
 
     'gioi-thieu' => (new HomeController())->gioiThieu(),
@@ -35,4 +39,7 @@ match ($act) {
     'blog' => (new HomeController())->blog(),
 
     'don-dat' => (new HomeController())->donDat(),
+
+
+    
 };

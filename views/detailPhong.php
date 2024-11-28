@@ -32,7 +32,7 @@ require_once 'layout/menu.php';
                             <div class="col-lg-5">
                                 <div class="room-large-slider">
                                     <div class="pro-large-img img-zoom">
-                                        <img src="<?= $phongDetail['hinh_anh'] ?>" alt="room-details" />
+                                        <img style="width: 500px; height:400px; object-fit: cover;" src="<?= $phongDetail['hinh_anh'] ?>" alt="room-details" />
                                     </div>
                                 </div>
                                 <div class="pro-nav slick-row-10 slick-arrow-style">

@@ -117,8 +117,8 @@ class AdminTaiKhoanController
 
     public function detailKhachHang()
     {
-        $id_khach_hang = $_GET['id'];
-        // $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
+        $id_khach_hang = $_GET['id_khach_hang'];
+        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
         // $listDonDat = $this->modelDonDat->getDonDatFromKhachHang($id_khach_hang);
         // $listBinhLuan = $this->modelPhong->getBinhLuanFromKhachHang($id_khach_hang);
         require_once './views/taikhoan/khachhang/detailKhachHang.php';

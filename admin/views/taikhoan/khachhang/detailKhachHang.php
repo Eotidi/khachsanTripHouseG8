@@ -33,7 +33,7 @@
                             <tbody style="font-size: x-large;">
                                 <tr>
                                     <th>Họ tên:</th>
-                                    <td>NULL</td>
+                                    <td><?= $khachHang['ho_ten'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Ngày sinh:</th>
@@ -41,11 +41,11 @@
                                 </tr>
                                 <tr>
                                     <th>Email:</th>
-                                    <td>NULL</td>
+                                    <td><?= $khachHang['email'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Số điện thoại:</th>
-                                    <td>NULL</td>
+                                    <td><?= $khachHang['dien_thoai'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Giới tinh:</th>
@@ -53,8 +53,13 @@
                                 </tr>
                                 <tr>
                                     <th>Địa chỉ:</th>
-                                    <td>NULL</td>
+                                    
                                 </tr>
+                                <tr>
+                                    <th>Trạng thái:</th>
+                                    <td><?= $khachHang['dien_thoai'] ?></td>
+                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>

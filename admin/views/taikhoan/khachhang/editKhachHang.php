@@ -30,33 +30,33 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="?act=formEditKh&id=<?=$khachHang['id']?>" method="post">
+                        <form action="?act=formEditKh&id=<?= $khachHang['id'] ?>" method="post">
                             <input type="hidden" name="id" value="<?= $khachHang['id'] ?>">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Họ tên</label>
-                                    <input type="text" class="form-control" name="ho_ten" value="<?=$khachHang['ho_ten']?>"  placeholder="Nhập họ tên" >
-                                    <?php if (isset($_SESSION['error']['hoten'])){ ?> 
+                                    <input type="text" class="form-control" name="ho_ten" value="<?= $khachHang['ho_ten'] ?>" placeholder="Nhập họ tên">
+                                    <?php if (isset($_SESSION['error']['hoten'])) { ?>
                                         <p class="text-danger"> <?= $_SESSION['error']['hoten'] ?></p>
                                     <?php } ?>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" name="email" value="<?=$khachHang['email']?>" placeholder="Nhập email" >
-                                    <?php if (isset($_SESSION['error']['email'])){ ?> 
+                                    <input type="email" class="form-control" name="email" value="<?= $khachHang['email'] ?>" placeholder="Nhập email">
+                                    <?php if (isset($_SESSION['error']['email'])) { ?>
                                         <p class="text-danger"> <?= $_SESSION['error']['email'] ?></p>
                                     <?php } ?>
-                                    
+
                                 </div>
 
                                 <div class="form-group">
                                     <label>Số điện thoại</label>
-                                    <input type="text" class="form-control" name="dien_thoai" value="<?=$khachHang['dien_thoai']?>" placeholder="Nhập Số điện thoại" >
-                                    <?php if (isset($_SESSION['error']['dien_thoai'])){ ?> 
+                                    <input type="text" class="form-control" name="dien_thoai" value="<?= $khachHang['dien_thoai'] ?>" placeholder="Nhập Số điện thoại">
+                                    <?php if (isset($_SESSION['error']['dien_thoai'])) { ?>
                                         <p class="text-danger"> <?= $_SESSION['error']['dien_thoai'] ?></p>
                                     <?php } ?>
-                                    
+
                                 </div>
                             </div>
                             <!-- /.card-body -->

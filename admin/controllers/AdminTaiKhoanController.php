@@ -70,7 +70,7 @@ class AdminTaiKhoanController
     public function formEditQuanTri()
     {
         $id = $_GET['id'];
-        $quanTri = $this->modelTaiKhoan->getDetailTaiKhoanQT($id);
+        $quanTri = $this->modelTaiKhoan->getDetailTaiKhoan($id);
         // var_dump($quanTri);die;
         require_once './views/taikhoan/quantri/editQuanTri.php';
         // deleteSessionError();
@@ -98,7 +98,7 @@ class AdminTaiKhoanController
     public function formEditKhachHang()
     {
         $id_khach_hang = $_GET['id_khach_hang'];
-        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoanQT($id_khach_hang);
+        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
         // var_dump($quanTri);die;
         require_once './views/taikhoan/khachhang/editKhachHang.php';
         // deleteSessionError();
@@ -110,7 +110,7 @@ class AdminTaiKhoanController
         $ho_ten = $_POST['ho_ten'];
         $email = $_POST['email'];
         $dien_thoai = $_POST['dien_thoai'];
-        $this->modelTaiKhoan->postUpdateQt($id, $ho_ten, $email, $dien_thoai);
+        $this->modelTaiKhoan->postUpdateKh($id, $ho_ten, $email, $dien_thoai);
         header("Location: " . BASE_URL_ADMIN . '?act=list-tai-khoan-khach-hang');
         exit();
     }

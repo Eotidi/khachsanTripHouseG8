@@ -63,7 +63,7 @@ class AdminTaiKhoan
         }
     }
 
-    public function getDetailTaiKhoanQT($id)
+    public function getDetailTaiKhoan($id)
     {
         //    Cau lenh SQL
         try {
@@ -83,6 +83,23 @@ class AdminTaiKhoan
     {
         try {
             $sql = "UPDATE `tai_khoans` SET `ho_ten` = '$ho_ten', `dien_thoai` = '$dien_thoai', `email` = '$email' WHERE `tai_khoans`.`id` = $id";
+            $this->conn->query($sql);
+
+            return true;
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
+
+
+    public function postUpdateKh($id, $ho_ten, $email, $dien_thoai)
+    {
+        try {
+            $sql = "UPDATE `tai_khoans` 
+                    SET `ho_ten` = '$ho_ten',
+                         `dien_thoai` = '$dien_thoai', 
+                         `email` = '$email' 
+                    WHERE `tai_khoans`.`id` = $id";
             $this->conn->query($sql);
 
             return true;

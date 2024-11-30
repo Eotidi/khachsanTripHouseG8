@@ -24,7 +24,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
-                    <img src="" style="width: 70%" alt="" onerror="this.onerror=null;this.src='https://www.nicepng.com/png/full/128-1280406_view-user-icon-png-user-circle-icon-png.png'">
+                    <img src="" style="width: 70%" alt=""
+                        onerror="this.onerror=null;this.src='https://www.nicepng.com/png/full/128-1280406_view-user-icon-png-user-circle-icon-png.png'">
                 </div>
                 <div class="col-8">
                     <div class="container">
@@ -32,7 +33,7 @@
                             <tbody style="font-size: x-large;">
                                 <tr>
                                     <th>Họ tên:</th>
-                                    <td>NULL</td>
+                                    <td><?= $khachHang['ho_ten'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Ngày sinh:</th>
@@ -40,11 +41,11 @@
                                 </tr>
                                 <tr>
                                     <th>Email:</th>
-                                    <td>NULL</td>
+                                    <td><?= $khachHang['email'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Số điện thoại:</th>
-                                    <td>NULL</td>
+                                    <td><?= $khachHang['dien_thoai'] ?></td>
                                 </tr>
                                 <tr>
                                     <th>Giới tinh:</th>
@@ -52,8 +53,13 @@
                                 </tr>
                                 <tr>
                                     <th>Địa chỉ:</th>
-                                    <td>NULL</td>
+                                    
                                 </tr>
+                                <tr>
+                                    <th>Trạng thái:</th>
+                                    <td><?= $khachHang['dien_thoai'] ?></td>
+                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
@@ -74,26 +80,26 @@
                             </thead>
                             <tbody>
 
-                                    <tr>
-                                        <td>NULL</td>
-                                        <td>NULL</td>
-                                        <td>NULL</td>
-                                        <td>NULL</td>
-                                        <td>NULL</td>
-                                        <td>NULL</td>
+                                <tr>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
+                                    <td>NULL</td>
 
-                                        <td>
-                                            <div class="btn-group">
-                                                <a href="<?= BASE_URL_ADMIN ?>">
-                                                    <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                                </a>
-                                                <a href="<?= BASE_URL_ADMIN ?>">
-                                                    <button class="btn btn-warning"><i class="fas fa-cogs"></i></button>
-                                                </a>
-                                            </div>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="<?= BASE_URL_ADMIN ?>">
+                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                                            </a>
+                                            <a href="<?= BASE_URL_ADMIN ?>">
+                                                <button class="btn btn-warning"><i class="fas fa-cogs"></i></button>
+                                            </a>
+                                        </div>
 
-                                        </td>
-                                    </tr>
+                                    </td>
+                                </tr>
 
                             </tbody>
                         </table>
@@ -115,26 +121,27 @@
                             </thead>
                             <tbody>
 
-                                    <tr>
+                                <tr>
                                     <td>PHP</td>
                                     <td>
-                                            <a target="_blank" href="<?= BASE_URL_ADMIN?>">
-                                                <!-- PHP -->
-                                            </a>
-                                        </td>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
-                                        <td>PHP</td>
-                                        <td>
-                                            <form action="" <?= BASE_URL_ADMIN  ?> method="post">
-                                                <input type="hidden" name="" value="">
-                                                <input type="hidden" name="" value="">
-                                                <input type="hidden" name="" value="">
-                                                <button onclick="return confirm('Bạn có muốn ẩn bình luận không ?')" class="btn btn-warning">Ẩn
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                        <a target="_blank" href="<?= BASE_URL_ADMIN?>">
+                                            <!-- PHP -->
+                                        </a>
+                                    </td>
+                                    <td>PHP</td>
+                                    <td>PHP</td>
+                                    <td>PHP</td>
+                                    <td>
+                                        <form action="" <?= BASE_URL_ADMIN  ?> method="post">
+                                            <input type="hidden" name="" value="">
+                                            <input type="hidden" name="" value="">
+                                            <input type="hidden" name="" value="">
+                                            <button onclick="return confirm('Bạn có muốn ẩn bình luận không ?')"
+                                                class="btn btn-warning">Ẩn
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -153,19 +160,19 @@
 <?php include './views/layout/footer.php'; ?>
 </body>
 <script>
-    $(function() {
-        $("#example1").DataTable({
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": false,
-            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-        $('#example2').DataTable({
-            "responsive": true,
-            "lengthChange": false,
-            "autoWidth": false,
-        });
+$(function() {
+    $("#example1").DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
+        // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+        "responsive": true,
+        "lengthChange": false,
+        "autoWidth": false,
     });
+});
 </script>
 
 </html>

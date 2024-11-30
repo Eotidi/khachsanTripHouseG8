@@ -208,12 +208,12 @@ require_once 'layout/menu.php';
                                         <div class="group-slide-item">
                                             <div class="group-item my-2">
                                                 <div class="group-item-thumb">
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                        <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="">
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                        <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="image">
                                                     </a>
                                                 </div>
                                                 <div class="group-item-desc">
-                                                    <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
+                                                    <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
                                                         </a></h5>
                                                     <div class="price-box">
                                                         <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
@@ -242,7 +242,7 @@ require_once 'layout/menu.php';
                                             <div class="group-item my-2">
                                                 <div class="group-item-thumb">
                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
-                                                        <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="">
+                                                        <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="image">
                                                     </a>
                                                 </div>
                                                 <div class="group-item-desc">

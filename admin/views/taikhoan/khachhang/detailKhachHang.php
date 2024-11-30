@@ -59,7 +59,7 @@
                                     <th>Trạng thái:</th>
                                     <td><?= $khachHang['dien_thoai'] ?></td>
                                 </tr> -->
-                                
+
                             </tbody>
                         </table>
                     </div>
@@ -71,9 +71,9 @@
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Mã đơn đặt</th>
                                     <th>Số điện thoại</th>
-                                    <th>Ngày đặt</th>
+                                    <th>Check_in</th>
+                                    <th>Check_out</th>
                                     <th>Tổng tiền</th>
                                     <th>Thao tác</th>
                                 </tr>
@@ -86,13 +86,9 @@
                                     <td>NULL</td>
                                     <td>NULL</td>
                                     <td>NULL</td>
-                                    <td>NULL</td>
 
                                     <td>
                                         <div class="btn-group">
-                                            <a href="<?= BASE_URL_ADMIN ?>">
-                                                <button class="btn btn-primary"><i class="fas fa-eye"></i></button>
-                                            </a>
                                             <a href="<?= BASE_URL_ADMIN ?>">
                                                 <button class="btn btn-warning"><i class="fas fa-cogs"></i></button>
                                             </a>
@@ -113,34 +109,18 @@
                                 <tr>
                                     <th>STT</th>
                                     <th>Số phòng</th>
-                                    <th>Nội dung</th>
                                     <th>Ngày bình luận</th>
-                                    <th>Trạng thái</th>
-                                    <th>Thao tác</th>
+                                    <th>Nội dung</th>
+
                                 </tr>
                             </thead>
                             <tbody>
 
                                 <tr>
                                     <td>PHP</td>
-                                    <td>
-                                        <a target="_blank" href="<?= BASE_URL_ADMIN?>">
-                                            <!-- PHP -->
-                                        </a>
-                                    </td>
+                                    <td></td>
                                     <td>PHP</td>
                                     <td>PHP</td>
-                                    <td>PHP</td>
-                                    <td>
-                                        <form action="" <?= BASE_URL_ADMIN  ?> method="post">
-                                            <input type="hidden" name="" value="">
-                                            <input type="hidden" name="" value="">
-                                            <input type="hidden" name="" value="">
-                                            <button onclick="return confirm('Bạn có muốn ẩn bình luận không ?')"
-                                                class="btn btn-warning">Ẩn
-                                            </button>
-                                        </form>
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -160,19 +140,19 @@
 <?php include './views/layout/footer.php'; ?>
 </body>
 <script>
-$(function() {
-    $("#example1").DataTable({
-        "responsive": true,
-        "lengthChange": false,
-        "autoWidth": false,
-        // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-        "responsive": true,
-        "lengthChange": false,
-        "autoWidth": false,
+    $(function() {
+        $("#example1").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+        $('#example2').DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+        });
     });
-});
 </script>
 
 </html>

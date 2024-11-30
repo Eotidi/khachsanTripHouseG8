@@ -40,11 +40,10 @@ class AdminTaiKhoan
     public function insertTaiKhoan(
         $ho_ten,
         $email,
-        $dien_thoai,
-        $chuc_vu_id
+        $dien_thoai
     ) {
         try {
-            $sql = "INSERT INTO `tai_khoans` (`ho_ten`, `password`, `dien_thoai`, `email`, `chuc_vu_id`) VALUES ('$ho_ten', '123456', '$dien_thoai', '$email', '$chuc_vu_id')";
+            $sql = "INSERT INTO `tai_khoans` (`ho_ten`, `password`, `dien_thoai`, `email`, `chuc_vu_id`,`trang_thai_id`) VALUES ('$ho_ten', '123456', '$dien_thoai', '$email', '1','1')";
             $this->conn->query($sql);
 
             return true;

@@ -27,24 +27,24 @@ require_once 'layout/menu.php';
                 <div class="col-12">
                     <div class="service-policy section-padding">
                         <div class="body1">
-                            <form action="">
+                            <form action="<?= BASE_URL . '?act=phong-filter' ?>" method="POST">
                                 <div class="search-container1">
-                                    <select name="">
-                                        <option value="">...</option>
-                                        <option value="">VIP</option>
-                                        <option value="">Medium</option>
+                                    <select name="select_loai" id="select_loai">
+                                        <option value="">Loại phòng</option>
+                                        <option value="1">VIP</option>
+                                        <option value="2">Normal</option>
                                     </select>
-                                    <select name="">
-                                        <option value="">...</option>
-                                        <option value="">Single</option>
-                                        <option value="">Double</option>
+                                    <select name="select_trang_thai" id="select_trang_thai">
+                                        <option value="">Trạng thái phòng</option>
+                                        <option value="1">Còn phòng</option>
+                                        <option value="2">Hết phòng</option>
                                     </select>
-                                    <select name="">
-                                        <option value="">...</option>
-                                        <option value="">Còn phòng</option>
-                                        <option value="">Hết phòng</option>
+                                    <select name="select_people" id="select_people">
+                                        <option value="">Thể loại</option>
+                                        <option value="1">Đơn</option>
+                                        <option value="2">Đôi</option>
                                     </select>
-                                    <button class="btn ">Search</button>
+                                    <button class="btn" onchange="this.form.submit()">Search</button>
                                 </div>
                             </form>
                         </div>

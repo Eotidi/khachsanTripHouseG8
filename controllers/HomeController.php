@@ -22,6 +22,12 @@ class HomeController
         require_once './views/phong.php';
     }
 
+    public function phongFilter()
+    {
+        $listFilter = $this->modelPhong->getPhongFilter();
+        require_once './views/phongFilter.php';
+    }
+
     public function chiTietPhong()
     {
         $id = $_GET['id'];

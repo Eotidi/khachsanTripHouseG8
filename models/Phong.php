@@ -39,6 +39,21 @@ class Phong
         }
     }
 
+    public function getPhongFilter()
+    {
+        // Cau lenh SQL
+        try {
+            $sql = "SELECT * FROM `phongs`";
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo ($e);
+        }
+    }
+
 
     public function getAllRoom()
     {

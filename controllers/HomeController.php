@@ -18,7 +18,7 @@ class HomeController
 
     public function phong()
     {
-        $listPhong = $this->modelPhong->getAllPhong();
+        $listPhongId = $this->modelPhong->getPhong();
         require_once './views/phong.php';
     }
 

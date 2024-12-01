@@ -1,14 +1,17 @@
 <?php
-class Phong {
+class Phong
+{
     public $conn; // Khai bao phuong thuc 
 
-    public function __construct(){
+    public function __construct()
+    {
         $this->conn = connectDB();
     }
 
-    public function getAllPhong(){
+    public function getAllPhong()
+    {
         // Cau lenh SQL
-        try{
+        try {
             $sql = "SELECT * FROM `phongs`";
 
             $stmt = $this->conn->prepare($sql);
@@ -16,22 +19,38 @@ class Phong {
             $stmt->execute();
 
             return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo ($e);
+        }
+    }
 
-        }catch(Exception $e){
-            echo($e);
+    public function getPhong()
+    {
+        // Cau lenh SQL
+        try {
+            $sql = "SELECT * FROM `phongs`";
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo ($e);
         }
     }
 
 
-    public function getAllRoom(){
+    public function getAllRoom()
+    {
         // Cau lenh SQL
     }
 
-    public function getDetailPhong($id){
+    public function getDetailPhong($id)
+    {
 
 
         // Cau lenh SQL
-        try{
+        try {
             $sql = "SELECT * FROM `phongs` WHERE `phongs`.`id`=$id";
 
             $stmt = $this->conn->prepare($sql);
@@ -39,14 +58,13 @@ class Phong {
             $stmt->execute();
 
             return $stmt->fetch();
-
-        }catch(Exception $e){
-            }
+        } catch (Exception $e) {
+        }
     }
-    
+
     public function getAllBinhLuan($id)
     {
-        try{
+        try {
             $sql = "SELECT *
                     FROM danh_gias
                     INNER JOIN tai_khoans ON danh_gias.tai_khoan_id = tai_khoans.id
@@ -56,9 +74,7 @@ class Phong {
             $stmt->execute();
 
             return $stmt->fetchAll();
-
-        }catch(Exception $e){
-            }
+        } catch (Exception $e) {
+        }
     }
 }
-?>

@@ -5,8 +5,13 @@
 $phongTrong = 0;
 foreach($listPhong as $a)
 {
-  
+    if($a['trang_thai_id']==1)
+    {
+      $phongTrong ++;
+    }
 }
+$phongHet = count($listPhong)-$phongTrong;
+foreach
 ?>
 <div class="content-wrapper">
   <section class="content-header">
@@ -33,7 +38,7 @@ foreach($listPhong as $a)
             <div class="card shadow-sm p-3 mb-4">
               <div class="card-body">
                 <h5 class="card-title">Phòng trống</h5>
-                <p class="card-text display-6" id="available-rooms">0</p>
+                <p class="card-text display-6" id="available-rooms"><?= $phongTrong ?></p>
               </div>
             </div>
           </div>
@@ -42,7 +47,7 @@ foreach($listPhong as $a)
             <div class="card shadow-sm p-3 mb-4">
               <div class="card-body">
                 <h5 class="card-title">Phòng đã đặt</h5>
-                <p class="card-text display-6" id="booked-rooms">0</p>
+                <p class="card-text display-6" id="booked-rooms"><?= $phongHet ?></p>
               </div>
             </div>
           </div>

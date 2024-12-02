@@ -1,6 +1,7 @@
 <?php
 require_once 'layout/header.php';
 require_once 'layout/menu.php';
+// print_r($listDon);
 // echo $_SESSION['currentUser'];
 ?>
 
@@ -34,12 +35,12 @@ require_once 'layout/menu.php';
                         <table class="table">
                             <thead>
                                 <tr class="text-center">
-                                    <th scope="col" style="background-color: #FFF3CD;">TÀI KHOẢN</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">KHÁCH HÀNG</th>
                                     <th scope="col" style="background-color: #FFF3CD;">ĐIỆN THOẠI</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">PHÒNG</th>
                                     <th scope="col" style="background-color: #FFF3CD;">CHECK IN</th>
                                     <th scope="col" style="background-color: #FFF3CD;">CHECK OUT</th>
                                     <th scope="col" style="background-color: #FFF3CD;">GIÁ TIỀN</th>
-
                                     <th scope="col" style="background-color: #FFF3CD;">TRẠNG THÁI</th>
                                     <th scope="col" style="background-color: #FFF3CD;">ACTIONS</th>
                                 </tr>
@@ -47,8 +48,9 @@ require_once 'layout/menu.php';
                             <tbody>
                                 <?php if(isset($listDon)){foreach ($listDon as $key => $donDat): ?>
                                     <tr class="text-center">
-                                        <td><?= $_SESSION['user_id'] ?></td>
+                                        <td><?= $donDat['ho_ten'] ?></td>
                                         <td><?= $donDat['dien_thoai'] ?></td>
+                                        <td><?= $donDat['ten_phong'] ?></td>
                                         <td><?= $donDat['check_in'] ?></td>
                                         <td><?= $donDat['check_out'] ?></td>
                                         <td><?= $donDat['don_gia'] ?>$</td>
@@ -58,7 +60,8 @@ require_once 'layout/menu.php';
                                             <?php if ($donDat['trang_thai_id'] == 1) { ?>
                                                 <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" type="submit" disabled>CANCEL</button>
                                             <?php } else { ?>
-                                                <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">CANCEL</button>
+                                                <a href="?act=huy-don-dat&id=<?=$donDat['id']?>"><button onclick="if (window.confirm('Bạn có chắc chắn muốn hủy?')) { console.log('Đã hủy'); } else { console.log('Hủy thao tác'); }" class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">CANCEL</button></a>
+                                                
                                             <?php } ?>
                                         </td>
                                     </tr>

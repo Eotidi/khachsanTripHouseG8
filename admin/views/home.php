@@ -11,7 +11,14 @@ foreach($listPhong as $a)
     }
 }
 $phongHet = count($listPhong)-$phongTrong;
-foreach
+$doanhThu = 0;
+foreach($listDonDat as $b)
+{
+  if($b['trang_thai_id']==1)
+  {
+    $doanhThu = $doanhThu + (float)$b['don_gia'];
+  }
+}
 ?>
 <div class="content-wrapper">
   <section class="content-header">
@@ -29,7 +36,7 @@ foreach
             <div class="card shadow-sm p-3 mb-4">
               <div class="card-body">
                 <h5 class="card-title">Doanh thu</h5>
-                <p class="card-text display-6" id="revenue">₫0</p>
+                <p class="card-text display-6" id="revenue"><?=$doanhThu?>$</p>
               </div>
             </div>
           </div>

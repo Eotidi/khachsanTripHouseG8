@@ -32,11 +32,12 @@ require_once 'layout/menu.php';
                                         <div class="room-short">
                                             <form action="<?= BASE_URL . '?act=phong' ?>" method="POST">
                                                 <select class="nice-select" name="select_phong" id="select_phong" onchange="this.form.submit()">
-                                                    <option value="">Select All</option>
+                                                    <option value="0">Select All</option>
                                                     <option value="1">VIP</option>
                                                     <option value="2">Normal</option>
                                                 </select>
                                             </form>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -116,7 +117,7 @@ require_once 'layout/menu.php';
                                             <?php endforeach; ?>
                                         </div>
                                     <?php
-                                    } elseif($select_phong == '') {
+                                    } elseif($select_phong == '0') {
                                     ?>
                                         <div class="row mbn-30">
                                             <?php foreach ($listPhongId as $key => $phong): ?>

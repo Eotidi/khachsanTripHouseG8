@@ -40,22 +40,54 @@ class AdminDonDatController
                 exit();
     }
 
+    // public function detailDonDat()
+    // {
+    //     $id = $_GET['id'] ?? null; 
+
+    //     if ($id === null) {
+    //         echo "ID is required.";
+    //         return; 
+    //     }
+        
+    //     $donDat = $this->modelDonDat->getDetailDonDat($id);
+        
+    //     $donDatPhong = $this->modelDonDat->getListDonDat($id);
+
+    //     $listTrangThaiDonDat = $this->modelDonDat->getAllTrangThaiDonDat();
+
+    //         require_once './views/dondat/detailDonDat.php';
+    // }
+
     public function detailDonDat()
-    {
-        $id = $_GET['id'] ?? null; 
+{
+    $id = $_GET['id'] ?? null;
 
-        if ($id === null) {
-            echo "ID is required.";
-            return; 
-        }
-        
-        $donDat = $this->modelDonDat->getDetailDonDat($id);
-        
-        $donDatPhong = $this->modelDonDat->getListDonDat($id);
-
-        $listTrangThaiDonDat = $this->modelDonDat->getAllTrangThaiDonDat();
-
-            require_once './views/dondat/detailDonDat.php';
+    if ($id === null) {
+        echo "ID is required.";
+        return;
     }
+
+    $donDat = $this->modelDonDat->getDetailDonDat($id); // Lấy thông tin đơn đặt
+    $donDatPhong = $this->modelDonDat->getListDonDat($id); // Lấy thông tin các phòng trong đơn đặt
+
+    // Tính số ngày giữa check_in và check_out
+    $check_in = new DateTime($donDat['check_in']);
+    $check_out = new DateTime($donDat['check_out']);
+    $so_ngay = $check_in->diff($check_out)->days;
+
+    // Giả sử giá phòng mỗi ngày là 200.000 VND
+    $gia_ngay = 200000;
+
+    // Tính tổng tiền cho mỗi phòng
+    $total = [];
+    foreach ($donDatPhong as $phong) {
+        $thanh_tien = $so_ngay * $gia_ngay;
+        $total[] = $thanh_tien;
+    }
+
+    // Truyền dữ liệu vào view
+    require_once './views/dondat/detailDonDat.php';
+}
+
 }
 //

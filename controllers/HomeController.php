@@ -56,6 +56,7 @@ class HomeController
             $ho_ten = $_POST['ho_ten'];
             $dien_thoai = $_POST['dien_thoai'];
             $password = $_POST['password'];
+            $chuc_vu_id = $_POST['chuc_vu_id'];
             $confirmPassword = $_POST["confirm_password"];
             $error = [];
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -70,7 +71,7 @@ class HomeController
 
             if (empty($error)) {
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                $this->modelTaiKhoan->registerUser($email,$ho_ten,$dien_thoai, $hashedPassword);
+                $this->modelTaiKhoan->registerUser($email,$ho_ten,$dien_thoai, $hashedPassword, $chuc_vu_id);
                 echo "<script>alert('Đăng ký thành công!');</script>";
                 // echo $dien_thoai;
                 header("Location: " . BASE_URL . '?act=login');

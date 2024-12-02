@@ -39,6 +39,7 @@ require_once 'views/layout/menu.php';
                                     <input type="text" placeholder="Enter your Fullname" name="ho_ten" required />
                                 <div class="single-input-item">
                                     <input type="text" placeholder="Enter your Phonenumber" name="dien_thoai" required />
+                                    <input type="hidden" name="chuc_vu_id" value="2">
                                 </div>
                                 <div class="single-input-item">
                                     <input type="password" placeholder="Enter your Password" name="password" required />

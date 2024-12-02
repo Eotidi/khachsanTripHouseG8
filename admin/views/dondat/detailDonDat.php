@@ -1,6 +1,5 @@
 <?php require './views/layout/header.php'; ?>
 <?php require './views/layout/navbar.php'; ?>
-
 <?php require './views/layout/sidebar.php'; ?>
 
 <div class="content-wrapper">
@@ -8,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-10">
-                    <h1>Quản lý danh sách đơn đặt - Đơn hàng: <?= $donDat['ma_don'] ?></h1>
+                    <h1>Quản lý danh sách đơn đặt - Đơn hàng</h1>
                 </div>
             </div>
         </div>
@@ -33,15 +32,18 @@
                             <div class="col-sm-4 invoice-col">
                                 Thông tin người đặt
                                 <address>
-                                    <strong><?= $donDat['ho_ten'] ?>
+                                    <strong><?= $donDat['ho_ten'] ?></strong>
+                                    <strong><br>Email: <?= $donDat['email'] ?></strong>
+                                    <strong><br>Điện thoại: <?= $donDat['dien_thoai'] ?></strong>   
+                                </address>
                             </div>
 
                             <div class="col-sm-4 invoice-col">
-                                <b>Mã đơn đặt: PHP</b><br>
+                                
                                 <br>
-                                <b>Tổng tiền: </b> ...<br>
-                                <b>Ghi chú:</b> ...<br>
-                                <b>Thanh toán:</b> ...
+                                <b>Tổng tiền: </b> <?= number_format(array_sum($total), 0, ',', '.') ?> VND<br>
+                                <b>Ghi chú: ĐANG CHẾT CHƯA BIẾT ĐỔ VÀO KIỂU GÌ </b><br>
+                                <b>Thanh toán:  ĐANG CHẾT </b>
                             </div>
                         </div>
 
@@ -58,40 +60,30 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
-                                            <tr>
-                                                <td>PHP</td>
-                                                <td>PHP</td>
-                                                <td>PHP</td>
-                                                <td>PHP</td>
-                                                <td>PHP</td>
-                                            </tr>
-                                            
+                                        <?php foreach ($donDatPhong as $index => $phong): ?>
+                                            <!--  -->
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
 
                         <div class="row">
-
                             <div class="col-6">
-                                <p class="lead">Hóa đơn: </p>
-
+                                <p class="lead">Hóa đơn:</p>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <tr>
                                             <th style="width:50%">Số ngày:</th>
-                                            <td>
-                                                PHP
-                                            </td>
+                                            <td><?= $so_ngay ?> ngày</td>
                                         </tr>
                                         <tr>
                                             <th>Giá tiền trên ngày:</th>
-                                            <td>200.000</td>
+                                            <td>200.000 VND</td>
                                         </tr>
                                         <tr>
-                                            <th>Thành tiền tiền:</th>
-                                            <td>PHP</td>
+                                            <th>Tổng thành tiền:</th>
+                                            <td><?= number_format(array_sum($total), 0, ',', '.') ?> VND</td>
                                         </tr>
                                     </table>
                                 </div>
@@ -104,8 +96,8 @@
         </div>
     </section>
 </div>
+
 <?php include './views/layout/footer.php'; ?>
 
 </body>
-
 </html>

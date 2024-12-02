@@ -42,9 +42,9 @@
                                     <ul class="nav justify-content-end">
                                         <label for="">
                                             <?php
-                                            if (isset($_SESSION['user_name'])) {
-                                                echo $_SESSION['user_name'];
-                                                
+                                            if (isset($_SESSION['user_id'])) {
+                                                echo $_SESSION['user_id'];
+
                                             } ?>
                                         </label>
                                         <li class="user-hover">
@@ -53,9 +53,9 @@
                                             </a>
                                             <ul class="dropdown-list">
                                                 <?php
-                                                if (!isset($_SESSION['user_name'])) {
+                                                if (isset($_SESSION['user_id'])) {
                                                 ?>
-                                                    <li><a href="<?= BASE_URL . '?act=login' ?>">Đăng nhập</a></li>
+                                                    <li><a href="<?= BASE_URL . '?act=logout' ?>">Đăng xuất</a></li>
                                                 <?php
                                                 } else {
                                                 ?>

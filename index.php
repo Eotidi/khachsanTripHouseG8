@@ -40,6 +40,8 @@ match ($act) {
 
     'don-dat' => (new HomeController())->donDat(),
 
+    'postBooking' => (new HomeController())->addDondat(),
 
+    'logout' => (new HomeController())->logOut(),
     
 };

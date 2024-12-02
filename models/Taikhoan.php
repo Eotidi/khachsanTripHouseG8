@@ -33,4 +33,20 @@ class TaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
+
+    public function getUser($id)
+    {
+        //    Cau lenh SQL
+        try {
+            $sql = "SELECT * FROM tai_khoans WHERE tai_khoans.id= $id";
+
+            $stmt = $this->conn->query($sql);
+            $data = $stmt->fetch();
+            return $data;
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
+
+    
 }

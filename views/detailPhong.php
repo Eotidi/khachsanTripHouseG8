@@ -16,7 +16,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                         <nav aria-label="breadcrumb">
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?= BASE_URL ?>"><i class="fa fa-home"></i></a></li>
-                                <li class="breadcrumb-item"><a href="shop.html">Phòng</a></li>
+                                <li class="breadcrumb-item"><a href="?act=phong">Phòng</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Chi tiết phòng</li>
                             </ul>
                         </nav>

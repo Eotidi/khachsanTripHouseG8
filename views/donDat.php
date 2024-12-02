@@ -62,7 +62,6 @@ require_once 'layout/menu.php';
                                                     <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" type="submit" disabled>CANCEL</button>
                                                 <?php } else { ?>
                                                     <a href="?act=huy-don-dat&id=<?= $donDat['id'] ?>"><button onclick="return confirm('Bạn có đồng ý xóa hay không ?')" class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">CANCEL</button></a>
-
                                                 <?php } ?>
                                             </td>
                                         </tr>

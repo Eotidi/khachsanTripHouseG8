@@ -40,11 +40,10 @@ class AdminTaiKhoan
     public function insertTaiKhoan(
         $ho_ten,
         $email,
-        $dien_thoai,
-        $chuc_vu_id
+        $dien_thoai
     ) {
         try {
-            $sql = "INSERT INTO `tai_khoans` (`ho_ten`, `password`, `dien_thoai`, `email`, `chuc_vu_id`) VALUES ('$ho_ten', '123456', '$dien_thoai', '$email', '$chuc_vu_id')";
+            $sql = "INSERT INTO `tai_khoans` (`ho_ten`, `password`, `dien_thoai`, `email`, `chuc_vu_id`,`trang_thai_id`) VALUES ('$ho_ten', '123456', '$dien_thoai', '$email', '1','1')";
             $this->conn->query($sql);
 
             return true;
@@ -63,7 +62,7 @@ class AdminTaiKhoan
         }
     }
 
-    public function getDetailTaiKhoanQT($id)
+    public function getDetailTaiKhoan($id)
     {
         //    Cau lenh SQL
         try {
@@ -90,4 +89,22 @@ class AdminTaiKhoan
             echo "LOI" . $e->getMessage();
         }
     }
+
+
+    public function postUpdateKh($id, $ho_ten, $email, $dien_thoai)
+    {
+        try {
+            $sql = "UPDATE `tai_khoans` 
+                    SET `ho_ten` = '$ho_ten',
+                         `dien_thoai` = '$dien_thoai', 
+                         `email` = '$email' 
+                    WHERE `tai_khoans`.`id` = $id";
+            $this->conn->query($sql);
+
+            return true;
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
+
 }

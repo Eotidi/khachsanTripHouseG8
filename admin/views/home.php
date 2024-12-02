@@ -4,13 +4,47 @@
 
 <div class="content-wrapper">
   <section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6">
-          <h1>Báo cáo thống kê</h1>
+    <div class="container my-5">
+      <h2>
           <?=$_SESSION['user_admin']?>
+          </h2>
+        <header class="mb-4">
+          <h1 class="text-center">TripHouse Dashboard</h1>
+        </header>
+
+        <div class="row text-center">
+          <!-- Doanh thu -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Doanh thu</h5>
+                <p class="card-text display-6" id="revenue">₫0</p>
+              </div>
+            </div>
+          </div>
+          <!-- Phòng trống -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Phòng trống</h5>
+                <p class="card-text display-6" id="available-rooms">0</p>
+              </div>
+            </div>
+          </div>
+          <!-- Phòng đã đặt -->
+          <div class="col-md-4">
+            <div class="card shadow-sm p-3 mb-4">
+              <div class="card-body">
+                <h5 class="card-title">Phòng đã đặt</h5>
+                <p class="card-text display-6" id="booked-rooms">0</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <footer class="text-center mt-4">
+          <button class="btn btn-primary btn-lg" id="update-stats">Cập nhật thống kê</button>
+        </footer>
     </div>
   </section>
 </div>

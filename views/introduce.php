@@ -46,11 +46,15 @@ require_once 'layout/menu.php';
             <div class="">
                 <h1 class=" text-2xl font-bold text-justify">About Us</h1>
                 <h2 class=" my-4 text-base font-normal text-justify">
-                    
+
                 </h2>
                 <h3 class=" text-base font-normal text-justify">
-                    Nằm ngay trung tâm thành phố Hà Nội, TripHouse là điểm dừng chân lý tưởng để bạn khám phá những địa điểm nổi tiếng. Chỉ cần bước ra khỏi khách sạn, bạn đã có thể hòa mình vào nhịp sống sôi động của thành phố.
-                    Hãy để TripHouse là điểm khởi đầu cho những chuyến đi đầy hứng khởi của bạn.
+                    Trải nghiệm bản chất của lòng hiếu khách tại TripHouse, nơi mọi khách hàng đều được đối xử như gia đình.
+                    Nằm ở trung tâm sôi động của thành phố Hà Nội, khách sạn của chúng tôi có chỗ ở đầy phong cách, dịch vụ đặc biệt
+                    và kết nối thuận tiện đến các điểm tham quan hàng đầu. Thư giãn trong các phòng đầy đủ tiện nghi của chúng tôi, thưởng thức
+                    các bữa ăn ngon tại nhà hàng trong khuôn viên của chúng tôi và tận hưởng các tiện nghi hiện đại được thiết kế để đáp ứng mọi
+                    nhu cầu của bạn. Tại TripHouse ,chúng tôi đi xa hơn để làm cho kỳ nghỉ của bạn thực sự đặc biệt.
+                    <br>Chào mừng bạn đến với ngôi nhà xa nhà của bạn!
                 </h3>
             </div>
         </div>
@@ -58,16 +62,12 @@ require_once 'layout/menu.php';
             <div class="">
                 <h1 class=" text-2xl font-bold text-justify">TripHouse Hotel</h1>
                 <h2 class=" my-4 text-base font-normal text-justify">
-                    Đến với TripHouse, bạn không chỉ đơn thuần là nghỉ ngơi mà còn được trải nghiệm một hành trình khám phá bản thân.
-                    Với không gian ấm cúng, thiết kế tinh tế và dịch vụ chu đáo, chúng tôi cam kết mang đến cho bạn những khoảnh khắc đáng nhớ. Hãy để TripHouse trở thành ngôi nhà thứ hai của bạn mỗi khi đến.
+                    TripHouse Hotel tự hào mang đến không gian nghỉ dưỡng sang trọng giữa lòng Hà Nội sôi động. Với thiết kế hiện đại, tiện nghi đẳng cấp và dịch vụ tận tâm, chúng tôi tạo ra một điểm dừng chân lý tưởng cho mọi chuyến đi, từ công tác đến thư giãn. Mỗi căn phòng tại TripHouse được chăm chút tỉ mỉ, kết hợp giữa sự thoải mái và phong cách tinh tế. Hãy tận hưởng bữa sáng tuyệt vời, trải nghiệm dịch vụ spa thư giãn,
+                    và khám phá các điểm đến nổi tiếng chỉ cách vài phút di chuyển. TripHouse – nơi mọi hành trình bắt đầu trọn vẹn!
                 </h2>
-                <h3 class=" text-base font-normal text-justify">
-                    Nằm ngay trung tâm thành phố Hà Nội, TripHouse là điểm dừng chân lý tưởng để bạn khám phá những địa điểm nổi tiếng. Chỉ cần bước ra khỏi khách sạn, bạn đã có thể hòa mình vào nhịp sống sôi động của thành phố.
-                    Hãy để TripHouse là điểm khởi đầu cho những chuyến đi đầy hứng khởi của bạn.
-                </h3>
             </div>
             <div class="ml-5">
-                <img src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8fDA%3D"
+                <img src="https://plus.unsplash.com/premium_photo-1682089297123-85459da8036b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDV8fGhvdGVsfGVufDB8fDB8fHww"
                     alt="img" class="w-full h-auto">
             </div>
 
@@ -119,7 +119,7 @@ require_once 'layout/menu.php';
                                 </div>
                             </figure>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

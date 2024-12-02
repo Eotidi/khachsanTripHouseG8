@@ -18,15 +18,18 @@ class HomeController
 
     public function phong()
     {
-        $listPhong = $this->modelPhong->getAllPhong();
+        $listPhongId = $this->modelPhong->getPhong();
         require_once './views/phong.php';
+    }
+
+    public function phongFilter()
+    {
+        $listFilter = $this->modelPhong->getPhongFilter();
+        require_once './views/phongFilter.php';
     }
 
     public function chiTietPhong()
     {
-
-        // Ham nay dung de hien thi form nhap
-        // Lay ra thong tin cua san pham can sua
         $id = $_GET['id'];
         $phongDetail = $this->modelPhong->getDetailPhong($id);
         $listBinhLuan = $this->modelPhong->getAllBinhLuan($id);
@@ -46,66 +49,31 @@ class HomeController
     {
         require_once "./views/auth/formRegister.php";
     }
-
-    // public function postRegister()
-    // {
-    //     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    //         $email = $_POST['email'];
-    //         $password = $_POST['password'];
-    //         $confirmPassword = $_POST["confirm_password"];
-
-    //         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    //             echo ("LOI");
-    //         }
-    //         if (strlen($password) < 6) {
-    //             echo ("LOI");
-    //         }
-    //         if ($password !== $confirmPassword) {
-    //             echo ("LOI");
-    //         }
-    //         $correct = "Thành công !";
-    //         $inCorrect = "Thất bại !";
-    //         if (empty($error)) {
-    //             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    //             $this->modelTaiKhoan->registerUser(
-    //                 $email,
-    //                 $hashedPassword
-    //             );
-    //             echo "<script>alert('$correct');</script>";
-    //             header("Location:" . BASE_URL . '?act=login');
-    //             exit();
-    //         } else {
-    //             echo "<script>alert('$inCorrect');</script>";
-    //             header("Location:" . BASE_URL . '?act=register');
-    //             exit();
-    //         }
-    //     }
-    // }
     public function postRegister()
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $email = $_POST['email'];
             $password = $_POST['password'];
             $confirmPassword = $_POST["confirm_password"];
-                $error = [];
-                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $error = [];
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $error[] = "Email không hợp lệ.";
             }
-                if (strlen($password) < 6) {
+            if (strlen($password) < 6) {
                 $error[] = "Mật khẩu phải có ít nhất 6 ký tự.";
             }
-                if ($password !== $confirmPassword) {
+            if ($password !== $confirmPassword) {
                 $error[] = "Mật khẩu xác nhận không khớp.";
             }
-    
+
             if (empty($error)) {
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                    $this->modelTaiKhoan->registerUser($email, $hashedPassword);
-                    echo "<script>alert('Đăng ký thành công!');</script>";
+                $this->modelTaiKhoan->registerUser($email, $hashedPassword);
+                echo "<script>alert('Đăng ký thành công!');</script>";
                 header("Location: " . BASE_URL . '?act=login');
                 exit();
             } else {
-                $errorMessage = implode("\\n", $error); 
+                $errorMessage = implode("\\n", $error);
                 echo "<script>alert('$errorMessage');</script>";
                 header("Location: " . BASE_URL . '?act=register');
                 exit();

@@ -8,11 +8,13 @@ class TaiKhoan
         $this->conn = connectDB();
     }
 
-    public function registerUser($email, $hashedPassword)
+    public function registerUser($email,$ho_ten,$dien_thoai, $hashedPassword)
     {
         // Chuẩn bị câu lệnh SQL
         try {
-            $sql = "INSERT INTO `tai_khoans` (`id`, `email`, `password`) VALUES (NULL, '$email', '$hashedPassword');";
+
+            $sql = "INSERT INTO `tai_khoans` (`id`,`ho_ten`, `dien_thoai`, `email`, `password`) VALUES (NULL, '$email','$ho_ten','$dien_thoai', '$hashedPassword');";
+
 
             $this->conn->query($sql);
         } catch (Exception $e) {

@@ -2,6 +2,8 @@
 require_once 'layout/header.php';
 require_once 'layout/menu.php';
 // print_r($listBinhLuan);
+$gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
+
 ?>
 
 
@@ -93,7 +95,12 @@ require_once 'layout/menu.php';
                                         <div class="quantity-cart-box d-flex align-items-center">
 
                                             <div class="action_link">
-                                                <button class="btn btn-cart2" id="btn-book">Đặt phòng</button>
+                                            <?php if($phongDetail['trang_thai_id']==1)
+                                            {?>
+                                                <button class="btn btn-cart2" id="btn-book" >Đặt phòng</button>
+                                            <?php   } else{?>
+                                                <button class="btn btn-cart2" style="background-color:grey" id="btn-book" disabled>Đặt phòng</button>
+                                                <?php   } ?>
                                             </div>
                                         </div>
                                     </form>
@@ -284,9 +291,19 @@ require_once 'layout/menu.php';
                     <input class="my-1" type="date" name="check_out" id="check_out">
                     <input type="hidden" name="tai_khoan_id" value="<?= $_SESSION['user_id'] ?>">
                     <input type="hidden" name="phong_id" value="<?= $phongDetail['id'] ?>">
-                    <input type="hidden" name="phuong_thuc_id" value="2">
-                    <input type="hidden" name="trang_thai_id" value="2">
-                    <input type="hidden" name="don_gia" value="22">
+                    <label class="form-label" for="">Phương Thức Thanh Toán</label>
+                    <select name="phuong_thuc_id" id="">
+                        <option value="1">Tiền mặt</option>
+                        <option value="2">Internet Banking</option>
+                    </select>
+
+                    <div class="my-3">
+                        <label for="total_price">Giá Tiền Cần Thanh Toán:</label>
+                        <span id="total_price" style="font-weight: bold; color: red;">0</span>
+                    </div>
+                    <input type="hidden" name="trang_thai_id" value="4">
+                    <input type="hidden" name="gia_phong" id="gia_phong" value="<?= htmlspecialchars(number_format($gia_phong, 2, '.', ''), ENT_QUOTES, 'UTF-8') ?>">
+                    <input type="hidden" name="don_gia" id="total_don_gia" value="">
                 </div>
                 <button class="btn btn-cart2" id="btn-submit" type="submit">Xác Nhận</button>
                 <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel" type="button">Hủy</button>
@@ -299,37 +316,82 @@ require_once 'layout/menu.php';
             const cancelButton = document.getElementById('btn-cancel');
             const bookingForm = document.getElementById('bookingForm');
 
+
             // Hiển thị form khi nhấn nút "Đặt Phòng"
             bookButton.addEventListener('click', (event) => {
                 event.preventDefault();
                 formContainer.classList.add('show');
                 overlay.classList.add('show');
             });
-        </script>
-        // Ẩn form khi nhấn overlay hoặc nút "Hủy"
-        cancelButton.addEventListener('click', hideForm);
-        overlay.addEventListener('click', hideForm);
+            // Lấy các phần tử cần thiết
+            const checkInInput = document.getElementById('check_in');
+            const checkOutInput = document.getElementById('check_out');
+            const totalPriceSpan = document.getElementById('total_price');
 
-        // Ngăn việc click form bên trong làm tắt form
-        formContainer.addEventListener('click', (event) => {
-        event.stopPropagation();
-        });
+            // Lấy giá trị đơn giá từ thẻ input và chuyển đổi thành số
+            const donGia = parseFloat(document.getElementById('gia_phong').value);
+            console.log(donGia);
 
-        function hideForm() {
-        formContainer.classList.remove('show');
-        overlay.classList.remove('show');
-        }
+            if (isNaN(donGia)) {
+                console.error("Đơn giá không hợp lệ, kiểm tra giá trị đầu vào.");
+            }
 
-        // Chặn hành động mặc định của nút Submit để không chuyển trang
-        bookingForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        alert('Form đã được xác nhận!');
-        });
+            // Hàm tính toán giá tiền
+            function calculateTotalPrice() {
+                const checkInDate = new Date(document.getElementById('check_in').value);
+                const checkOutDate = new Date(document.getElementById('check_out').value);
+                const donGiaInput = document.getElementById('gia_phong');
+                const totalDonGiaInput = document.getElementById('total_don_gia');
 
-        document.getElementById('btn-submit').addEventListener('click', () => {
-        alert('Xác nhận đặt phòng thành công!');
-        hideForm();
-        });
+                const donGia = parseFloat(donGiaInput.value);
+
+                if (checkInDate && checkOutDate && checkOutDate > checkInDate && !isNaN(donGia)) {
+                    const daysDifference = (checkOutDate - checkInDate) / (1000 * 60 * 60 * 24);
+                    const totalPrice = daysDifference * donGia;
+
+                    // Hiển thị tổng giá tiền trong định dạng USD
+                    document.getElementById('total_price').textContent = totalPrice.toLocaleString('en-US', {
+                        style: 'currency',
+                        currency: 'USD'
+                    });
+
+                    // Gán tổng tiền vào input ẩn
+                    totalDonGiaInput.value = totalPrice.toFixed(2); // Lưu giá trị dạng số thực 2 chữ số thập phân
+                } else {
+                    document.getElementById('total_price').textContent = "0 USD";
+                    totalDonGiaInput.value = ""; // Reset giá trị nếu không hợp lệ
+                }
+            }
+
+
+            // Thêm sự kiện cho các input ngày
+            checkInInput.addEventListener('change', calculateTotalPrice);
+            checkOutInput.addEventListener('change', calculateTotalPrice);
+
+            // // Ẩn form khi nhấn overlay hoặc nút "Hủy"
+            cancelButton.addEventListener('click', hideForm);
+            overlay.addEventListener('click', hideForm);
+
+            // //Ngăn việc click form bên trong làm tắt form
+            // formContainer.addEventListener('click', (event) => {
+            // event.stopPropagation();
+            // });
+
+            function hideForm() {
+            formContainer.classList.remove('show');
+            overlay.classList.remove('show');
+            }
+
+            // // Chặn hành động mặc định của nút Submit để không chuyển trang
+            // bookingForm.addEventListener('submit', (event) => {
+            // event.preventDefault();
+            // alert('Form đã được xác nhận!');
+            // });
+
+            // document.getElementById('btn-submit').addEventListener('click', () => {
+            // alert('Xác nhận đặt phòng thành công!');
+            // hideForm();
+            // }); 
         </script>
     </div>
 

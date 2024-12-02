@@ -153,4 +153,40 @@ class HomeController
         session_destroy();
         header("Location: " . BASE_URL . '?act=login');
     }
+
+
+    public function updateRoomStatuses() {
+        $rooms = $this->modelPhong->getAllRooms();
+        $bookings = $this->modelDonDat->getBookings();
+        $current_time = new DateTime();
+
+        // Duyệt qua tất cả các phòng
+        foreach ($rooms as $room) {
+            $room_id = $room['id'];
+            $shouldUpdate = true;
+
+            // Kiểm tra xem phòng có trong danh sách đặt không
+            foreach ($bookings as $booking) {
+                if ($booking['phong_id'] == $room_id) {
+                    $check_out_time = new DateTime($booking['check_out'] . " 23:59:59");
+
+                    // Nếu ngày check_out lớn hơn thời gian hiện tại, không cập nhật
+                    if ($check_out_time >= $current_time) {
+                        $shouldUpdate = false;
+                        break;
+                    }
+                }
+            }
+
+            // Cập nhật trạng thái về 2 nếu cần
+            if ($shouldUpdate) {
+                $this->modelPhong->updateRoomStatus($room_id);
+            }
+        }
+
+
+    }
 }
+
+}
+

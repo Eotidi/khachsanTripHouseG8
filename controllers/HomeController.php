@@ -53,7 +53,8 @@ class HomeController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $email = $_POST['email'];
-            $ho_ten
+            $ho_ten = $_POST['ho_ten'];
+            $dien_thoai = $_POST['dien_thoai'];
             $password = $_POST['password'];
             $confirmPassword = $_POST["confirm_password"];
             $error = [];
@@ -69,8 +70,9 @@ class HomeController
 
             if (empty($error)) {
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                $this->modelTaiKhoan->registerUser($email, $hashedPassword);
+                $this->modelTaiKhoan->registerUser($email,$ho_ten,$dien_thoai, $hashedPassword);
                 echo "<script>alert('Đăng ký thành công!');</script>";
+                echo $dien_thoai;
                 // header("Location: " . BASE_URL . '?act=login');
                 exit();
             } else {

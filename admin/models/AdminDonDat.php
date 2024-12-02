@@ -29,16 +29,16 @@ class AdminDonDat
     {
         try {
             $sql = 'SELECT don_dats.*,
-            trang_thai_don_dats.ten_trang_thai, 
-            tai_khoans.ho_ten,
-            tai_khoans.email,
-            tai_khoans.dien_thoai,
-            phuong_thuc_thanh_toans.ten_phuong_thuc
-            FROM don_dats 
-            INNER JOIN trang_thai_don_dats ON don_dats.trang_thai_id = trang_thai_don_dats.id
-            INNER JOIN tai_khoans ON don_dats.tai_khoan_id = tai_khoans.id
-            INNER JOIN phuong_thuc_thanh_toans ON don_dats.phuong_thuc_id = phuong_thuc_thanh_toans.id
-            WHERE don_dats.id = :id';
+       tai_khoans.dien_thoai,
+       tai_khoans.email,
+       tai_khoans.ho_ten,
+       trang_thai_don_dats.ten_trang_thai,
+       phuong_thuc_thanh_toans.ten_phuong_thuc
+       FROM don_dats
+       INNER JOIN tai_khoans ON don_dats.tai_khoan_id = tai_khoans.id
+       INNER JOIN trang_thai_don_dats ON don_dats.trang_thai_id = trang_thai_don_dats.id
+       INNER JOIN phuong_thuc_thanh_toans ON don_dats.phuong_thuc_id = phuong_thuc_thanh_toans.id;
+       WHERE don_dats.id = :id';
 
             $stmt = $this->conn->prepare($sql);
 
@@ -59,7 +59,6 @@ class AdminDonDat
             FROM chi_tiet_don_dats 
             INNER JOIN phongs ON chi_tiet_don_dats.phong_id = phongs.id
             WHERE chi_tiet_don_dats.don_dat_id = :id';
-
             $stmt = $this->conn->prepare($sql);
 
             $stmt->execute([

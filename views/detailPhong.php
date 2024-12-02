@@ -95,11 +95,10 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                         <div class="quantity-cart-box d-flex align-items-center">
 
                                             <div class="action_link">
-                                            <?php if($phongDetail['trang_thai_id']==1)
-                                            {?>
-                                                <button class="btn btn-cart2" id="btn-book" >Đặt phòng</button>
-                                            <?php   } else{?>
-                                                <button class="btn btn-cart2" style="background-color:grey" id="btn-book" disabled>Đặt phòng</button>
+                                                <?php if ($phongDetail['trang_thai_id'] == 1) { ?>
+                                                    <button class="btn btn-cart2" id="btn-book">Đặt phòng</button>
+                                                <?php   } else { ?>
+                                                    <button class="btn btn-cart2" style="background-color:grey" id="btn-book" disabled>Đặt phòng</button>
                                                 <?php   } ?>
                                             </div>
                                         </div>
@@ -331,10 +330,11 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
             // Lấy giá trị đơn giá từ thẻ input và chuyển đổi thành số
             const donGia = parseFloat(document.getElementById('gia_phong').value);
             console.log(donGia);
-
             if (isNaN(donGia)) {
                 console.error("Đơn giá không hợp lệ, kiểm tra giá trị đầu vào.");
             }
+
+            
 
             // Hàm tính toán giá tiền
             function calculateTotalPrice() {
@@ -372,26 +372,10 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
             cancelButton.addEventListener('click', hideForm);
             overlay.addEventListener('click', hideForm);
 
-            // //Ngăn việc click form bên trong làm tắt form
-            // formContainer.addEventListener('click', (event) => {
-            // event.stopPropagation();
-            // });
-
             function hideForm() {
-            formContainer.classList.remove('show');
-            overlay.classList.remove('show');
+                formContainer.classList.remove('show');
+                overlay.classList.remove('show');
             }
-
-            // // Chặn hành động mặc định của nút Submit để không chuyển trang
-            // bookingForm.addEventListener('submit', (event) => {
-            // event.preventDefault();
-            // alert('Form đã được xác nhận!');
-            // });
-
-            // document.getElementById('btn-submit').addEventListener('click', () => {
-            // alert('Xác nhận đặt phòng thành công!');
-            // hideForm();
-            // }); 
         </script>
     </div>
 

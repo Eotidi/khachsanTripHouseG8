@@ -46,14 +46,16 @@ require_once 'layout/menu.php';
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(isset($listDon)){foreach ($listDon as $key => $donDat): ?>
-                                    <tr class="text-center">
-                                        <td><?= $donDat['ho_ten'] ?></td>
-                                        <td><?= $donDat['dien_thoai'] ?></td>
-                                        <td><?= $donDat['ten_phong'] ?></td>
-                                        <td><?= $donDat['check_in'] ?></td>
-                                        <td><?= $donDat['check_out'] ?></td>
-                                        <td><?= $donDat['don_gia'] ?>$</td>
+                                <?php if (isset($listDon)) {
+                                    foreach ($listDon as $key => $donDat): ?>
+                                        <tr class="text-center">
+                                            <td><?= $donDat['ho_ten'] ?></td>
+                                            <td><?= $donDat['dien_thoai'] ?></td>
+                                            <td><?= $donDat['ten_phong'] ?></td>
+                                            <td><?= $donDat['check_in'] ?></td>
+                                            <td><?= $donDat['check_out'] ?></td>
+                                            <td><?= $donDat['don_gia'] ?>$</td>
+
 
                                         <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>
                                         <td>
@@ -66,6 +68,7 @@ require_once 'layout/menu.php';
                                         </td>
                                     </tr>
                                 <?php endforeach;}; ?>
+                                
                             </tbody>
                         </table>
                     </div>

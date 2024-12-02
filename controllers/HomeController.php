@@ -154,6 +154,7 @@ class HomeController
         header("Location: " . BASE_URL . '?act=login');
     }
 
+
     public function updateRoomStatuses() {
         $rooms = $this->modelPhong->getAllRooms();
         $bookings = $this->modelDonDat->getBookings();
@@ -186,3 +187,6 @@ class HomeController
 
     }
 }
+
+}
+

@@ -44,6 +44,9 @@ match ($act) {
 
     'postBooking' => (new HomeController())->addDondat(),
 
+    'huy-don-dat' => (new HomeController())->huyDondat(),
+
+
     'logout' => (new HomeController())->logOut(),
 
 };

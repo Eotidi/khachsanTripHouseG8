@@ -48,7 +48,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                         <img class="w-full h-full" src="https://images.unsplash.com/photo-1529290130-4ca3753253ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdGVsfGVufDB8fDB8fHww" alt="room-details" />
                                     </div>
                                 </div>
-</div>
+                            </div>
                             <div class="col-lg-7">
                                 <div class="room-details-des">
                                     <div class="manufacturer-name">
@@ -95,11 +95,10 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                         <div class="quantity-cart-box d-flex align-items-center">
 
                                             <div class="action_link">
-                                            <?php if($phongDetail['trang_thai_id']==1)
-                                            {?>
-                                                <button class="btn btn-cart2" id="btn-book" >Đặt phòng</button>
-<?php   } else{?>
-                                                <button class="btn btn-cart2" style="background-color:grey" id="btn-book" disabled>Đặt phòng</button>
+                                                <?php if ($phongDetail['trang_thai_id'] == 1) { ?>
+                                                    <button class="btn btn-cart2" id="btn-book">Đặt phòng</button>
+                                                <?php   } else { ?>
+                                                    <button class="btn btn-cart2" style="background-color:grey" id="btn-book" disabled>Đặt phòng</button>
                                                 <?php   } ?>
                                             </div>
                                         </div>
@@ -142,7 +141,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                                                     <img src="<?= $a['avt_link'] ?>" alt="AVT">
                                                                 <?php } ?>
                                                             </div>
-<div class="review-box">
+                                                            <div class="review-box">
 
                                                                 <div class="post-author">
                                                                     <p><span><?= $a['ho_ten'] ?> </span><i class="fa-solid fa-grip-lines-vertical"></i> <?= $a['ngay_danh_gia'] ?></p>
@@ -198,7 +197,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                             <div class="room-item">
                                 <figure class="room-thumb">
                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
-<img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
+                                        <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
                                         <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
                                     </a>
                                     <div class="cart-hover">
@@ -282,7 +281,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
         <div class="form-container" id="booking-form">
             <form action="?act=postBooking" method="post" id="bookingForm">
                 <h3 class="text-center" style="color: darkturquoise;">Đặt Phòng Ngay</h3>
-<div class="single-input-item my-3">
+                <div class="single-input-item my-3">
                     <label for="check_in">Ngày Nhận Phòng:</label>
                     <input class="my-1" type="date" name="check_in" id="check_in">
                 </div>
@@ -331,9 +330,11 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
             // Lấy giá trị đơn giá từ thẻ input và chuyển đổi thành số
             const donGia = parseFloat(document.getElementById('gia_phong').value);
             console.log(donGia);
-if (isNaN(donGia)) {
+            if (isNaN(donGia)) {
                 console.error("Đơn giá không hợp lệ, kiểm tra giá trị đầu vào.");
             }
+
+            
 
             // Hàm tính toán giá tiền
             function calculateTotalPrice() {
@@ -372,8 +373,8 @@ if (isNaN(donGia)) {
             overlay.addEventListener('click', hideForm);
 
             function hideForm() {
-            formContainer.classList.remove('show');
-            overlay.classList.remove('show');
+                formContainer.classList.remove('show');
+                overlay.classList.remove('show');
             }
         </script>
     </div>

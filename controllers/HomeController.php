@@ -141,6 +141,13 @@ class HomeController
         $this->modelDonDat->changeStatus($phong_id);
         header("Location: " . BASE_URL . '?act=don-dat');
     }
+
+    public function huyDonDat()
+    {
+        $id = $_GET['id'];
+        $this->modelDonDat->deleteDonDat($id);
+        header("Location: " . BASE_URL . '?act=don-dat');
+    }
     public function logOut()
     {
         session_destroy();

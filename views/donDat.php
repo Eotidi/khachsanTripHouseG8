@@ -34,7 +34,6 @@ echo $_SESSION['currentUser'];
                         <table class="table">
                             <thead>
                                 <tr class="text-center">
-                                    <th scope="col" style="background-color: #FFF3CD;">MÃ ĐƠN</th>
                                     <th scope="col" style="background-color: #FFF3CD;">TÀI KHOẢN</th>
                                     <th scope="col" style="background-color: #FFF3CD;">ĐIỆN THOẠI</th>
                                     <th scope="col" style="background-color: #FFF3CD;">CHECK IN</th>
@@ -46,8 +45,7 @@ echo $_SESSION['currentUser'];
                             <tbody>
                                 <?php foreach ($listDon as $key => $donDat): ?>
                                     <tr class="text-center">
-                                        <th scope="row"><?= $donDat['ma_don'] ?></th>
-                                        <td><?= $_SESSION['user_name'] ?></td>
+                                        <td><?= $_SESSION['user_id'] ?></td>
                                         <td><?= $donDat['dien_thoai'] ?></td>
                                         <td><?= $donDat['check_in'] ?></td>
                                         <td><?= $donDat['check_out'] ?></td>

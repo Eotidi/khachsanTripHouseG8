@@ -120,41 +120,4 @@ class AdminPhong
             echo "LOI" . $e->getMessage();
         }
     }
-
-    // public function getDetailBinhLuan($id)
-    // {
-    //     try {
-    //         $sql = 'SELECT * FROM danh_gias WHERE id = :id';
-
-    //         $stmt = $this->conn->prepare($sql);
-
-    //         $stmt->execute([':id' => $id]);
-
-    //         return $stmt->fetch();
-    //     } catch (Exception $e) {
-    //         echo "LOI" . $e->getMessage();
-    //     }
-    // }
-
-    // public function updateTrangThaiBinhLuan($id, $trang_thai_id)
-    // {
-    //     try {
-    //         $sql = "UPDATE danh_gias
-    //         SET 
-    //             trang_thai_id = :trang_thai_id
-
-    //             WHERE id = :id ";
-    //         $stmt = $this->conn->prepare($sql);
-
-    //         $stmt->execute([
-    //             ':trang_thai_id' => $trang_thai_id,
-    //             ':id' => $id
-
-    //         ]);
-    //         // Lay id san pham vua them 
-    //         return true;
-    //     } catch (Exception $e) {
-    //         echo "LOI" . $e->getMessage();
-    //     }
-    // }
 }

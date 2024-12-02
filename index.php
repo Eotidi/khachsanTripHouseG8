@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 // Require file Common
 require_once './commons/env.php'; // Khai báo biến môi trường
@@ -21,7 +21,9 @@ match ($act) {
     '/' => (new HomeController())->home(),
 
     'phong' => (new HomeController())->phong(),
-    
+
+    'phong-filter' => (new HomeController())->phongFilter(),
+
     'chi-tiet-phong' => (new HomeController())->chiTietPhong(),
 
     'login' => (new HomeController())->formLogin(),
@@ -30,7 +32,7 @@ match ($act) {
 
     'check-register' => (new HomeController())->postRegister(),
 
-    'check-login'=> (new HomeController())->postLogin(),
+    'check-login' => (new HomeController())->postLogin(),
 
     'gioi-thieu' => (new HomeController())->gioiThieu(),
 
@@ -43,5 +45,5 @@ match ($act) {
     'postBooking' => (new HomeController())->addDondat(),
 
     'logout' => (new HomeController())->logOut(),
-    
+
 };

@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Quản lý tài khoản khách hàng</h1>
+                    <h1>Quản lý tài khoản Khách hàng</h1>
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -26,48 +26,40 @@
                 <div class="col-12">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Sửa thông tin tài khoản khách hàng: PHP</h3>
+                            <h3 class="card-title">Sửa thông tin tài khoản Khách hàng: <?= $khachHang['ho_ten'] ?> </h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="" method="post">
-                            <input type="hidden" name="" value="">
+                        <form action="?act=postEditKh&id=<?= $khachHang['id'] ?>" method="post">
+                            <input type="hidden" name="id" value="<?= $khachHang['id'] ?>">
                             <div class="card-body">
                                 <div class="form-group">
                                     <label>Họ tên</label>
-                                    <input type="text" class="form-control" name="" value="">
-                                    
+                                    <input type="text" class="form-control" name="ho_ten"
+                                        value="<?= $khachHang['ho_ten'] ?>" placeholder="Nhập họ tên">
+                                    <?php if (isset($_SESSION['error']['hoten'])) { ?>
+                                    <p class="text-danger"> <?= $_SESSION['error']['hoten'] ?></p>
+                                    <?php } ?>
                                 </div>
 
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="text" class="form-control" name="" value="">
-                                    
+                                    <input type="email" class="form-control" name="email"
+                                        value="<?= $khachHang['email'] ?>" placeholder="Nhập email">
+                                    <?php if (isset($_SESSION['error']['email'])) { ?>
+                                    <p class="text-danger"> <?= $_SESSION['error']['email'] ?></p>
+                                    <?php } ?>
+
                                 </div>
 
                                 <div class="form-group">
                                     <label>Số điện thoại</label>
-                                    <input type="text" class="form-control" name="" value="">
-                                    
-                                </div>
+                                    <input type="text" class="form-control" name="dien_thoai"
+                                        value="<?= $khachHang['dien_thoai'] ?>" placeholder="Nhập Số điện thoại">
+                                    <?php if (isset($_SESSION['error']['dien_thoai'])) { ?>
+                                    <p class="text-danger"> <?= $_SESSION['error']['dien_thoai'] ?></p>
+                                    <?php } ?>
 
-                                <div class="form-group">
-                                    <label>Ngày sinh</label>
-                                    <input type="date" class="form-control" name="" value="">
-                                    
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Giói tính</label>
-                                    <select id="inputStatus" name="" class="form-control custom-select">
-                                        <option  value="1">Nam</option>
-                                        <option  value="2">Nữ</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Địa chỉ</label>
-                                    <input type="text" class="form-control" name="" value="" placeholder="Địa chỉ">
-                                    
                                 </div>
                             </div>
                             <!-- /.card-body -->

@@ -28,7 +28,6 @@
                   <thead>
                     <tr>
                       <th>STT</th>
-                      <th>Mã đơn đặt</th>
                       <th>Tên khách hàng</th>
                       <th>Số điện thoại</th>
                       <th>Check in</th>
@@ -42,7 +41,6 @@
                     <?php foreach ($listDonDat as $key => $donDat): ?>
                       <tr>
                         <td><?= $key + 1 ?></td>
-                        <td><?= $donDat['ma_don'] ?></td>
                         <td><?= $donDat['ho_ten'] ?></td>
                         <td><?= $donDat['dien_thoai'] ?></td>
                         <td><?= $donDat['check_in'] ?></td>
@@ -66,7 +64,6 @@
                   <tfoot>
                     <tr>
                       <th>STT</th>
-                      <th>Mã đơn đặt</th>
                       <th>Tên khách hàng</th>
                       <th>Số điện thoại</th>
                       <th>Check in</th>

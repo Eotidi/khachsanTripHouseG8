@@ -67,6 +67,8 @@ match ($act) {
     'list-tai-khoan-khach-hang' =>(new AdminTaiKhoanController())->danhSachKhachHang(),
     'form-sua-khach-hang' =>(new AdminTaiKhoanController())->formEditKhachHang(),
     'chi-tiet-khach-hang' =>(new AdminTaiKhoanController())->detailKhachHang(),
+    'postEditKh' =>(new AdminTaiKhoanController())->postEditKh(),
+
 
     // auth
     'login-admin' =>(new AdminTaiKhoanController())->formLogin(),

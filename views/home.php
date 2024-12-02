@@ -3,7 +3,7 @@ require_once 'layout/header.php';
 require_once 'layout/menu.php';
 ?>
 <main>
-    <section class="slider-area">
+    <section class="slider-area mt-4">
         <div class="hero-slider-active slick-arrow-style slick-arrow-style_hero slick-dot-style">
             <div class="hero-single-slide hero-overlay">
                 <div class="hero-slider-item bg-img" data-bg="assets/img/slider/slider1.png">
@@ -27,24 +27,24 @@ require_once 'layout/menu.php';
                 <div class="col-12">
                     <div class="service-policy section-padding">
                         <div class="body1">
-                            <form action="">
+                            <form action="<?= BASE_URL . '?act=phong-filter' ?>" method="POST">
                                 <div class="search-container1">
-                                    <select name="">
-                                        <option value="">...</option>
-                                        <option value="">VIP</option>
-                                        <option value="">Medium</option>
+                                    <select name="select_loai" id="select_loai">
+                                        <option value="">Loại phòng</option>
+                                        <option value="1">VIP</option>
+                                        <option value="2">Normal</option>
                                     </select>
-                                    <select name="">
-                                        <option value="">...</option>
-                                        <option value="">Single</option>
-                                        <option value="">Double</option>
+                                    <select name="select_trang_thai" id="select_trang_thai">
+                                        <option value="">Trạng thái phòng</option>
+                                        <option value="1">Còn phòng</option>
+                                        <option value="2">Hết phòng</option>
                                     </select>
-                                    <select name="">
-                                        <option value="">...</option>
-                                        <option value="">Còn phòng</option>
-                                        <option value="">Hết phòng</option>
+                                    <select name="select_people" id="select_people">
+                                        <option value="">Thể loại</option>
+                                        <option value="1">Đơn</option>
+                                        <option value="2">Đôi</option>
                                     </select>
-                                    <button class="btn ">Search</button>
+                                    <button class="btn" onchange="this.form.submit()">Search</button>
                                 </div>
                             </form>
                         </div>
@@ -67,19 +67,19 @@ require_once 'layout/menu.php';
                                             <figure class="room-thumb">
 
                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
-                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?=$phong['hinh_anh'] ?>" alt="roon">
-                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?=$phong['hinh_anh'] ?>" alt="room">
+                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" pri-img" src="<?= $phong['hinh_anh'] ?>" alt="roon">
+                                                    <img style="width: 300px; height:200px; object-fit: cover;" class=" sec-img" src="<?= $phong['hinh_anh'] ?>" alt="room">
 
                                                 </a>
 
                                                 <div class="cart-hover">
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id='. $phong['id'] ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>"><button class="btn btn-cart">Xem chi tiết</button></a>
                                                 </div>
                                             </figure>
                                             <div class="room-caption text-center">
                                                 <h6 class="room-name">
 
-                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id='. $phong['id'] ?>">Phòng <?= $phong['ten_phong'] ?></a>
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">Phòng <?= $phong['ten_phong'] ?></a>
 
                                                 </h6>
                                                 <div class="price-box">
@@ -204,23 +204,25 @@ require_once 'layout/menu.php';
                         <div class="group-list-item-wrapper">
                             <div class="group-list-carousel">
                                 <?php foreach ($listPhong as $key => $phong): ?>
-                                    <div class="group-slide-item">
-                                        <div class="group-item my-2">
-                                            <div class="group-item-thumb">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                    <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="group-item-desc">
-                                                <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                    </a></h5>
-                                                <div class="price-box">
-                                                    <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
-                                                    <span class="price-old"><?= $phong['gia_phong'] ?> $</span>
+                                    <?php if ($phong['loai_phong_id'] == 1): ?>
+                                        <div class="group-slide-item">
+                                            <div class="group-item my-2">
+                                                <div class="group-item-thumb">
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                        <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="image">
+                                                    </a>
+                                                </div>
+                                                <div class="group-item-desc">
+                                                    <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                        </a></h5>
+                                                    <div class="price-box">
+                                                        <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
+                                                        <span class="price-old"><?= $phong['gia_phong'] ?> $</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
                         </div>
@@ -235,23 +237,25 @@ require_once 'layout/menu.php';
                         <div class="group-list-item-wrapper">
                             <div class="group-list-carousel">
                                 <?php foreach ($listPhong as $key => $phong): ?>
-                                    <div class="group-slide-item">
-                                        <div class="group-item my-2">
-                                            <div class="group-item-thumb">
-                                                <a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                    <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="group-item-desc">
-                                                <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong' ?>">
-                                                    </a></h5>
-                                                <div class="price-box">
-                                                    <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
-                                                    <span class="price-old"><?= $phong['gia_phong'] ?> $</span>
+                                    <?php if ($phong['loai_phong_id'] == 2): ?>
+                                        <div class="group-slide-item">
+                                            <div class="group-item my-2">
+                                                <div class="group-item-thumb">
+                                                    <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                        <img src="<?= $phong['hinh_anh'] ?>" style="height: 80px; width:auto" alt="image">
+                                                    </a>
+                                                </div>
+                                                <div class="group-item-desc">
+                                                    <h5 class="group-room-name"><a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">
+                                                        </a></h5>
+                                                    <div class="price-box">
+                                                        <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
+                                                        <span class="price-old"><?= $phong['gia_phong'] ?> $</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
                         </div>

@@ -70,7 +70,7 @@ class HomeController
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                 $this->modelTaiKhoan->registerUser($email, $hashedPassword);
                 echo "<script>alert('Đăng ký thành công!');</script>";
-                header("Location: " . BASE_URL . '?act=login');
+                // header("Location: " . BASE_URL . '?act=login');
                 exit();
             } else {
                 $errorMessage = implode("\\n", $error);

@@ -12,7 +12,7 @@ class TaiKhoan
     {
         // Chuẩn bị câu lệnh SQL
         try {
-            $sql = "INSERT INTO `tai_khoan` (`id`, `email`, `password`) VALUES (NULL, '$email', '$hashedPassword');";
+            $sql = "INSERT INTO `tai_khoans` (`id`, `email`, `password`) VALUES (NULL, '$email', '$hashedPassword');";
 
             $this->conn->query($sql);
         } catch (Exception $e) {

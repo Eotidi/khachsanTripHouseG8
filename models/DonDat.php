@@ -52,5 +52,11 @@ class DonDat {
             echo "LOI" . $e->getMessage();
         }
     }
+
+    public function getBookings() {
+        $sql = "SELECT phong_id, check_out FROM don_dats";
+        $stmt = $this->conn->query($sql);
+        return $stmt->fetchAll();
+    }
 }
 ?>

@@ -14,6 +14,8 @@ require_once './models/Taikhoan.php';
 require_once './models/DonDat.php';
 
 // Route 
+$control = new HomeController();
+$control->updateRoomStatuses();
 $act = $_GET['act'] ?? '/';
 
 match ($act) {

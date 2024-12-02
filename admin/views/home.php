@@ -1,7 +1,13 @@
 <?php require './views/layout/header.php'; ?>
 <?php require './views/layout/navbar.php'; ?>
 <?php require './views/layout/sidebar.php'; ?>
-
+<?php 
+$phongTrong = 0;
+foreach($listPhong as $a)
+{
+  
+}
+?>
 <div class="content-wrapper">
   <section class="content-header">
     <div class="container my-5">

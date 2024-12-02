@@ -139,7 +139,7 @@ class AdminTaiKhoanController
 
                 if (($email == $a['email']) && ($password == $a['password'])) {
                     if (($a['trang_thai_id'] == 1) && ($a['chuc_vu_id'] == 1)) {
-                        $_SESSION['user_admin'] = $email;
+                        $_SESSION['user_id'] = $a['id'];
                         header("Location:" . BASE_URL_ADMIN);
                     } elseif ($a['chuc_vu_id'] !== 1) {
                         echo "Tài khoản ko hợp lệ";

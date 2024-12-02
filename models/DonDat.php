@@ -6,6 +6,12 @@ class DonDat {
         $this->conn = connectDB();
     }
 
+    public function postBooking($tai_khoan_id,$phong_id,$check_in,$check_out,$trang_thai_id,$phuong_thuc_id,$don_gia)
+    {
+        $sql = "INSERT INTO `don_dats` (`tai_khoan_id`, `phong_id`, `check_in`, `check_out`, `trang_thai_id`, `don_gia`, `phuong_thuc_id`) VALUES ('$tai_khoan_id', '$phong_id', '$check_in', '$check_out', '$trang_thai_id', '$phuong_thuc_id', '$don_gia')";
+        $this->conn->query($sql);
+    }
+
     public function getAllDonDat()
     {
         try {

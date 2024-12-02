@@ -287,16 +287,41 @@ require_once 'layout/menu.php';
     <div>
         <div class="overlay" id="overlay"></div>
         <div class="form-container" id="booking-form">
-            <form id="bookingForm">
+            <form action="?act=postBooking" method="post" id="bookingForm">
                 <h3 class="text-center" style="color: darkturquoise;">Đặt Phòng Ngay</h3>
                 <div class="single-input-item my-3">
                     <label for="check_in">Ngày Nhận Phòng:</label>
-                    <input class="my-1" type="date" id="check_in">
+                    <input class="my-1" type="date" name="check_in" id="check_in">
                 </div>
                 <div class="single-input-item my-3" style="margin-top: -5px;">
                     <label for="checkout_out">Ngày Trả Phòng:</label>
-                    <input class="my-1" type="date" id="check_out">
+                    <input class="my-1" type="date" name="check_out" id="check_out">
+                    <input type="hidden" name="tai_khoan_id" value="<?= $_SESSION['user_id'] ?>">
+                    <input type="hidden" name="phong_id" value="<?= $phongDetail['id'] ?>">
+                    <input type="hidden" name="phuong_thuc_id" value="2">
+                    <input type="hidden" name="trang_thai_id" value="2">
+                    <input type="hidden" name="don_gia" value="22">
                 </div>
+
+                <button class="btn btn-cart2" id="btn-submit" type="submit">Xác Nhận</button>
+                <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel" type="button">Hủy</button>
+            </form>
+        </div>
+        <script>
+            const bookButton = document.getElementById('btn-book');
+            const formContainer = document.getElementById('booking-form');
+            const overlay = document.getElementById('overlay');
+            const cancelButton = document.getElementById('btn-cancel');
+            const bookingForm = document.getElementById('bookingForm');
+
+            // Hiển thị form khi nhấn nút "Đặt Phòng"
+            bookButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                formContainer.classList.add('show');
+                overlay.classList.add('show');
+            });
+        </script>
+
                 <button class="btn btn-cart2" id="btn-submit" type="button">Xác Nhận</button>
                 <button class="btn btn-danger h-10" style="border:1px solid dark" id="btn-cancel"
                     type="button">Hủy</button>
@@ -316,22 +341,41 @@ require_once 'layout/menu.php';
             overlay.classList.add('show');
         });
 
+
         // Ẩn form khi nhấn overlay hoặc nút "Hủy"
         cancelButton.addEventListener('click', hideForm);
         overlay.addEventListener('click', hideForm);
 
         // Ngăn việc click form bên trong làm tắt form
         formContainer.addEventListener('click', (event) => {
+
+        event.stopPropagation();
+        });
+
+        function hideForm() {
+        formContainer.classList.remove('show');
+        overlay.classList.remove('show');
+
             event.stopPropagation();
         });
 
         function hideForm() {
             formContainer.classList.remove('show');
             overlay.classList.remove('show');
+
         }
 
         // Chặn hành động mặc định của nút Submit để không chuyển trang
         bookingForm.addEventListener('submit', (event) => {
+
+        event.preventDefault();
+        alert('Form đã được xác nhận!');
+        });
+
+        document.getElementById('btn-submit').addEventListener('click', () => {
+        alert('Xác nhận đặt phòng thành công!');
+        hideForm();
+
             event.preventDefault();
             alert('Form đã được xác nhận!');
         });
@@ -339,6 +383,7 @@ require_once 'layout/menu.php';
         document.getElementById('btn-submit').addEventListener('click', () => {
             alert('Xác nhận đặt phòng thành công!');
             hideForm();
+
         });
         </script>
     </div>

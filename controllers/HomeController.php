@@ -89,7 +89,7 @@ class HomeController
             foreach ($listUser as $a) {
                 if (($email == $a['email']) && ($password == $a['password'])) {
                     if (($a['trang_thai_id'] == 2) && ($a['chuc_vu_id'] == 2)) {
-                        $_SESSION['user_name'] = $a['email'];
+                        $_SESSION['user_id'] = $a['id'];
                         header("Location:" . BASE_URL);
                     } elseif ($a['chuc_vu_id'] !== 2) {
                         echo "<script>alert('Tài khoản ko hợp lệ !');</script>";
@@ -125,5 +125,23 @@ class HomeController
     {
         $listDon = $this->modelDonDat->getAllDonDat();
         require_once './views/donDat.php';
+    }
+
+    public function addDondat()
+    {
+        $tai_khoan_id = $_POST['tai_khoan_id'];
+        $phong_id = $_POST['phong_id'];
+        $check_in = $_POST['check_in'];
+        $check_out = $_POST['check_out'];
+        $trang_thai_id = $_POST['trang_thai_id'];
+        $phuong_thuc_id = $_POST['phuong_thuc_id'];
+        $don_gia = $_POST['don_gia'];
+        $this->modelDonDat->postBooking($tai_khoan_id,$phong_id,$check_in,$check_out,$trang_thai_id,$phuong_thuc_id,$don_gia);
+        header("Location: " . BASE_URL . '?act=don-dat');
+    }
+    public function logOut()
+    {
+        session_destroy();
+        header("Location: " . BASE_URL . '?act=login');
     }
 }

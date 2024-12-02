@@ -53,6 +53,7 @@ class HomeController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $email = $_POST['email'];
+            $ho_ten
             $password = $_POST['password'];
             $confirmPassword = $_POST["confirm_password"];
             $error = [];

@@ -35,6 +35,10 @@ require_once 'views/layout/menu.php';
                             <form action="<?= BASE_URL. '?act=check-register' ?>" method="post">
                                 <div class="single-input-item">
                                     <input type="email" placeholder="Email or Username" name="email" required />
+                                <div class="single-input-item">
+                                    <input type="text" placeholder="Enter your Fullname" name="ho_ten" required />
+                                <div class="single-input-item">
+                                    <input type="text" placeholder="Enter your Phonenumber" name="text" required />
                                 </div>
                                 <div class="single-input-item">
                                     <input type="password" placeholder="Enter your Password" name="password" required />
@@ -49,7 +53,7 @@ require_once 'views/layout/menu.php';
                                     </div>
                                 </div>
                                 <div class="single-input-item">
-                                    <button class="btn btn-sqr">ĐĂNG KÝ</button>
+                                    <button type="submit" class="btn btn-sqr">ĐĂNG KÝ</button>
                                 </div>
                             </form>
                         </div>

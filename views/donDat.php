@@ -46,25 +46,28 @@ require_once 'layout/menu.php';
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(isset($listDon)){foreach ($listDon as $key => $donDat): ?>
-                                    <tr class="text-center">
-                                        <td><?= $donDat['ho_ten'] ?></td>
-                                        <td><?= $donDat['dien_thoai'] ?></td>
-                                        <td><?= $donDat['ten_phong'] ?></td>
-                                        <td><?= $donDat['check_in'] ?></td>
-                                        <td><?= $donDat['check_out'] ?></td>
-                                        <td><?= $donDat['don_gia'] ?>$</td>
+                                <?php if (isset($listDon)) {
+                                    foreach ($listDon as $key => $donDat): ?>
+                                        <tr class="text-center">
+                                            <td><?= $donDat['ho_ten'] ?></td>
+                                            <td><?= $donDat['dien_thoai'] ?></td>
+                                            <td><?= $donDat['ten_phong'] ?></td>
+                                            <td><?= $donDat['check_in'] ?></td>
+                                            <td><?= $donDat['check_out'] ?></td>
+                                            <td><?= $donDat['don_gia'] ?>$</td>
 
-                                        <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>
-                                        <td>
-                                            <?php if ($donDat['trang_thai_id'] == 1) { ?>
-                                                <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" type="submit" disabled>CANCEL</button>
-                                            <?php } else { ?>
-                                                <button class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">CANCEL</button>
-                                            <?php } ?>
-                                        </td>
-                                    </tr>
-                                <?php endforeach;}; ?>
+                                            <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>
+                                            <td>
+                                                <?php if ($donDat['trang_thai_id'] == 1) { ?>
+                                                    <button class="bg-red-500 text-white font-bold py-2 px-4 rounded" type="submit" disabled>CANCEL</button>
+                                                <?php } else { ?>
+                                                    <a href="?act=huy-don-dat&id=<?= $donDat['id'] ?>"><button onclick="return confirm('Bạn có đồng ý xóa hay không ?')" class="bg-red-500 hover:bg-red-800 text-white font-bold py-2 px-4 rounded" type="submit">CANCEL</button></a>
+
+                                                <?php } ?>
+                                            </td>
+                                        </tr>
+                                <?php endforeach;
+                                }; ?>
                             </tbody>
                         </table>
                     </div>

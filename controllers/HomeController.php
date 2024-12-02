@@ -123,7 +123,8 @@ class HomeController
 
     public function donDat()
     {
-        $listDon = $this->modelDonDat->getAllDonDat();
+        $id = $_SESSION['user_id'];
+        $listDon = $this->modelDonDat->getAllDonDat($id);
         require_once './views/donDat.php';
     }
 
@@ -137,6 +138,7 @@ class HomeController
         $phuong_thuc_id = $_POST['phuong_thuc_id'];
         $don_gia = $_POST['don_gia'];
         $this->modelDonDat->postBooking($tai_khoan_id,$phong_id,$check_in,$check_out,$trang_thai_id,$phuong_thuc_id,$don_gia);
+        $this->modelDonDat->changeStatus($phong_id);
         header("Location: " . BASE_URL . '?act=don-dat');
     }
     public function logOut()

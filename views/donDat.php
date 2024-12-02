@@ -1,7 +1,7 @@
 <?php
 require_once 'layout/header.php';
 require_once 'layout/menu.php';
-echo $_SESSION['currentUser'];
+// echo $_SESSION['currentUser'];
 ?>
 
 <main>
@@ -34,23 +34,25 @@ echo $_SESSION['currentUser'];
                         <table class="table">
                             <thead>
                                 <tr class="text-center">
-                                    <th scope="col" style="background-color: #FFF3CD;">MÃ ĐƠN</th>
                                     <th scope="col" style="background-color: #FFF3CD;">TÀI KHOẢN</th>
                                     <th scope="col" style="background-color: #FFF3CD;">ĐIỆN THOẠI</th>
                                     <th scope="col" style="background-color: #FFF3CD;">CHECK IN</th>
                                     <th scope="col" style="background-color: #FFF3CD;">CHECK OUT</th>
+                                    <th scope="col" style="background-color: #FFF3CD;">GIÁ TIỀN</th>
+
                                     <th scope="col" style="background-color: #FFF3CD;">TRẠNG THÁI</th>
                                     <th scope="col" style="background-color: #FFF3CD;">ACTIONS</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($listDon as $key => $donDat): ?>
+                                <?php if(isset($listDon)){foreach ($listDon as $key => $donDat): ?>
                                     <tr class="text-center">
-                                        <th scope="row"><?= $donDat['ma_don'] ?></th>
-                                        <td><?= $_SESSION['user_name'] ?></td>
+                                        <td><?= $_SESSION['user_id'] ?></td>
                                         <td><?= $donDat['dien_thoai'] ?></td>
                                         <td><?= $donDat['check_in'] ?></td>
                                         <td><?= $donDat['check_out'] ?></td>
+                                        <td><?= $donDat['don_gia'] ?>$</td>
+
                                         <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>
                                         <td>
                                             <?php if ($donDat['trang_thai_id'] == 1) { ?>
@@ -60,7 +62,7 @@ echo $_SESSION['currentUser'];
                                             <?php } ?>
                                         </td>
                                     </tr>
-                                <?php endforeach; ?>
+                                <?php endforeach;}; ?>
                             </tbody>
                         </table>
                     </div>

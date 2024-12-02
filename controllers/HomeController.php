@@ -53,24 +53,18 @@ class HomeController
     {
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $email = $_POST['email'];
+            $dien_thoai = $_POST['dien_thoai'];
             $password = $_POST['password'];
             $confirmPassword = $_POST["confirm_password"];
             $error = [];
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $error[] = "Email không hợp lệ.";
-            }
-            if (strlen($password) < 6) {
-                $error[] = "Mật khẩu phải có ít nhất 6 ký tự.";
-            }
-            if ($password !== $confirmPassword) {
-                $error[] = "Mật khẩu xác nhận không khớp.";
-            }
 
             if (empty($error)) {
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                 $this->modelTaiKhoan->registerUser($email, $hashedPassword);
+                $this->modelTaiKhoan->registerUser($email,$dien_thoai, $hashedPassword);
                 echo "<script>alert('Đăng ký thành công!');</script>";
-                header("Location: " . BASE_URL . '?act=login');
+                echo $dien_thoai;
+                // header("Location: " . BASE_URL . '?act=login');
                 exit();
             } else {
                 $errorMessage = implode("\\n", $error);
@@ -137,7 +131,7 @@ class HomeController
         $trang_thai_id = $_POST['trang_thai_id'];
         $phuong_thuc_id = $_POST['phuong_thuc_id'];
         $don_gia = $_POST['don_gia'];
-        $this->modelDonDat->postBooking($tai_khoan_id,$phong_id,$check_in,$check_out,$trang_thai_id,$phuong_thuc_id,$don_gia);
+        $this->modelDonDat->postBooking($tai_khoan_id, $phong_id, $check_in, $check_out, $trang_thai_id, $phuong_thuc_id, $don_gia);
         $this->modelDonDat->changeStatus($phong_id);
         header("Location: " . BASE_URL . '?act=don-dat');
     }
@@ -155,7 +149,8 @@ class HomeController
     }
 
 
-    public function updateRoomStatuses() {
+    public function updateRoomStatuses()
+    {
         $rooms = $this->modelPhong->getAllRooms();
         $bookings = $this->modelDonDat->getBookings();
         $current_time = new DateTime();
@@ -183,10 +178,5 @@ class HomeController
                 $this->modelPhong->updateRoomStatus($room_id);
             }
         }
-
-
     }
 }
-
-}
-

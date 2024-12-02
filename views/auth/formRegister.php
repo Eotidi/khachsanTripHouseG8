@@ -32,9 +32,12 @@ require_once 'views/layout/menu.php';
                     <div class="col-lg-12">
                         <div class="login-reg-form-wrap">
                             <h5 class="text-center">ĐĂNG KÝ</h5>
-                            <form action="<?= BASE_URL. '?act=check-register' ?>" method="post">
+                            <form action="<?= BASE_URL . '?act=check-register' ?>" method="post">
                                 <div class="single-input-item">
                                     <input type="email" placeholder="Email or Username" name="email" required />
+                                </div>
+                                <div class="single-input-item">
+                                    <input type="text" placeholder="Enter your Phonenumber" name="dien_thoai" required />
                                 </div>
                                 <div class="single-input-item">
                                     <input type="password" placeholder="Enter your Password" name="password" required />

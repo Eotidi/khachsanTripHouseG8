@@ -33,7 +33,7 @@ function connectDB()
     function checkLoginAdmin()
     {
         if (!isset($_SESSION['user_admin'])) { 
-            header("Location: " . BASE_URL_ADMIN . '?act=login-admin');
+            require_once './views/auth/formLogin.php';
             exit();
         }
     }

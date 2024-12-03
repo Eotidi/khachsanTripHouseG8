@@ -18,6 +18,7 @@ require_once './models/AdminDonDat.php';
 require_once './models/AdminTaiKhoan.php';
 
 // Route
+
 $act = $_GET['act'] ?? '/';
 
 // if($act !== 'login-admin' && $act !== 'check-login-admin' && $act = 'logout-admin'){

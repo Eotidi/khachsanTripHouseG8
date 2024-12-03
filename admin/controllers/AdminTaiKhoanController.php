@@ -126,6 +126,8 @@ class AdminTaiKhoanController
 
     public function formLogin()
     {
+        $list = $this->modelTaiKhoan->getAllTaiKhoanAD();
+
         require_once "./views/auth/formLogin.php";
     }
 
@@ -137,23 +139,23 @@ class AdminTaiKhoanController
             $listUser = $this->modelTaiKhoan->getAllTaiKhoanAD();
             foreach ($listUser as $a) {
 
-                if (($email == $a['email']) && ($password == $a['password'])) {
+                if (($email == $a['email']) && ($password == $a['password'])) 
+                {
                     if (($a['trang_thai_id'] == 1) && ($a['chuc_vu_id'] == 1)) {
                         $_SESSION['user_admin'] = $a['email'];
                         header("Location:" . BASE_URL_ADMIN);
                     } elseif ($a['chuc_vu_id'] !== 1) {
                         echo "Tài khoản ko hợp lệ";
-                        exit();
+                        
                     } elseif ($a['trang_thai_id'] !== 1) {
                         echo "Tài khoản bị cấm";
-                        exit();
+                        
                     }
                     exit();
                 } else {
                     $_SESSION['error'] = $email;
                     $_SESSION['flash'] = true;
                     header("Location:" . BASE_URL_ADMIN . "?act=login-admin");
-                    exit();
                 }
             }
         }

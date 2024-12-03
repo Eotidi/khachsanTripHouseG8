@@ -41,9 +41,8 @@
                             <div class="col-sm-4 invoice-col">
                                 
                                 <br>
-                                <b>Tổng tiền: </b> <?= number_format(array_sum($total), 0, ',', '.') ?> VND<br>
-                                <b>Ghi chú: ĐANG CHẾT CHƯA BIẾT ĐỔ VÀO KIỂU GÌ </b><br>
-                                <b>Thanh toán:  ĐANG CHẾT </b>
+                                <b>Tổng tiền:<?= $donDat['don_gia'] ?> VND</b>  <br>
+                                <b>Thanh toán:  <?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?> </b>
                             </div>
                         </div>
 
@@ -74,8 +73,9 @@
                                 <div class="table-responsive">
                                     <table class="table">
                                         <tr>
-                                            <th style="width:50%">Số ngày:</th>
-                                            <td><?= $so_ngay ?> ngày</td>
+                                            <td >Ngày đến :<?= $donDat['check_in'] ?></td>
+                                            <br>
+                                            <td> Ngày đi :<?= $donDat['check_out'] ?> </td>
                                         </tr>
                                         <tr>
                                             <th>Giá tiền trên ngày:</th>
@@ -83,7 +83,7 @@
                                         </tr>
                                         <tr>
                                             <th>Tổng thành tiền:</th>
-                                            <td><?= number_format(array_sum($total), 0, ',', '.') ?> VND</td>
+                                            <td><?= $donDat['don_gia'] ?> VND</td>
                                         </tr>
                                     </table>
                                 </div>

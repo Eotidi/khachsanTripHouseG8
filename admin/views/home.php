@@ -61,7 +61,7 @@ foreach($listDonDat as $b)
         </div>
 
         <footer class="text-center mt-4">
-          <button class="btn btn-primary btn-lg" id="update-stats">Cập nhật thống kê</button>
+          <button class="btn btn-primary btn-lg" onclick="location.reload()">Cập nhật thống kê</button>
         </footer>
     </div>
   </section>

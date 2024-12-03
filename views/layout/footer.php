@@ -36,7 +36,6 @@
                                 <li><a href="#">Chính Sách Phòng</a></li>
                                 <li><a href="#">Quy Định Đặt Phòng</a></li>
                                 <li><a href="#">Câu Hỏi Thường Gặp</a></li>
-                                <li><a href="#">Liên Hệ</a></li>
                             </ul>
                         </div>
                     </div>

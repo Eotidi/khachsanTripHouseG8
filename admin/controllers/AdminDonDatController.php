@@ -19,27 +19,21 @@ class AdminDonDatController
     {
         $id = $_GET['id'];
         $donDat = $this->modelDonDat->getDetailDonDat($id);
-        // if ($donDat) {
-        require_once './views/dondat/editDonDat.php';
-        // } else {
-        //     header("Location: " . BASE_URL_ADMIN . '?act=don-dat');
-        //     exit();
-        // }
 
+        require_once './views/dondat/editDonDat.php';
     }
 
     public function postEditDonDat()
     {
-        $id = $_GET['id'];
-        $check_in = $_POST['check_in'];
-        $check_out = $_POST['check_out'];
-        $trang_thai_id = $_POST['trang_thai_id'];
+        $id = $_GET['id'] ?? null;
+        $check_in = $_POST['check_in'] ?? null;
+        $check_out = $_POST['check_out'] ?? null;
+        $trang_thai_id = $_POST['trang_thai_id'] ?? null;
         $ghi_chu = $_POST['ghi_chu'] ?? null;
         $this->modelDonDat->updateDonDat($id, $check_in, $check_out, $trang_thai_id, $ghi_chu);
-        header("Location: " . BASE_URL_ADMIN . '?act=don-dat');
-        exit();
-    }
+       header('Location: ' .BASE_URL_ADMIN . '?act=don-dat');
 
+    }
     public function detailDonDat()
     {
         $id = $_GET['id'] ?? null;
@@ -50,7 +44,7 @@ class AdminDonDatController
         }
 
         $donDat = $this->modelDonDat->getDetailDonDat($id);
-
+        $phong = $this->modelDonDat->getDetailDonDatPhong($id);
         $donDatPhong = $this->modelDonDat->getListDonDat($id);
 
         // $listTrangThaiDonDat = $this->modelDonDat->getAllTrangThaiDonDat();

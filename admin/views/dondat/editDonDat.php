@@ -1,7 +1,8 @@
 <?php require './views/layout/header.php'; ?>
 <?php require './views/layout/navbar.php'; ?>
 
-<?php require './views/layout/sidebar.php'; ?>
+<?php require './views/layout/sidebar.php'; 
+print_r($donDat);?>
 
 <div class="content-wrapper">
     <section class="content-header">

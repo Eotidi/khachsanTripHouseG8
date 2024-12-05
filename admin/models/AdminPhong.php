@@ -120,4 +120,22 @@ class AdminPhong
             echo "LOI" . $e->getMessage();
         }
     }
+    public function getBinhLuanFromClient($id)
+    {
+        try {
+            $sql = "SELECT danh_gias.*,phongs.ten_phong
+            FROM danh_gias 
+            INNER JOIN phongs ON danh_gias.phong_id = phongs.id
+            WHERE danh_gias.tai_khoan_id = :id
+            ";
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([':id' => $id]);
+
+            return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
 }

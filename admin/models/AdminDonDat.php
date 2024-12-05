@@ -28,29 +28,23 @@ class AdminDonDat
     public function getDetailDonDat($id)
     {
         try {
-            $sql = 'SELECT don_dats.*,
-       tai_khoans.dien_thoai,
-       tai_khoans.email,
-       tai_khoans.ho_ten,
-       trang_thai_don_dats.ten_trang_thai,
-       phuong_thuc_thanh_toans.ten_phuong_thuc
-       FROM don_dats
-       INNER JOIN tai_khoans ON don_dats.tai_khoan_id = tai_khoans.id
-       INNER JOIN trang_thai_don_dats ON don_dats.trang_thai_id = trang_thai_don_dats.id
-       INNER JOIN phuong_thuc_thanh_toans ON don_dats.phuong_thuc_id = phuong_thuc_thanh_toans.id;
-       WHERE don_dats.id = :id';
-
+            $sql = "SELECT don_dats.*, 
+            tai_khoans.dien_thoai, 
+            tai_khoans.ho_ten,
+            tai_khoans.email
+            FROM don_dats
+            JOIN tai_khoans ON don_dats.tai_khoan_id = tai_khoans.id
+            WHERE don_dats.id = $id";
             $stmt = $this->conn->prepare($sql);
 
-            $stmt->execute([
-                ':id' => $id,
-            ]);
+            $stmt->execute();
 
             return $stmt->fetch();
         } catch (Exception $e) {
             echo "LOI" . $e->getMessage();
         }
     }
+
 
     public function getListDonDat($id)
     {
@@ -91,6 +85,25 @@ class AdminDonDat
             $stmt->execute();
 
             return $stmt->fetchAll();
+        } catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+    }
+
+    public function getDetailDonDatPhong($id)
+    {
+        try {
+            $sql = "SELECT don_dats.*,
+            phongs.ten_phong,
+            phongs.gia_phong
+            FROM don_dats 
+            INNER JOIN phongs ON don_dats.phong_id = phongs.id
+            WHERE don_dats.id = $id";
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetch();
         } catch (Exception $e) {
             echo "LOI" . $e->getMessage();
         }

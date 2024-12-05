@@ -2,10 +2,14 @@
 class AdminTaiKhoanController
 {
     public $modelTaiKhoan;
+    public $modelDonDat;
+    public $modelPhong;
 
     public function __construct()
     {
         $this->modelTaiKhoan = new AdminTaiKhoan();
+        $this->modelDonDat = new AdminDonDat();
+        $this->modelPhong = new AdminPhong();
     }
 
     public function danhSachQuanTri()
@@ -97,8 +101,8 @@ class AdminTaiKhoanController
 
     public function formEditKhachHang()
     {
-        $id_khach_hang = $_GET['id_khach_hang'];
-        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
+        $id = $_GET['id'];
+        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id);
         // var_dump($quanTri);die;
         require_once './views/taikhoan/khachhang/editKhachHang.php';
         // deleteSessionError();
@@ -117,12 +121,13 @@ class AdminTaiKhoanController
 
     public function detailKhachHang()
     {
-        $id_khach_hang = $_GET['id_khach_hang'];
-        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id_khach_hang);
-        // $listDonDat = $this->modelDonDat->getDonDatFromKhachHang($id_khach_hang);
-        // $listBinhLuan = $this->modelPhong->getBinhLuanFromKhachHang($id_khach_hang);
+        $id = $_GET['id'];
+        $khachHang = $this->modelTaiKhoan->getDetailTaiKhoan($id);
+        $listDonDat = $this->modelDonDat->getDonFromClient($id);
+        $listBinhLuan = $this->modelPhong->getBinhLuanFromClient($id);
         require_once './views/taikhoan/khachhang/detailKhachHang.php';
     }
+    
 
     public function formLogin()
     {

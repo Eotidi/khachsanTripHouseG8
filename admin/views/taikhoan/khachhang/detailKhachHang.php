@@ -35,7 +35,7 @@
                                     <th>Họ tên:</th>
                                     <td><?= $khachHang['ho_ten'] ?></td>
                                 </tr>
-                                
+
                                 <tr>
                                     <th>Email:</th>
                                     <td><?= $khachHang['email'] ?></td>
@@ -44,7 +44,7 @@
                                     <th>Số điện thoại:</th>
                                     <td><?= $khachHang['dien_thoai'] ?></td>
                                 </tr>
-                                
+
 
                             </tbody>
                         </table>
@@ -61,28 +61,18 @@
                                     <th>Check_in</th>
                                     <th>Check_out</th>
                                     <th>Tổng tiền</th>
-                                    <th>Thao tác</th>
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <tr>
-                                    <td>NULL</td>
-                                    <td>NULL</td>
-                                    <td>NULL</td>
-                                    <td>NULL</td>
-                                    <td>NULL</td>
-
-                                    <td>
-                                        <div class="btn-group">
-                                            <a href="<?= BASE_URL_ADMIN ?>">
-                                                <button class="btn btn-warning"><i class="fas fa-cogs"></i></button>
-                                            </a>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
+                                <?php foreach ($listDonDat as $key => $donDat) : ?>
+                                    <tr>
+                                        <td><?= $key + 1 ?></td>
+                                        <td><?= $donDat['dien_thoai'] ?></td>
+                                        <td><?= $donDat['check_in'] ?></td>
+                                        <td><?= $donDat['check_out'] ?></td>
+                                        <td><?= $donDat['don_gia'] ?> $</td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
@@ -101,13 +91,14 @@
                                 </tr>
                             </thead>
                             <tbody>
-
-                                <tr>
-                                    <td>PHP</td>
-                                    <td></td>
-                                    <td>PHP</td>
-                                    <td>PHP</td>
-                                </tr>
+                                <?php foreach ($listBinhLuan as $key => $binhLuan): ?>
+                                    <tr>
+                                        <td><?= $key+1 ?></td>
+                                        <td><?= $binhLuan['ten_phong'] ?></td>
+                                        <td><?= $binhLuan['ngay_danh_gia'] ?></td>
+                                        <td><?= $binhLuan['noi_dung'] ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

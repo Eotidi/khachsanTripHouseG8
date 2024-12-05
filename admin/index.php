@@ -75,5 +75,4 @@ match ($act) {
     'login-admin' =>(new AdminTaiKhoanController())->formLogin(),
     'check-login-admin' =>(new AdminTaiKhoanController())->login(),
     'logout-admin' =>(new AdminTaiKhoanController())->logout(),
-// ..
 };

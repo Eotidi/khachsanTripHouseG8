@@ -55,13 +55,13 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <a
-                                                        href="<?= BASE_URL_ADMIN . '?act=chi-tiet-khach-hang&id_khach_hang=' . $khachHang['id'] ?>">
+                                                        href="<?= BASE_URL_ADMIN . '?act=chi-tiet-khach-hang&id=' . $khachHang['id'] ?>">
                                                         <button class="btn btn-primary" style="margin-right: 10px;">
                                                             <i class="fas fa-eye"></i>
                                                         </button>
                                                     </a>
                                                     <a
-                                                        href="<?= BASE_URL_ADMIN . '?act=form-sua-khach-hang&id_khach_hang=' . $khachHang['id'] ?>">
+                                                        href="<?= BASE_URL_ADMIN . '?act=form-sua-khach-hang&id=' . $khachHang['id'] ?>">
                                                         <button class="btn btn-warning">
                                                             <i class="fas fa-cogs"></i>
                                                         </button>

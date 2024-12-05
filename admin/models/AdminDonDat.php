@@ -90,6 +90,7 @@ class AdminDonDat
         }
     }
 
+
     public function getDetailDonDatPhong($id)
     {
         try {
@@ -100,10 +101,32 @@ class AdminDonDat
             INNER JOIN phongs ON don_dats.phong_id = phongs.id
             WHERE don_dats.id = $id";
             $stmt = $this->conn->prepare($sql);
-
             $stmt->execute();
-
             return $stmt->fetch();
+        }
+             catch (Exception $e) {
+            echo "LOI" . $e->getMessage();
+        }
+  
+}
+    public function getDonFromClient($id)
+    {
+        try {
+            $sql = "SELECT don_dats.*,
+            trang_thai_don_dats.ten_trang_thai,
+            tai_khoans.dien_thoai
+            FROM don_dats 
+            INNER JOIN trang_thai_don_dats ON don_dats.trang_thai_id = trang_thai_don_dats.id
+            INNER JOIN tai_khoans ON don_dats.tai_khoan_id = tai_khoans.id
+            WHERE don_dats.tai_khoan_id = :id
+            ";
+
+            $stmt = $this->conn->prepare($sql);
+
+            $stmt->execute([':id' => $id]);
+
+            return $stmt->fetchAll();
+
         } catch (Exception $e) {
             echo "LOI" . $e->getMessage();
         }

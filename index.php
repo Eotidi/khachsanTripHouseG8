@@ -50,5 +50,6 @@ match ($act) {
 
 
     'logout' => (new HomeController())->logOut(),
+    
 
 };

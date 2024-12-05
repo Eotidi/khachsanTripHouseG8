@@ -124,7 +124,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                                     ?> -->
                                             <form action="#" class="review-form">
                                                 <?php foreach ($listBinhLuan as $a) {
-                                                    if ($a['trang_thai'] === 1) {
+                                                    if ($a['trang_thai_id'] === 1) {
                                                 ?>
                                                         <div class="total-reviews">
                                                             <div class="rev-avatar">
@@ -142,10 +142,6 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                                                 <?php } ?>
                                                             </div>
                                                             <div class="review-box">
-
-                                                                <div class="post-author">
-                                                                    <p><span><?= $a['ho_ten'] ?> </span><i class="fa-solid fa-grip-lines-vertical"></i> <?= $a['ngay_danh_gia'] ?></p>
-                                                                </div>
                                                                 <p><?= $a['noi_dung'] ?></p>
                                                             </div>
                                                         </div>
@@ -334,7 +330,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                 console.error("Đơn giá không hợp lệ, kiểm tra giá trị đầu vào.");
             }
 
-            
+
 
             // Hàm tính toán giá tiền
             function calculateTotalPrice() {

@@ -83,7 +83,7 @@ require_once 'layout/menu.php';
 
                                                 </h6>
                                                 <div class="price-box">
-                                                    <span class="">Giá phòng: <?= $phong['gia_phong'] ?> $</span>
+                                                    <span class="">Giá phòng: <?= $phong['gia_phong'] ?> VNĐ</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -217,7 +217,7 @@ require_once 'layout/menu.php';
                                                         </a></h5>
                                                     <div class="price-box">
                                                         <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
-                                                        <span class="price-old"><?= $phong['gia_phong'] ?> $</span>
+                                                        <span class="price-old"><?= $phong['gia_phong'] ?> VNĐ</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -250,7 +250,7 @@ require_once 'layout/menu.php';
                                                         </a></h5>
                                                     <div class="price-box">
                                                         <span class="ml-3"><?= $phong['ten_phong'] ?></span><br><br><br>
-                                                        <span class="price-old"><?= $phong['gia_phong'] ?> $</span>
+                                                        <span class="price-old"><?= $phong['gia_phong'] ?> VNĐ</span>
                                                     </div>
                                                 </div>
                                             </div>

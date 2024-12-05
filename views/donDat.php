@@ -54,7 +54,7 @@ require_once 'layout/menu.php';
                                             <td><?= $donDat['ten_phong'] ?></td>
                                             <td><?= $donDat['check_in'] ?></td>
                                             <td><?= $donDat['check_out'] ?></td>
-                                            <td><?= $donDat['don_gia'] ?>$</td>
+                                            <td><?= $donDat['don_gia'] ?>VNĐ</td>
 
 
                                         <td><?= $donDat['trang_thai_id'] == 1 ? "Đã thanh toán" : "Chưa thanh toán" ?></td>

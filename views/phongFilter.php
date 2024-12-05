@@ -57,7 +57,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -87,7 +87,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -117,7 +117,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -147,7 +147,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -177,7 +177,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -207,7 +207,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -237,7 +237,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -267,7 +267,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -296,7 +296,7 @@ require_once 'layout/menu.php';
                                                                 <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                             </h6>
                                                             <div class="price-box">
-                                                                <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -325,7 +325,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -355,7 +355,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -385,7 +385,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -415,7 +415,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -445,7 +445,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -475,7 +475,7 @@ require_once 'layout/menu.php';
                                                                     <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phongFilter['id'] ?>"><?= $phongFilter['ten_phong'] ?></a>
                                                                 </h6>
                                                                 <div class="price-box">
-                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?><b> $</b></span>
+                                                                    <span class="price-regular"><?= $phongFilter['gia_phong'] ?>VNĐ</span>
                                                                 </div>
                                                             </div>
                                                         </div>

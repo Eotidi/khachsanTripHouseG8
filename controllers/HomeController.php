@@ -34,8 +34,6 @@ class HomeController
         $phongDetail = $this->modelPhong->getDetailPhong($id);
         $listBinhLuan = $this->modelPhong->getAllBinhLuan($id);
         $listPhong = $this->modelPhong->getAllPhong();
-
-
         require_once './views/detailPhong.php';
     }
 

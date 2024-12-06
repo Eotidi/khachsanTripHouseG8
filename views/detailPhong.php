@@ -68,7 +68,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                     </div>
                                     <div class="price-box">
                                         <!--  -->
-                                        <span class="price-regular"><?= $phongDetail['gia_phong'] ?>$</span>
+                                        <span class="price-regular"><?= $phongDetail['gia_phong'] ?>VNĐ</span>
 
                                         <!--  -->
                                         <!-- <span class="price-regular">PHP</span> -->
@@ -205,7 +205,7 @@ $gia_phong = (float) $phongDetail['gia_phong']; // Ép kiểu về float
                                         <a href="<?= BASE_URL . '?act=chi-tiet-phong&id=' . $phong['id'] ?>">Phòng <?= $phong['ten_phong'] ?></a>
                                     </h6>
                                     <div class="price-box">
-                                        <span class="">Giá phòng: <?= $phong['gia_phong'] ?> $</span>
+                                        <span class="">Giá phòng: <?= $phong['gia_phong'] ?> VNĐ</span>
                                     </div>
                                 </div>
                             </div>

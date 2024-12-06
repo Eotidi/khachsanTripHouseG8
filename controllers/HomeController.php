@@ -55,6 +55,7 @@ class HomeController
             $dien_thoai = $_POST['dien_thoai'];
             $password = $_POST['password'];
             $chuc_vu_id = $_POST['chuc_vu_id'];
+            $trang_thai_id = $_POST['trang_thai_id'];
             $confirmPassword = $_POST["confirm_password"];
             $error = [];
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -68,9 +69,8 @@ class HomeController
             }
 
             if (empty($error)) {
-                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                $this->modelTaiKhoan->registerUser($email,$ho_ten,$dien_thoai, $hashedPassword, $chuc_vu_id);
-                echo "<script>alert('Đăng ký thành công!');</script>";
+                $this->modelTaiKhoan->registerUser($email, $ho_ten, $dien_thoai, $password, $chuc_vu_id, $trang_thai_id);
+                echo "<script>alert('Đăng ký thành công!')</script>";
                 // echo $dien_thoai;
                 header("Location: " . BASE_URL . '?act=login');
                 exit();
@@ -139,7 +139,7 @@ class HomeController
         $trang_thai_id = $_POST['trang_thai_id'];
         $phuong_thuc_id = $_POST['phuong_thuc_id'];
         $don_gia = $_POST['don_gia'];
-        $this->modelDonDat->postBooking($tai_khoan_id,$phong_id,$check_in,$check_out,$trang_thai_id,$phuong_thuc_id,$don_gia);
+        $this->modelDonDat->postBooking($tai_khoan_id, $phong_id, $check_in, $check_out, $trang_thai_id, $phuong_thuc_id, $don_gia);
         $this->modelDonDat->changeStatus($phong_id);
         header("Location: " . BASE_URL . '?act=don-dat');
     }
@@ -157,7 +157,8 @@ class HomeController
     }
 
 
-    public function updateRoomStatuses() {
+    public function updateRoomStatuses()
+    {
         $rooms = $this->modelPhong->getAllRooms();
         $bookings = $this->modelDonDat->getBookings();
         $current_time = new DateTime();
@@ -185,7 +186,5 @@ class HomeController
                 $this->modelPhong->updateRoomStatus($room_id);
             }
         }
-
-
     }
 }

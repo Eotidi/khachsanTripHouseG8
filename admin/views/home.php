@@ -36,7 +36,7 @@ foreach($listDonDat as $b)
             <div class="card shadow-sm p-3 mb-4">
               <div class="card-body">
                 <h5 class="card-title">Doanh thu</h5>
-                <p class="card-text display-6" id="revenue"><?=$doanhThu?>$</p>
+                <p class="card-text display-6" id="revenue"><?=$doanhThu?>.000 VNĐ</p>
               </div>
             </div>
           </div>

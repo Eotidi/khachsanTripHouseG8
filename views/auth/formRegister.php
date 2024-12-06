@@ -40,6 +40,7 @@ require_once 'views/layout/menu.php';
                                 <div class="single-input-item">
                                     <input type="text" placeholder="Enter your Phonenumber" name="dien_thoai" required />
                                     <input type="hidden" name="chuc_vu_id" value="2">
+                                    <input type="hidden" name="trang_thai_id" value="2">
                                 </div>
                                 <div class="single-input-item">
                                     <input type="text" placeholder="Enter your Phonenumber" name="dien_thoai" required />
